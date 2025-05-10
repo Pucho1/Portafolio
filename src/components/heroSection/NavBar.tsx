@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-import DragableBtn from '../dragablaBtn/DragableBtn';
 import './Navbar.css';
+import DragableBtn from '../btns/dragablaBtn/DragableBtn';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

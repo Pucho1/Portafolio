@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Hero from '../components/heroSection/Hero';
+import FloatBtn from '../components/btns/floatBtn/FloatBtn';
 
 const Home = ({showIntro}: {showIntro: boolean}) => {
 
@@ -14,6 +15,8 @@ const Home = ({showIntro}: {showIntro: boolean}) => {
         >
           <div className="h-screen w-screen">
             {/* MEAN SECCTIONS */}
+
+            < FloatBtn />
             
             <Hero />
             

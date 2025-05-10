@@ -1,4 +1,4 @@
-export interface AnimatedButtonProps {
+export interface AnimatedDragableButtonProps {
   title?: string;
   onClick?: () => void;
 }

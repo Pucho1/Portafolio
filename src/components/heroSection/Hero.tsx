@@ -11,7 +11,6 @@ const Hero = () => {
       </p>
     </div>
     </CvSection>
-    
   );
 };
 

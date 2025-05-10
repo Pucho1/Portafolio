@@ -1,0 +1,17 @@
+.name_animation {
+  transition: all 0.5s ease-in-out; /* Transición para el width */
+}
+
+.name_animation p {
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0);
+  min-width: 100%; /* Aseguro que el texto ocupe todo el ancho inicial */
+}
+
+.name_animation:hover {
+  width: 80%;
+}
+
+.name_animation:hover p {
+  transform: translateX(-24.8%); /* Ajusto este valor según cuánto quiero que se mueva */
+}

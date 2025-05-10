@@ -1,6 +1,6 @@
 
 import "./App.css";
-import Layout from "./components/Loyout/Layout";
+import Layout from "./components/layout/Layout";
 
 export default function App() {
 

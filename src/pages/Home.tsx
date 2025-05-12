@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import Hero from '../components/heroSection/Hero';
 import FloatBtn from '../components/btns/floatBtn/FloatBtn';
+import Works from '../components/workSection/Works';
 
 const Home = ({showIntro}: {showIntro: boolean}) => {
 
@@ -19,6 +20,7 @@ const Home = ({showIntro}: {showIntro: boolean}) => {
             < FloatBtn />
             
             <Hero />
+            <Works />
             
           </div>
         </motion.div>

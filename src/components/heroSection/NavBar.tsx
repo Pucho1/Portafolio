@@ -1,28 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useInView } from 'framer-motion';
 
 import './Navbar.css';
 import DragableBtn from '../btns/dragablaBtn/DragableBtn';
+import { usePositionStore } from '../../context/PositionContext';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
-  const [isScrolled, setIsScrolled] = useState(false);
+
+  const { setNavIsVisible } = usePositionStore();
+  const ref                 = useRef(null);
+  const isInView            = useInView(ref);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 30) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    setNavIsVisible(isInView);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isInView]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -41,9 +35,9 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300" >
+    <header ref={ref} className="fixed top-0 left-0 right-0 z-50 transition-all duration-300" >
 
-      <div className={`container mx-auto px-4 sm:px-6 ${ isScrolled ? 'hidden' : ''} `}>
+      <div className={`container mx-auto px-4 sm:px-6  `}>
         <div className="flex justify-between items-center">
           <a href="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2" >

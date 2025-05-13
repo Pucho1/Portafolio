@@ -17,7 +17,7 @@ const Home = ({showIntro}: {showIntro: boolean}) => {
           <div className="h-screen w-screen">
             {/* MEAN SECCTIONS */}
 
-            < FloatBtn />
+            <FloatBtn />
             
             <Hero />
             <Works />

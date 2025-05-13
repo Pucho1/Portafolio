@@ -27,7 +27,6 @@ const Navbar: React.FC = () => {
   };
 
   const navLinks = [
-    { name: 'Home', href: '/' },
     { name: 'Projects', href: '#projects' },
     { name: 'Resume', href: '#resume' },
     { name: 'Skills', href: '#skills' },
@@ -35,9 +34,9 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header ref={ref} className="fixed top-0 left-0 right-0 z-50 transition-all duration-300" >
+    <header ref={ref} className="top-2 left-0 right-0 z-50 transition-all duration-300 bg-black/50" >
 
-      <div className={`container mx-auto px-4 sm:px-6  `}>
+      <div className="md:px-2 px-3 w-full">
         <div className="flex justify-between items-center">
           <a href="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2" >

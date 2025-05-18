@@ -1,0 +1,32 @@
+.locationCard {
+  display: flex; /* Para alinear el texto y el globo horizontalmente */
+  align-items: center; /* Para centrar verticalmente los elementos */
+  /* background-color: #060606; Ejemplo de color de fondo oscuro */
+  color: white; /* Ejemplo de color de texto blanco */
+  padding: 15px 20px;
+  border-radius: 0px 40px 40px 0px; /* Para las esquinas redondeadas */
+  gap: 20px; /* Espacio entre el texto y el globo */
+}
+
+.textContainer {
+  flex-direction: column;
+  text-align: start;
+}
+
+.located {
+  font-size: 0.9em;
+  color: #a0a0a0;
+  margin-bottom: 5px;
+}
+
+.country {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+@media (min-width: 48rem) {
+  .globeContainer{
+    left: -2rem;
+  }
+  
+}

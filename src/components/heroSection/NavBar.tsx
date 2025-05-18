@@ -39,19 +39,18 @@ const Navbar: React.FC = () => {
       <div className="md:px-2 px-3 w-full">
         <div className="flex justify-between items-center">
           <a href="/" className="flex items-center">
-            <div className="p-2 rounded-lg mr-2" >
+            <div className="p-2 rounded-lg mr-2">
               <img
                 src="public/imgs/logo.png"
                 alt="Logo"
-                className="h-6 w-7"
+                className="h-6 w-8"
               />
             </div>
             <div className='name_animation w-25 overflow-hidden whitespace-nowrap'>
-              <p className=" text-sm">
+              <p className="text-white text-sm">
                 Code by Miguel Antonio Martinez
               </p>
             </div>
-            
           </a>
 
           {/* Navigation */}

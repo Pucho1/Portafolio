@@ -4,7 +4,7 @@
   /* background-color: #060606; Ejemplo de color de fondo oscuro */
   color: white; /* Ejemplo de color de texto blanco */
   padding: 15px 20px;
-  border-radius: 0px 40px 40px 0px; /* Para las esquinas redondeadas */
+  border-radius: 0px 5rem 5rem 0px; /* Para las esquinas redondeadas */
   gap: 20px; /* Espacio entre el texto y el globo */
 }
 

@@ -1,40 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { useInView } from 'framer-motion';
 
 import './Navbar.css';
 import DragableBtn from '../btns/dragablaBtn/DragableBtn';
-import { usePositionStore } from '../../context/PositionContext';
+import useNavBar from './useNavBar';
+import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
-const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const { setNavIsVisible } = usePositionStore();
-  const ref                 = useRef(null);
-  const isInView            = useInView(ref);
-
-  useEffect(() => {
-    setNavIsVisible(isInView);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isInView]);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-  const navLinks = [
-    { name: 'Projects', href: '#projects' },
-    { name: 'Resume', href: '#resume' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
-  ];
+const Navbar = () => {
+  const { navLinks, toggleMenu, closeMenu, isOpen, ref } = useNavBar();
 
   return (
-    <header ref={ref} className="top-2 left-0 right-0 z-50 transition-all duration-300 bg-black/50" >
+    <header ref={ ref } className="top-2 left-0 right-0 z-50 transition-all duration-300 bg-black/50" >
 
       <div className="md:px-2 px-3 w-full">
         <div className="flex justify-between items-center">
@@ -53,9 +28,14 @@ const Navbar: React.FC = () => {
             </div>
           </a>
 
+
+
           {/* Navigation */}
           <nav className="hidden md:flex">
             <ul className="flex space-x-8">
+              <li key={'language'} className='flex items-center'>
+                <LanguageSwitcher />
+              </li>
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <DragableBtn
@@ -81,6 +61,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
+ 
       {/* Mobile Navigation */}
       <div
         className={`fixed inset-0 bg-white z-40 pt-20 transition-transform duration-300 ease-in-out transform ${

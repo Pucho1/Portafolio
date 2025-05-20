@@ -7,9 +7,9 @@ const Layout = () => {
   const { showIntro, currentWordIndex } = useLayout();
 
   return (
-    <div className="h-screen w-screen bg-black text-white flex items-center justify-center">
+    <div className="flex bg-black">
      
-      <IntroAnimation showIntro= { showIntro } currentWordIndex={ currentWordIndex } />
+      <IntroAnimation showIntro={ showIntro } currentWordIndex={ currentWordIndex } />
 
       <Home showIntro={ showIntro } />
      

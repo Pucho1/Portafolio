@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
+
 import Hero from '../components/heroSection/Hero';
 import FloatBtn from '../components/btns/floatBtn/FloatBtn';
 import Works from '../components/workSection/Works';
@@ -6,6 +7,9 @@ import Works from '../components/workSection/Works';
 const Home = ({showIntro}: {showIntro: boolean}) => {
 
   return (
+    // animo todo el contenedor de la pagina para que se vea el efecto de entrada de todo el home
+    // sino lo pongo dentro de los div lo puedo condiconar pero no se veria la entrada animada, puedo poner solo la primera seccion
+    // pero no se veria la animacion de entrada de todo el home
     <AnimatePresence>
       {!showIntro && (
         <motion.div
@@ -16,10 +20,10 @@ const Home = ({showIntro}: {showIntro: boolean}) => {
         >
           <div className="h-screen w-screen">
             {/* MEAN SECCTIONS */}
-
             <FloatBtn />
             
             <Hero />
+
             <Works />
             
           </div>

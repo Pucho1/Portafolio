@@ -1,7 +1,7 @@
 import CustomParallax from "../customParallax/CustomParallax";
 import GlobeScene from "../RotatingGlobe/RotatingGlobe";
 import TypeWriter from "../typegriter/TypeWriter";
-import Navbar from "./NavBar";
+import Navbar from "../navBar/NavBar";
 import useHero from "./useHero";
 import "./hero.css"
 

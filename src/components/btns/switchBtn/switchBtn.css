@@ -1,0 +1,18 @@
+.toggle-container{
+	width: 2.59rem;
+	height: 1.59rem;
+	background-color: black;
+	border-radius: 3rem;
+	cursor: pointer;
+	display: flex;
+	padding: 0.3rem;
+	position: relative;
+	top: 0.25rem;
+}
+
+.toggle-handle {
+	width: 1rem;
+	height: 1rem;
+	background-color: #9911ff;
+	border-radius: 50%;
+}

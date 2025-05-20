@@ -1,9 +1,9 @@
-import type { AnimatedButtonProps } from "../interfaces/InterfaceDragablebtn";
+import type { AnimatedDragableButtonProps } from "../../../interfaces/InterfaceDragablebtn";
 import useDragableBtn from "./useDragableBtn";
 
 
 
-const DragableBtn = ({ title = "Click Me",  onClick }: AnimatedButtonProps) => {
+const DragableBtn = ({ title = "Click Me",  onClick }: AnimatedDragableButtonProps) => {
 
   const {handleMouseLeave, handleMouseEnter, isHovered, dotRef, containerRef, buttonRef } = useDragableBtn();
   

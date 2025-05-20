@@ -11,7 +11,7 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="relative inline-flex items-center h-6 rounded-full w-16 bg-gray-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="relative inline-flex items-center h-6 rounded-full w-16 bg-gray-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
       aria-label={t('toggle')}
     >
       <span className="sr-only">{t('toggle')}</span>

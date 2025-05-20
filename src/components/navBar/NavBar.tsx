@@ -28,8 +28,6 @@ const Navbar = () => {
             </div>
           </a>
 
-
-
           {/* Navigation */}
           <nav className="hidden md:flex">
             <ul className="flex space-x-8">

@@ -1,9 +1,9 @@
-import CustomParallax from "../customParallax/CustomParallax";
-import GlobeScene from "../RotatingGlobe/RotatingGlobe";
-import TypeWriter from "../typegriter/TypeWriter";
-import Navbar from "../navBar/NavBar";
 import useHero from "./useHero";
 import "./hero.css"
+import Navbar from "../../../components/navBar/NavBar";
+import CustomParallax from "../../../components/customParallax/CustomParallax";
+import TypeWriter from "../../../components/typegriter/TypeWriter";
+import GlobeScene from "../../../components/RotatingGlobe/RotatingGlobe";
 
 
 const Hero = () => {

@@ -1,5 +1,5 @@
-import Home from "../pages/Home";
 import IntroAnimation from "../components/IntroAnimation";
+import Home from "../pages/home/Home";
 import useLayout from "./useLayout";
 
 const Layout = () => {

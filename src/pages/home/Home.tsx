@@ -13,12 +13,12 @@ const Home = ({showIntro}: {showIntro: boolean}) => {
     <AnimatePresence>
       {!showIntro && (
         <motion.div
-          className="absolute inset-0 bg-white text-black flex items-center justify-center z-10"
+          className="absolute inset-0 bg-white z-10 verflow-y-auto"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="h-screen w-screen">
+          <div className="w-full">
             {/* MEAN SECCTIONS */}
             <FloatBtn />
             

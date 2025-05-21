@@ -10,18 +10,12 @@ const CustomParallax = ({ children }: { children: React.ReactNode }) => {
             <div className="w-full h-full bg-black/50" />
           ),
         },
-        // {
-        //   speed: 20,
-        //   children: (
-            
-        //   ),
-        // }
     ]}
-      className="h-screen aspect-[2/1]"
+      className="h-[120vh] aspect-[2/1]"
     >
-      <div className="relative z-10 flex items-center justify-center h-full text-white text-center p-8">
+      <>
         {children}
-      </div>
+      </>
      
     </ParallaxBanner>
   );

@@ -9,7 +9,7 @@ const Navbar = () => {
   const { navLinks, toggleMenu, closeMenu, isOpen, ref } = useNavBar();
 
   return (
-    <header ref={ ref } className="top-2 left-0 right-0 z-50 transition-all duration-300 bg-black/50" >
+    <header ref={ ref } className="relative top-2 w-full left-0 right-0 z-50 transition-all duration-300 mb-2" >
 
       <div className="md:px-2 px-3 w-full">
         <div className="flex justify-between items-center">

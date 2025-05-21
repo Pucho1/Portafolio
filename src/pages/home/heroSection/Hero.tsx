@@ -37,12 +37,12 @@ const Hero = () => {
             <div className="flex h-1/3 flex-row-reverse md:h-2/3 w-full text-white items-center md:items-end md:flex-row">
 
               {/* Rotating globe */}
-              <div className="globeContainer flex justify-start w-1/4 relative">
-                <div className="locationCard w-60 md:bg-[#040404cf]">
+              <div className="globeContainer flex justify-start w-1/4 relative h-24">
+                <div className="locationCard w-60 md:bg-[#141414fc]">
                     
                   <div className="textContainer hidden md:flex">
-                    <p className="locate">Located</p>
-                    <p className="country">in Spain</p>
+                    <p>Located</p>
+                    <p>in Spain</p>
                   </div>
 
                   <div className="h-20 w-20 ml-5">

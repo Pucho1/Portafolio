@@ -7,7 +7,7 @@ const Layout = () => {
   const { showIntro, currentWordIndex } = useLayout();
 
   return (
-    <main className="flex bg-black">
+    <main className="flex bg-black font-(family-name:--san-serif)">
      
       <IntroAnimation showIntro={ showIntro } currentWordIndex={ currentWordIndex } />
 

@@ -7,7 +7,7 @@ const CustomParallax = ({ children }: { children: React.ReactNode }) => {
         { 
           speed: -20,
           children: (
-            <div className="w-full h-full bg-black/50" />
+            <div className="w-full h-full bg-[#999D9E]" />
           ),
         },
     ]}

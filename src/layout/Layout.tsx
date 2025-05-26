@@ -7,12 +7,11 @@ const Layout = () => {
   const { showIntro, currentWordIndex } = useLayout();
 
   return (
-    <main className="flex bg-black font-(family-name:--san-serif)">
+    <main className="flex bg-black font-(family-name:--san-serif) text-white">
      
-      <IntroAnimation showIntro={ showIntro } currentWordIndex={ currentWordIndex } />
+     <IntroAnimation showIntro={ showIntro } currentWordIndex={ currentWordIndex } />
 
-      <Home showIntro={ showIntro } />
-     
+      <Home showIntro={ showIntro } /> 
     </main>
   );
 };

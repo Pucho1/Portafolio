@@ -19,8 +19,8 @@ const { navIsVisible } = usePositionStore();
             className={`z-50 fixed top-15 right-10 p-2 md:top-20 md:right-15 md:p-3`}>
             <DawnAnimatedBtn  content = { <Menu size={24} />}/>
           </motion.div>
-        )}
-      </AnimatePresence>
+         )} 
+       </AnimatePresence> 
       
     </div>
   );

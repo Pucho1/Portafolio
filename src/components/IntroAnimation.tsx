@@ -6,8 +6,6 @@ const greetings = [
   "Bonjour!",
   "Ciao!",
   "こんにちは!",
-  "안녕하세요!",
-  "你好!",
   "Здравствуйте!"
 ];
 
@@ -19,7 +17,7 @@ const IntroAnimation = ({showIntro, currentWordIndex }: {showIntro: boolean, cur
         <motion.div
           className="text-5xl font-bold text-center text-white  flex items-center justify-center bg-black h-screen w-screen"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.5 } }}
+          exit={{ opacity: 0, transition: { duration: 0.3 } }}
         >
           <AnimatePresence mode="wait">
             <motion.span
@@ -27,7 +25,7 @@ const IntroAnimation = ({showIntro, currentWordIndex }: {showIntro: boolean, cur
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className="inline-block"
             >
               {greetings[currentWordIndex]}

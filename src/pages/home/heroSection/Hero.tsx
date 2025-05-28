@@ -1,7 +1,5 @@
 import useHero from "./useHero";
-import Navbar from "../../../components/navBar/NavBar";
-import TypeWriter from "../../../components/typegriter/TypeWriter";
-import GlobeScene from "../../../components/RotatingGlobe/RotatingGlobe";
+import { NavBar, TypeWriter,  GlobeScene} from '../../../components';
 import "./hero.css"
 
 
@@ -11,11 +9,10 @@ const Hero = () => {
   
   return (
     <section className="relative bg-[#aeaeae] w-screen">
-      {/* <CustomParallax> */}
-        <div className="flex flex-col h-screen relative z-10 items-center text-white text-center">
-          <Navbar />
+        <div className="flex flex-col h-[110vh] relative z-10 items-center text-white text-center">
+          <NavBar />
 
-          <div className="flex flex-col md:flex-col-reverse h-[90vh] w-screen">
+          <div className="flex flex-col md:flex-col-reverse h-[100vh]  md:h-[92vh] w-screen">
              {/* footer big name */}
             <div className="relative w-full h-2/3 flex items-end justify-center">
               <div
@@ -66,7 +63,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      {/* </CustomParallax> */}
     </section>
   );
 };

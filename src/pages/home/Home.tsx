@@ -21,13 +21,12 @@ const Home = ({showIntro}: {showIntro: boolean}) => {
           transition={{ duration: 1, ease: "easeOut" }}
          >
           <div className="">
+
             {/* MEAN SECCTIONS */}
             <FloatBtn />
-            
             <Hero />
             <Description />
             <Projects />
-
             
           </div>
         </motion.div>

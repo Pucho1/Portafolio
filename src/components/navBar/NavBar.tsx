@@ -5,7 +5,7 @@ import DragableBtn from '../btns/dragablaBtn/DragableBtn';
 import useNavBar from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
-const Navbar = () => {
+const NavBar = () => {
   const { navLinks, toggleMenu, closeMenu, isOpen, ref } = useNavBar();
 
   return (
@@ -86,4 +86,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;

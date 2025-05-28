@@ -15,7 +15,7 @@ const useLayout = () => {
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [showIntro, setShowIntro] = useState(true);
-  const firstAnimate = 700; // 700ms
+  const firstAnimate = 500; // 700ms
 
   // Rotación de palabras cada x segundos
   useEffect(() => {

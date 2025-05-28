@@ -7,8 +7,6 @@ test('the btn to be in the document', () => {
 
 
 	const buttonElement = screen.getByText(/dragableBtn/i);
-	
-	console.log('DragableBtn test', buttonElement);
 
 	expect(buttonElement).toBeInTheDocument();
 });

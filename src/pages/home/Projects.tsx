@@ -6,10 +6,10 @@ const Projects = () => {
         <p className="text-xl font-bld text-gray-400 my-3">
           Key projects
         </p>
-        <hr />
+        <hr className="text-black"/>
       </div>
 
-      <div className="">
+      <div className="text-black">
         <ul className="list-disc pl-5 mt-4">
           <li>Project A: A web application that helps users manage their tasks efficiently.</li>
           <li>Project B: An e-commerce platform that provides a seamless shopping experience.</li>

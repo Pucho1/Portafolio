@@ -7,6 +7,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import "./App.css";
 import Layout from "./layout/Layout";
+import AboutMe from './pages/aboutMe/AboutMe';
+import TransitionComponent from './components/Transition/TransitionRoute';
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger, useGSAP); // Register GSAP plugins
 
@@ -26,7 +28,22 @@ export default function App() {
       <div id="smooth-content">
         <Routes>
           <Route>
-            <Route path="/" element={<Layout />} />
+            <Route 
+              path="/" 
+              element={
+                <TransitionComponent>
+                  <Layout />
+                </TransitionComponent>
+              } 
+            />
+            <Route 
+              path="/about" 
+              element={
+                <TransitionComponent>
+                  <AboutMe />
+                </TransitionComponent>
+              }
+            />
           </Route>
         </Routes>
       </div>

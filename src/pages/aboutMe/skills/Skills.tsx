@@ -50,7 +50,7 @@ const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
 
 const Projects = ( ) => {
 
-   const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState('all');
   
   const filteredSkills = skills.filter((skill) => 
     activeCategory === 'all' ? true : skill.category === activeCategory

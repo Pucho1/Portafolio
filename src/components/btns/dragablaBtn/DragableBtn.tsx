@@ -1,25 +1,25 @@
+import { NavLink  } from "react-router";
 import type { AnimatedDragableButtonProps } from "../../../interfaces/InterfaceDragablebtn";
 import useDragableBtn from "./useDragableBtn";
 
 
 
-const DragableBtn = ({ title = "Click Me",  onClick }: AnimatedDragableButtonProps) => {
+const DragableBtn = ({ title = "Click Me", link }: AnimatedDragableButtonProps) => {
 
-  const {handleMouseLeave, handleMouseEnter, isHovered, dotRef, containerRef, buttonRef } = useDragableBtn();
+  const {handleMouseLeave, handleMouseEnter, isHovered, dotRef, containerRef } = useDragableBtn();
   
   return (
     <div ref={containerRef} className="relative inline-block">
-      <button
-        ref={buttonRef}
+      <NavLink 
+        to={link}
         className="px-3 py-2 text-white font-medium rounded-lg
                     transition-shadow duration-300 ease-in-out
                   transform hover:-translate-y-1 active:translate-y-0 active:shadow-md"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={onClick}
       >
         {title}
-      </button>
+      </NavLink>
       
       <div
         ref={dotRef}

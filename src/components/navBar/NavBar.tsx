@@ -38,10 +38,7 @@ const NavBar = () => {
                 <li key={link.name}>
                   <DragableBtn
                     title={link.name}
-                    onClick={() => {
-                      closeMenu();
-                      window.location.href = link.href;
-                    }}
+                    link = {link.href}
                   />
                 </li>
               ))}

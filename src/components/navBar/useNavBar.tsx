@@ -15,7 +15,7 @@ const useNavBar = () => {
 
   const navLinks = [
     { name: t('PROJECTS'), href: '#projects' },
-    { name: t('RESUME'), href: '#resume' },
+    { name: t('RESUME'), href: '/about' },
     { name: t('SKILLS'), href: '#skills' },
   ];
 

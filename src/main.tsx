@@ -1,4 +1,4 @@
-import { StrictMode } from 'react';
+// import { StrictMode } from 'react';
 import { BrowserRouter } from 'react-router';
 import { createRoot } from 'react-dom/client';
 
@@ -9,9 +9,7 @@ import './assets/i18n.ts';
 
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>
 );

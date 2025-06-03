@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const greetings = [
   "Hello!",
@@ -17,6 +17,8 @@ const useLayout = () => {
   const [showIntro, setShowIntro] = useState(true);
   const firstAnimate = 500; // 700ms
 
+  const introIsShowed = useRef(false);
+
   // Rotación de palabras cada x segundos
   useEffect(() => {
     const wordInterval = setInterval(() => {
@@ -30,8 +32,11 @@ const useLayout = () => {
   useEffect(() => {
     const totalTimeTochange = greetings.length * firstAnimate;
 
+    if (introIsShowed.current) return; // Evita que se ejecute más de una vez
+
     const timer = setTimeout(() => {
       setShowIntro(false);
+      introIsShowed.current = true;
     }, totalTimeTochange);
 
     return () => clearTimeout(timer);
@@ -44,6 +49,7 @@ const useLayout = () => {
 		setCurrentWordIndex,
 		firstAnimate,
 		greetings,
+    introIsShowed,
   };
 };
 

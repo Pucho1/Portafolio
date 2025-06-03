@@ -1,17 +1,26 @@
 import IntroAnimation from "../components/IntroAnimation";
+import SectionLayout from "../components/sectionLayout/sectionLayout";
 import Home from "../pages/home/Home";
 import useLayout from "./useLayout";
 
-const Layout = () => {
+const Layout = ({isVisited} : { isVisited: boolean}) => {
  
   const { showIntro, currentWordIndex } = useLayout();
 
   return (
     <main className="flex bg-black font-(family-name:--san-serif) text-white">
      
-     <IntroAnimation showIntro={ showIntro } currentWordIndex={ currentWordIndex } />
+     { !isVisited ? 
+      <>
+        <IntroAnimation showIntro={ showIntro } currentWordIndex={ currentWordIndex } />
 
-      <Home showIntro={ showIntro } /> 
+          <Home showIntro={ showIntro } />
+      </>
+     : 
+      <SectionLayout />
+    }
+     
+
     </main>
   );
 };

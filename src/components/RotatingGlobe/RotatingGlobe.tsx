@@ -18,16 +18,21 @@ function RotatingGlobe() {
     }
   })
 
+  /**
+   * Referencia al mesh para poder rotar
+   * Aumenta la cantidad de segmentos para mayor detalle, puedo ajustar el radio según lo necesite
+   * Aplico la textura del mapa mundi
+   */
   return (
-    <mesh ref={globeRef}> // Referencia al mesh para poder rotar
-      <sphereGeometry args={[2, 44, 44]} /> // Aumenta la cantidad de segmentos para mayor detalle, puedo ajustar el radio según lo necesite
-      <meshStandardMaterial map={texture} /> // Aplico la textura del mapa mundi
+    <mesh ref={globeRef}> 
+      <sphereGeometry args={[2, 44, 44]} />
+      <meshStandardMaterial map={texture} />
     </mesh>
   )
 };
 
 /**
- * 
+ * OrbitControls ---> Desactiva el zoom, puedes ajustar la configuración según tus necesidades
  * @returns {JSX.Element}
  * @description Componente que renderiza la escena 3D con el globo terráqueo
  */
@@ -37,7 +42,7 @@ export default function GlobeScene() {
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} />
       <RotatingGlobe />
-      <OrbitControls  enableZoom={false} /> // Desactiva el zoom, puedes ajustar la configuración según tus necesidades
+      <OrbitControls  enableZoom={false} /> 
     </Canvas>
   )
 };

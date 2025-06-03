@@ -1,12 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
-
-import FloatBtn from '../../components/btns/floatBtn/FloatBtn';
-import Hero from './heroSection/Hero';
-import Description from './aboutMeHome/Description';
-import Projects from './Projects';
+import SectionLayout from '../../components/sectionLayout/sectionLayout';
 
 const Home = ({showIntro}: {showIntro: boolean}) => {
-
 
   return (
     // animo todo el contenedor de la pagina para que se vea el efecto de entrada de todo el home
@@ -20,15 +15,7 @@ const Home = ({showIntro}: {showIntro: boolean}) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
          >
-          <div className="">
-
-            {/* MEAN SECCTIONS */}
-            <FloatBtn />
-            <Hero />
-            <Description />
-            <Projects />
-            
-          </div>
+          <SectionLayout />
         </motion.div>
       )}
     </AnimatePresence>

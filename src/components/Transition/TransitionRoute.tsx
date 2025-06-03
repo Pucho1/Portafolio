@@ -38,6 +38,7 @@ const TransitionComponent = ( { children } : {children: ReactElement}) => {
         onEnter={(node: HTMLElement) => {
           // Indica que la transición no ha completado
           toggleCompleted(false);
+          
           console.log('TransitionComponent onEnter ----->', node);
           // Establece el estado inicial del nodo para la animación de entrada
           gsap.set(node, { autoAlpha: 0, scale: 0.8, xPercent: -100 });

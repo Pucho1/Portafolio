@@ -14,7 +14,7 @@ const Hero = () => {
 
           <div className="flex flex-col md:flex-col-reverse h-[100vh]  md:h-[92vh] w-screen">
              {/* footer big name */}
-            <div className="relative w-full h-2/3 flex items-end justify-center">
+            <div className="relative w-full h-2/3 flex items-end justify-center trigger">
               <div
                 ref={marqueeRef}
                 className="flex whitespace-nowrap will-change-transform animate-marquee-left"

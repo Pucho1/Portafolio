@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
 const skills: Skill[] = [
   // Frontend
@@ -48,7 +49,9 @@ const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
   );
 };
 
-const Projects = ( ) => {
+
+
+const Skills = ( ) => {
 
   const [activeCategory, setActiveCategory] = useState('all');
   
@@ -56,8 +59,21 @@ const Projects = ( ) => {
     activeCategory === 'all' ? true : skill.category === activeCategory
   );
 
+  const navigate = useNavigate();
+
+  const goback= (): void => {
+    navigate(-1);
+  }
+
   return (
+
    <section id="skills" className="py-24 bg-gray-50 dark:bg-gray-800">
+    <button
+      className="absolute top-4 left-4 bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition-colors"
+      onClick={goback}
+    >
+      goback
+    </button>
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -180,4 +196,4 @@ const Projects = ( ) => {
   );
 };
 
-export default Projects;
+export default Skills;

@@ -3,7 +3,7 @@ import SectionLayout from "../components/sectionLayout/sectionLayout";
 import Home from "../pages/home/Home";
 import useLayout from "./useLayout";
 
-const Layout = ({isVisited} : { isVisited: boolean}) => {
+const HomeLayout = ({isVisited} : { isVisited: boolean}) => {
  
   const { showIntro, currentWordIndex } = useLayout();
 
@@ -25,4 +25,4 @@ const Layout = ({isVisited} : { isVisited: boolean}) => {
   );
 };
 
-export default Layout;
+export default HomeLayout;

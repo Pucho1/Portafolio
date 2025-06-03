@@ -1,9 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import gsap from 'gsap';
-
-// gsap.registerPlugin( ScrollTrigger); // Register GSAP plugins
-
 
 const useHero = () => {
 
@@ -12,9 +7,9 @@ const useHero = () => {
     "Frontend Developer",
   ];
 
-	const marqueeRef = useRef(null);
+	const marqueeRef                = useRef(null);
   const [direction, setDirection] = useState("left");
-  const lastScrollY = useRef(0);
+  const lastScrollY               = useRef(0);
 
 	useEffect(() => {
     const handleScroll = () => {
@@ -25,14 +20,6 @@ const useHero = () => {
       } else {
         setDirection("right");
       }
-
-      // ScrollTrigger.create({
-      //   trigger: ".trigger",
-      //   start: "top center",
-      //   end: "+=500",
-      //   onToggle: (self) => console.log("toggled. active?", self.isActive),
-      // });
-
       lastScrollY.current = currentScrollY;
     };
 

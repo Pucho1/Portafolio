@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import "./App.css";
-import Layout from "./layout/Layout";
+import HomeLayout from "./layout/Layout";
 import AboutMe from './pages/aboutMe/AboutMe';
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger, useGSAP);
@@ -20,11 +20,8 @@ export default function App() {
 
   useEffect(() => {
     visitedRoutesRef.current.add(location.pathname);
-
-
     isVisited.current = hasVisited(); // Check if the current route has been visited
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[location]);
 
   const hasVisited= () => visitedRoutesRef.current.has(location.pathname);
@@ -43,17 +40,13 @@ export default function App() {
           <Route>
             <Route
               path="/"
-              element={
-                  <Layout  isVisited={isVisited.current}/>
-              }
+              element={ <HomeLayout  isVisited={isVisited.current}/> }
             />
             <Route
               path="/about"
-              element={
-                  <AboutMe />
-              }
+              element={ <AboutMe /> }
             />
-            <Route path='*' element  ={<Navigate to="/" replace />} />
+            <Route path='*' element ={<Navigate to="/" replace />} />
           </Route>
         </Routes>
       </div>

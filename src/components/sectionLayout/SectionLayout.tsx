@@ -1,6 +1,6 @@
 import Description from "../../pages/home/aboutMeHome/Description";
 import Hero from "../../pages/home/heroSection/Hero";
-import Projects from "../../pages/home/Projects";
+import Projects from "../../pages/home/projects/Projects";
 import FloatBtn from "../btns/floatBtn/FloatBtn";
 
 const SectionLayout = () => {

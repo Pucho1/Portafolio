@@ -4,7 +4,7 @@ import Projects from "../../pages/home/projects/Projects";
 import FloatBtn from "../btns/floatBtn/FloatBtn";
 
 const SectionLayout = () => {
-  
+
   return (
      <div className="bg-white">
       {/* MEAN SECCTIONS */}

@@ -1,19 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
+import useIntro from "./useIntro";
 
-const greetings = [
-  "Hello!",
-  "¡Hola!",
-  "Bonjour!",
-  "Ciao!",
-  "こんにちは!",
-  "Здравствуйте!"
-];
+const IntroAnimation = ({ handleisIntroFinished } : { handleisIntroFinished: () => void}) => {
 
-const IntroAnimation = ({showIntro, currentWordIndex }: {showIntro: boolean, currentWordIndex: number}) => {
+  const { currentWordIndex, greetings } = useIntro( handleisIntroFinished );
 
   return (
     <AnimatePresence mode="wait">
-      {showIntro && (
         <motion.div
           className="text-5xl font-bold text-center text-white  flex items-center justify-center bg-black h-screen w-screen"
           initial={{ opacity: 1 }}
@@ -32,7 +25,6 @@ const IntroAnimation = ({showIntro, currentWordIndex }: {showIntro: boolean, cur
             </motion.span>
           </AnimatePresence>
         </motion.div>
-      )}
     </AnimatePresence>
   );
 }; 

@@ -11,10 +11,8 @@ const greetings = [
   "Здравствуйте!"
 ];
 
-const useLayout = () => {
-
+const useIntro = ( handleisIntroFinished: ()=> void ) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [showIntro, setShowIntro] = useState(true);
   const firstAnimate = 500; // 700ms
 
   const introIsShowed = useRef(false);
@@ -35,16 +33,14 @@ const useLayout = () => {
     if (introIsShowed.current) return; // Evita que se ejecute más de una vez
 
     const timer = setTimeout(() => {
-      setShowIntro(false);
+      handleisIntroFinished();
       introIsShowed.current = true;
     }, totalTimeTochange);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [handleisIntroFinished]);
 
-  return { 
-		setShowIntro,
-		showIntro,
+  return {
 		currentWordIndex,
 		setCurrentWordIndex,
 		firstAnimate,
@@ -53,4 +49,4 @@ const useLayout = () => {
   };
 };
 
-export default useLayout;
+export default useIntro;

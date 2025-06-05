@@ -6,7 +6,7 @@ import "./hero.css"
 const Hero = () => {
 
   const { marqueeRef, texts } = useHero();
-  
+
   return (
     <section className="relative bg-[#aeaeae] w-screen">
         <div className="flex flex-col h-[110vh] relative z-10 items-center text-white text-center">

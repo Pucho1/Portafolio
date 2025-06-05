@@ -3,14 +3,14 @@ import { useEffect, useRef } from 'react';
 
 import gsap from 'gsap';
 import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
 import "./App.css";
-import HomeLayout from "./layout/Layout";
+import HomeLayout from "./layout/HomeLayout";
 import AboutMe from './pages/aboutMe/AboutMe';
 
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger, useGSAP);
+gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
 
 export default function App() {
 
@@ -31,6 +31,10 @@ export default function App() {
       smooth: 1, // how long it takes to smooth the scroll
       effects: true, // enable effects like pinning and parallax
     });
+
+    return () => {
+      ScrollSmoother.get()?.kill(); // Cleanup on unmount
+    };
   }, [location]); // Recreate the ScrollSmoother on location change
 
   return (

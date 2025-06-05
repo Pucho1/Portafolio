@@ -14,12 +14,10 @@ const Projects = () => {
         </p>
         <hr className="text-black"/>
       </div>
-
+      
       <RowCardWorks companies={ firstGroup} />
       
-      <RowCardWorks companies={ secondGroup} /> 
-
-      
+      <RowCardWorks companies={ secondGroup} reverse /> 
     </section>
   );
 };

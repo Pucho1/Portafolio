@@ -1,6 +1,4 @@
-import {  useEffect, useMemo, useState } from 'react';
-
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useMemo } from 'react';
 
 
 const companies = [
@@ -46,33 +44,12 @@ const companies = [
 	},
 ];
 
-
-
 const useProyects = () => {
-	const [ changeDirection, setChangeDirection ] = useState(false);
-
-	const [ progres, setProgres ] = useState<number>(0);
 
 	const firstGroup = useMemo(() => companies.slice(0, 4), []);
 	const secondGroup = useMemo(() => companies.slice(4, 8), []);
 
-	useEffect(() => {
-
-		ScrollTrigger.create({
-			trigger: '.trigger',
-			start: 'top bottom',
-      end: 'bottom top',
-			onToggle: (self) => setChangeDirection(self.direction === 1),
-			onUpdate: (self) => setProgres( self.progress ),
-		});
-		return () => {
-			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-		}
-	}, []);
-
   return {
-		changeDirection,
-		progres,
 		firstGroup,
 		secondGroup,
   };

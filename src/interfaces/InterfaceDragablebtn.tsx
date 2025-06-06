@@ -1,4 +1,6 @@
+import type { ReactElement } from "react";
+
 export interface AnimatedDragableButtonProps {
-  title?: string;
-  link: string;
+  showDot?: boolean;
+  children: ReactElement;
 }

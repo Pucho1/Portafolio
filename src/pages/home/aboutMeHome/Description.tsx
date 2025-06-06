@@ -2,7 +2,7 @@
 const Description = () => {
 
   return (
-    <section className="flex justify-center h-[50vh] my-5 items-center">
+    <section className="flex justify-center h-[70vh] my-5 items-center">
 			<div className="flex flex-col md:flex-row px-20 lg:px-30 gap-8 text-black">
 				<div className="grow-[2] items-center lg:pr-30">
 					<h4 className="text-2xl">

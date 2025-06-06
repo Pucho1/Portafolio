@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 
 import './Navbar.css';
-import DragableBtn from '../btns/dragablaBtn/DragableBtn';
+import MagneticBtn from '../btns/dragablaBtn/MagneticBtn';
 import useNavBar from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
@@ -36,10 +36,15 @@ const NavBar = () => {
               </li>
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <DragableBtn
-                    title={link.name}
-                    link = {link.href}
-                  />
+                  <MagneticBtn showDot >
+                    <button
+                      // onClick={ handleOnClikk }
+                      className="px-3 py-2 text-white font-medium rounded-lg transition-shadow duration-300 ease-in-out
+                                  transform hover:-translate-y-1 active:translate-y-0 active:shadow-md"
+                    >
+                      test
+                    </button> 
+                  </MagneticBtn>
                 </li>
               ))}
             </ul>

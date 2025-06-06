@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import SectionLayout from '../../components/sectionLayout/sectionLayout';
+import SectionLayout from '../../components/sectionLayout/SectionLayout';
 
 const Home = () => {
 

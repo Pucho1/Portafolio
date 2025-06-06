@@ -1,4 +1,3 @@
-import MagneticButton from "../../../components/btns/magneticBtn/MagneticBtn";
 import RowCardWorks from "../../../components/rowCardsWorks/RowCardWorks";
 import useProyects from "./useProyects";
 
@@ -21,7 +20,6 @@ const Projects = () => {
       <RowCardWorks companies={ secondGroup} reverse /> 
 
 
-      <MagneticButton />
     </section>
   );
 };

@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 
 import './Navbar.css';
-import MagneticBtn from '../btns/dragablaBtn/MagneticBtn';
+import MagneticBtn from '../btns/magneticBtn/MagneticBtn';
 import useNavBar from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 

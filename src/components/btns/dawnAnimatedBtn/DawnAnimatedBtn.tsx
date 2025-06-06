@@ -1,5 +1,5 @@
 import type { AnimatedButtonProps } from '../../../interfaces/btnInterfaces';
-import MagneticBtn from "../dragablaBtn/MagneticBtn";
+import MagneticBtn from "../magneticBtn/MagneticBtn";
 import '../btns.css';
 
 const DawnAnimatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonProps ) => {

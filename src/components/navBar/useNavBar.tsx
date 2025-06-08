@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { usePositionStore } from "../../context/PositionContext";
+import { useNavigate } from "react-router";
+
 import { useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
+
+import { usePositionStore } from "../../context/PositionContext";
 
 const useNavBar = () => {
 
@@ -9,6 +12,7 @@ const useNavBar = () => {
   const ref                 = useRef(null);
   const isInView            = useInView(ref);
   const { t }               = useTranslation();
+  const navigate = useNavigate();
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -32,9 +36,12 @@ const useNavBar = () => {
     setIsOpen(false);
   };
 
+  const handleOnClik = (link: string) =>  navigate(`${link}`);
+
 
   return {
 		navLinks,
+    handleOnClik,
 		toggleMenu,
 		closeMenu,
 		isOpen,

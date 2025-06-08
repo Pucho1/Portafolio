@@ -1,9 +1,12 @@
+import FloatBtn from "../../components/btns/floatBtn/FloatBtn";
 import Projects from "./skills/Skills";
 
 const AboutMe = () => {
   return (
     <div>
-        <Projects />
+      <FloatBtn />
+
+      <Projects />
     </div>
   );
 };

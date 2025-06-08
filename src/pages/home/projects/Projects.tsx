@@ -1,3 +1,4 @@
+import SectionBtn from "../../../components/btns/sectionbtn/SectionBtn";
 import RowCardWorks from "../../../components/rowCardsWorks/RowCardWorks";
 import useProyects from "./useProyects";
 
@@ -16,8 +17,16 @@ const Projects = () => {
       </div>
 
       <RowCardWorks companies={ firstGroup} />
-      
-      <RowCardWorks companies={ secondGroup} reverse /> 
+
+      <RowCardWorks companies={ secondGroup} reverse />
+
+      <div className="flex justify-center items-center mt-10">
+        <SectionBtn
+          content={"More Works"}
+          hgt={20}
+          wdt={60}
+        />
+      </div>
 
 
     </section>

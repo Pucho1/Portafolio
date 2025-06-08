@@ -1,8 +1,8 @@
 import { cloneElement } from "react";
-import type { AnimatedDragableButtonProps } from "../../../interfaces/InterfaceDragablebtn";
+import type { MagneticWraperInterface } from "../../../interfaces/magneticWraperInterface";
 import useMagneticBtn from "./useMagneticBtn";
 
-const MagneticBtn = ({ showDot = false,  children }: AnimatedDragableButtonProps) => {
+const MagneticBtn = ({ showDot = false,  children }: MagneticWraperInterface) => {
 
   const { dotRef, containerRef, buttonRef } = useMagneticBtn();
   
@@ -12,7 +12,6 @@ const MagneticBtn = ({ showDot = false,  children }: AnimatedDragableButtonProps
   if ( childWithRef.type  !== "button") {
     throw new Error("The child must be a button or an anchor element.");
   };
-
 
   return (
     <div ref={containerRef} className="relative inline-block">

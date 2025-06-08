@@ -14,8 +14,6 @@ const defaultPosition: Position = {
 
 export const PositionContext =  createContext<Position>(defaultPosition);
 
-
-
 export const PositionProvider = ({ children }: { children: React.ReactNode }) => {
 
   const [position, setPosition] = useState({ x: window.scrollX, y: window.scrollY });

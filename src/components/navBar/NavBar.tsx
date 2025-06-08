@@ -6,7 +6,7 @@ import useNavBar from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
 const NavBar = () => {
-  const { navLinks, toggleMenu, closeMenu, isOpen, ref } = useNavBar();
+  const { navLinks, toggleMenu, closeMenu, isOpen, ref, handleOnClik } = useNavBar();
 
   return (
     <header ref={ ref } className="relative top-5 w-full left-0 right-0 z-50 transition-all duration-300 mb-2" >
@@ -38,11 +38,11 @@ const NavBar = () => {
                 <li key={link.name}>
                   <MagneticBtn showDot >
                     <button
-                      // onClick={ handleOnClikk }
+                      onClick={ ()=> handleOnClik(link.href) }
                       className="px-3 py-2 text-white font-medium rounded-lg transition-shadow duration-300 ease-in-out
                                   transform hover:-translate-y-1 active:translate-y-0 active:shadow-md"
                     >
-                      test
+                      {link.name}
                     </button> 
                   </MagneticBtn>
                 </li>

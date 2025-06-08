@@ -1,6 +1,6 @@
 import type { ReactElement } from "react";
 
-export interface AnimatedDragableButtonProps {
+export interface MagneticWraperInterface {
   showDot?: boolean;
   children: ReactElement;
 }

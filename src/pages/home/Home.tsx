@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import SectionLayout from '../../components/sectionLayout/SectionLayout';
+import SectionLayout from './sectionLayout/SectionLayout';
 
 const Home = () => {
 
@@ -9,7 +9,7 @@ const Home = () => {
     // pero no se veria la animacion de entrada de todo el home
     <AnimatePresence>
         <motion.div
-          className="bg-white"
+          className="bg-white w-screen"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}

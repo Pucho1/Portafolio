@@ -1,0 +1,12 @@
+.profileImg{
+    background: url(https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png);
+    background-size: cover;
+    position: relative;
+    border-radius: 50%;
+    width: clamp(1.5rem, 10vw, 4.5rem);
+    height: clamp(1.5rem, 10vw, 4.5rem);
+}
+
+.increase_text {
+    font-size: clamp(1.5rem, 10vw, 4.5rem);
+}

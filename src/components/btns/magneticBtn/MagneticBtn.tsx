@@ -2,7 +2,7 @@ import { cloneElement } from "react";
 import type { MagneticWraperInterface } from "../../../interfaces/magneticWraperInterface";
 import useMagneticBtn from "./useMagneticBtn";
 
-const MagneticBtn = ({ showDot = false,  children }: MagneticWraperInterface) => {
+const MagneticBtn = ({ showDot = false,  children, justifyPosition }: MagneticWraperInterface) => {
 
   const { dotRef, containerRef, buttonRef } = useMagneticBtn();
   
@@ -14,7 +14,7 @@ const MagneticBtn = ({ showDot = false,  children }: MagneticWraperInterface) =>
   };
 
   return (
-    <div ref={containerRef} className="relative inline-block">
+    <div ref={containerRef} className={`relative flex ${ justifyPosition ?? 'justify-center'}`}>
 
       {childWithRef}
 

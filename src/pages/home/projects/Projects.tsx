@@ -2,9 +2,7 @@ import SectionBtn from "../../../components/btns/sectionbtn/SectionBtn";
 import RowCardWorks from "../../../components/rowCardsWorks/RowCardWorks";
 import useProyects from "./useProyects";
 
-
 const Projects = () => {
-
   const { firstGroup, secondGroup, } = useProyects();
 
   return (
@@ -23,12 +21,10 @@ const Projects = () => {
       <div className="flex justify-center items-center mt-10">
         <SectionBtn
           content={"More Works"}
-          hgt={20}
-          wdt={60}
+          hgt={5}
+          wdt={15}
         />
       </div>
-
-
     </section>
   );
 };

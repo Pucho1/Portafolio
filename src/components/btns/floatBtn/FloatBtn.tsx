@@ -7,8 +7,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 const FloatBtn = () => {
 const { navIsVisible } = usePositionStore();
 
-console.log("FloatBtn navIsVisible", navIsVisible);
-
   return (
     <AnimatePresence initial={false}>
       {!navIsVisible && (

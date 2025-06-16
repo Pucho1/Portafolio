@@ -1,0 +1,21 @@
+import Description from "../aboutMeHome/Description";
+import Hero from "../heroSection/Hero";
+import Projects from "../projects/Projects";
+import FloatBtn from "../../../components/btns/floatBtn/FloatBtn";
+import FooterHome from "../foter/FoterHome";
+
+const SectionLayout = () => {
+
+  return (
+     <div className="bg-white flex flex-col">
+      {/* MEAN SECCTIONS */}
+      <FloatBtn />
+      <Hero />
+      <Description />
+      <Projects />
+      <FooterHome />
+    </div>
+  );
+};
+
+export default SectionLayout;

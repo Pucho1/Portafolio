@@ -4,8 +4,9 @@ import './Navbar.css';
 import MagneticBtn from '../btns/magneticBtn/MagneticBtn';
 import useNavBar from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
+import { Link } from 'react-router';
 
-const NavBar = () => {
+const NavBar = ({text_color = 'text-white'} : {text_color?: string}) => {
   const { navLinks, toggleMenu, closeMenu, isOpen, ref, handleOnClik } = useNavBar();
 
   return (
@@ -13,7 +14,7 @@ const NavBar = () => {
 
       <div className="md:px-2 px-3 w-full">
         <div className="flex justify-between items-center font-[450] ">
-          <a href="/" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2">
               <img
                 src="public/imgs/logo.png"
@@ -22,11 +23,11 @@ const NavBar = () => {
               />
             </div>
             <div className='name_animation w-25 overflow-hidden whitespace-nowrap'>
-              <p className="text-white text-sm">
+              <p className={`${text_color} text-sm`}>
                 Code by Miguel Antonio Martinez
               </p>
             </div>
-          </a>
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden md:flex">
@@ -39,8 +40,8 @@ const NavBar = () => {
                   <MagneticBtn showDot >
                     <button
                       onClick={ ()=> handleOnClik(link.href) }
-                      className="px-3 py-2 text-white font-medium rounded-lg transition-shadow duration-300 ease-in-out
-                                  transform hover:-translate-y-1 active:translate-y-0 active:shadow-md"
+                      className={`px-3 py-2 ${text_color} font-medium rounded-lg transition-shadow duration-300 ease-in-out
+                                  transform hover:-translate-y-1 active:translate-y-0 active:shadow-md`}
                     >
                       {link.name}
                     </button> 
@@ -74,7 +75,7 @@ const NavBar = () => {
               <li key={link.name}>
                 <a
                   href={link.href}
-                  className="text-xl font-medium text-gray-800 hover:text-blue-600 transition-colors duration-300"
+                  className={`text-xl font-medium ${text_color ?  text_color : 'text-gray-800'} hover:text-blue-600 transition-colors duration-300`}
                   onClick={closeMenu}
                 >
                   {link.name}

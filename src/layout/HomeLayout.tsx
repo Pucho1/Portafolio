@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import IntroAnimation from "../components/introAnimation/IntroAnimation";
 import Home from "../pages/home/Home";
-import SectionLayout from "../components/sectionLayout/sectionLayout";
+import SectionLayout from "../pages/home/sectionLayout/sectionLayout";
 
 const HomeLayout = ({isVisited} : { isVisited: boolean}) => {
 

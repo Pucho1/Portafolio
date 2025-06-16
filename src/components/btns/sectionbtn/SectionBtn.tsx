@@ -1,15 +1,36 @@
 import type { SectionBtnInterface } from "../../../interfaces/sectionBtnInterface";
 import MagneticBtn from "../magneticBtn/MagneticBtn";
 
-const SectionBtn = ({ content= 'Cilk me', hgt = 15, wdt = 15 }: SectionBtnInterface) => {
+const SectionBtn = ({ 
+  content= 'Cilk me',
+  hgt,
+  wdt,
+  bgCustom,
+  showBorder,
+  px,
+  minW,
+  classCustom,
+  justifyPosition,
+}: SectionBtnInterface) => {
 
   return (
-		<MagneticBtn>
-			<button className={`animated-btn bg-black h-${hgt} w-${wdt} rounded-full flex items-center justify-center`}>
+		<MagneticBtn justifyPosition={justifyPosition}>
+			<button
+        className={
+          `animated-btn ${bgCustom ? '' : 'bg-black'} rounded-full flex ${showBorder ? 'border-1 border-(--white_midle)' : 'border-none'}
+          items-center   max-w-[35rem]  ${minW ? 'min-w-[16rem]' : ''}  justify-center ${wdt ? '' : 'w-full'} ${classCustom}`
+        }
+        style={{
+          height: `${hgt}rem`,
+          width: `${wdt}rem`,
+          backgroundColor: bgCustom,
+          paddingLeft: `${px}rem`,
+          paddingRight: `${px}rem`,
+        }}
+      >
         <span className='flex justify-center items-center'>{content}</span>
       </button>
 		</MagneticBtn>
-     
   );
 };
 

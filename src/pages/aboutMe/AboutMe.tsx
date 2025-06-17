@@ -1,55 +1,14 @@
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-
 import { NavBar } from "../../components";
 import FloatBtn from "../../components/btns/floatBtn/FloatBtn";
 import FooterHome from "../home/foter/FoterHome";
 import Skills from "./skills/Skills";
 
 import './aboutMe.css';
-import { useEffect, useRef } from 'react';
-
-gsap.registerPlugin( ScrollTrigger );
+import useAboutMe from "./useAboutMe";
 
 const AboutMe = () => {
 
-  // Creamos una referencia para la sección principal que actuará como el "trigger" del scroll
-  const sectionRef = useRef(null);
-  // Creamos una referencia para el div que contiene la imagen y cuya visibilidad animaremos
-  const imageRevealRef = useRef(null);
-
- useEffect(() => {
-  const section = sectionRef.current;
-  const imageReveal = imageRevealRef.current;
-
-  if (!section || !imageReveal) return;
-
-  gsap.fromTo(
-    imageReveal,
-    { backgroundPosition: 'center 0%' },
-    {
-      backgroundPosition: 'center 100%',
-      ease: 'none',
-      scrollTrigger: {
-        trigger: section,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true,
-      }
-    }
-  );
-
-  return () => {
-    ScrollTrigger.getAll().forEach(trigger => {
-      if (trigger.trigger === section) {
-        trigger.kill();
-      }
-    });
-  };
-}, []);
-
-
+  const { sectionRef, imageRevealRef } = useAboutMe();
 
   return (
     <div>

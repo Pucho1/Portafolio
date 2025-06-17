@@ -7,20 +7,23 @@ const Skills = ( ) => {
   const { filteredSkills,		activeCategory,	setActiveCategory, categories } = useSkills();
 
   return (
-    <section id="skills" className="py-4 bg-white">
+    <section id="skills" className="py-4 bg-white trigger">
       <div className="px-4 md:px-8">
-        <div className="mx-auto text-left mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-blck mb-4">
-            Skills
-          </h2>
-          <div className="w-40 h-1 bg-gray-400 mb-6"></div>
-        </div>
+          <div className="mx-auto text-left mb-16">
+              <>
+                <h2 className="text-3xl md:text-4xl font-bold text-blck mb-4">
+                  Skills
+                </h2>
+                <div className="w-40 h-1 bg-gray-400 mb-6 rounded-full"></div>
+              </>
+          </div>
+      
         
         <div className="max-w-4xl mx-auto">
           {/* Category Filter */}
           <div className="flex flex-wrap justify-left gap-3 mb-12">
-            {categories.map((category) => (
-              <MagneticBtn>
+            {categories.map((category, index) => (
+              <MagneticBtn key={index}>
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}

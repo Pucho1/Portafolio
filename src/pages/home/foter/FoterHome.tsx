@@ -24,9 +24,9 @@ const FooterHome = () => {
 
         <div className="h-20 mt-10 relative">
           <hr className='opacity-20'/>
-          <div className="absolute" style={{ left: '71%', bottom: '-18%'}}>
-            <SectionBtn hgt={9} wdt={9} classCustom='md:h-12 md:w-12 md:bottom-[15%]'/>
-          </div>
+            <div className="absolute trigger flex left-[50%] sm:left-[60%] bottom-[10%] md:left-[70%]">
+              <SectionBtn hgt={9} wdt={9} classCustom='md:h-12 md:w-12'/>
+            </div>
         </div>
 
         <div className="grid grid-cols-5 gap-4 mt-8 md:w-130">
@@ -64,7 +64,7 @@ const FooterHome = () => {
           <div className="">
             <ul className="flex gap-6">
               {footerLinks.map((link, index) => 
-                <li>
+                <li key={index}>
                   <MagneticBtn>
                     <button key={index}> { link.name }</button>
                   </MagneticBtn>

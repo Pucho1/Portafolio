@@ -26,28 +26,28 @@ const useRowWorks = ( reverse? : boolean ) => {
 	}, []);
 
 
-    useEffect(() => {
-			const updateVisibleCount = () => {
-			const width = window.innerWidth;
+	useEffect(() => {
+		const updateVisibleCount = () => {
+		const width = window.innerWidth;
 
-			let columns = 2;
-			if (width >= 1024) columns = 4; // lg
-			else if (width >= 640) columns = 3; // sm
+		let columns = 2;
+		if (width >= 1024) columns = 4; // lg
+		else if (width >= 640) columns = 3; // sm
 
-			setVisibleCount(columns); // Muestra una fila de items como máximo
-    };
+		setVisibleCount(columns); // Muestra una fila de items como máximo
+	};
 
-    updateVisibleCount();
-    window.addEventListener("resize", updateVisibleCount);
-    return () => window.removeEventListener("resize", updateVisibleCount);
-  }, []);
+	updateVisibleCount();
+	window.addEventListener("resize", updateVisibleCount);
+	return () => window.removeEventListener("resize", updateVisibleCount);
+	}, []);
 
-	  const handleRowMovement = (): number => {
-    if (reverse) {
-      return changeDirection ? -progres * 100 : progres * 100;
-    }
-    return changeDirection ? progres * 100 : -progres * 100;
-  };
+	const handleRowMovement = (): number => {
+		if (reverse) {
+		return changeDirection ? -progres * 100 : progres * 100;
+		}
+		return changeDirection ? progres * 100 : -progres * 100;
+	};
 
   return {
 		visibleCount,

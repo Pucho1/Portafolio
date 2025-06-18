@@ -9,8 +9,8 @@ const SectionLayout = () => {
   return (
      <div className="bg-white flex flex-col">
       {/* MEAN SECCTIONS */}
-      <FloatBtn />
       <Hero />
+      <FloatBtn />
       <Description />
       <Projects />
       <FooterHome />

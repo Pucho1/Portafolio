@@ -23,20 +23,18 @@ const AboutMe = () => {
         </p>
       </section>
 
-
-      <hr className="bg-gray-600  mx-[15%] opacity-20"/>
-
+      <hr className="bg-gray-600  mx-[12%] lg:mx-[] opacity-20"/>
 
       {/* my img section */}
-      <section className="flex gap-5 h-[130vh] my-20 px-[15%] relative" ref={sectionRef}>
-        <div className="w-60">
-          <p className="text-lg text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ex, qui ipsam obcaecati nostrum, atque quos doloremque
-            architecto nulla voluptatibus cum non, tempore eos repellendus reprehenderit! Possimus quae iure et!
+      <section className="flex flex-col lg:flex-row  gap-5 h-[130vh] my-20 lg:pr-[5%] px-[12%] relative" ref={sectionRef}>
+        <div className="w-full  lg:w-60 pr-15 lg:p-0">
+          <p className="text-md font-medium text-gray-700 ">
+            I help companies from all over the world with tailor-made solutions. 
+            With each project, I push my work to new horizons, always putting quality first.
           </p>
         </div>
         
-        <div className="right-0 top-0 w-1/2 h-full flex-1 mx-4 img-caja bg-gray-400 overflow-hidden" ref={imageRevealRef} />
+        <div className="flex-1 img-caja overflow-hidden mt-15 lg:mt-0" ref={imageRevealRef} />
       </section>
 
       <Skills />

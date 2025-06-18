@@ -12,14 +12,14 @@ const useNavBar = () => {
   const ref                 = useRef(null);
   const isInView            = useInView(ref);
   const { t }               = useTranslation();
-  const navigate = useNavigate();
+  const navigate            = useNavigate();
 
 
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
     { name: t('PROJECTS'), href: '#projects' },
-    { name: t('RESUME'), href: '/about' },
+    { name: t('ABOUT_ME'), href: '/about' },
     { name: t('SKILLS'), href: '#skills' },
   ];
 

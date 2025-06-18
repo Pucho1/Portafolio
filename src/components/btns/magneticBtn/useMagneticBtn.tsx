@@ -1,13 +1,47 @@
 
-import { useEffect, useRef } from "react";
+import { cloneElement, useEffect, useRef, type ReactElement } from "react";
+
 import { gsap } from 'gsap';
+import { useLocation } from 'react-router';
+
 import type { boundsType } from "../../../interfaces/boundsInterface";
 
-const useMagneticBtn = () => {
-	const buttonRef                 = useRef<HTMLButtonElement>(null);
-  const dotRef                    = useRef<HTMLDivElement>(null);
-  const containerRef              = useRef<HTMLDivElement>(null);
-  const initialPosition           = useRef({ x: 0, y: 0 });
+const useMagneticBtn = ( children: ReactElement ) => {
+	const buttonRef       = useRef<HTMLButtonElement>(null);
+  const dotRef          = useRef<HTMLDivElement>(null);
+  const containerRef    = useRef<HTMLDivElement>(null);
+	const initialPosition = useRef({ x: 0, y: 0 });
+	const isGrandSon 			= useRef(false);
+	const { pathname }    = useLocation();
+
+
+  // Clono el hijo y le paso la ref
+  const childWithRef = cloneElement(children, { ref: buttonRef });
+  const  { children: grandson } = childWithRef.props;
+
+	/**
+	 * @returns El nieto del componente si es un string o vacio.
+	 */
+	const handlerClearedGrandson = (): string => {
+		return Array.isArray(grandson)
+			? (typeof grandson[0] === "string" ? grandson[0] : "")
+			: (typeof grandson === "string" ? grandson : "");
+	};
+
+
+	/**
+	 * Manejo cuando es un hijo y cuando no, y si lo es llamo show Dot y no permito quie se quite.
+	 */
+	const handleIsGrandSon = (): void => {
+		const currentPath = pathname.split('/')[1];
+		const clearedGrandson = handlerClearedGrandson();
+
+		if(currentPath.toLowerCase() === clearedGrandson.toLowerCase()) {
+			isGrandSon.current = true;
+			showDot();
+		};
+	};
+
 
   useEffect(() => {
     if (!buttonRef.current || !containerRef.current) return;
@@ -15,6 +49,8 @@ const useMagneticBtn = () => {
     const button    = buttonRef.current; // Gets the button element for handler the btn movement
     const container = containerRef.current; //Gets the container element for triggering mouse events
     const bounds    = { x: 10, y: 10 }; // Maximum movement range in pixels
+
+		handleIsGrandSon();
 
     const handleMouseMove = (e: MouseEvent) =>{
       mouseMove(e, button, bounds);
@@ -37,6 +73,7 @@ const useMagneticBtn = () => {
       container.removeEventListener("mouseenter", handleMouseEnter);   
       container.removeEventListener("mouseleave", handleMouseLeave);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   /**
@@ -47,7 +84,7 @@ const useMagneticBtn = () => {
    */
   const mouseMove = (e: MouseEvent, button: HTMLButtonElement, bounds: boundsType) => {
 
-    const rect   = button.getBoundingClientRect();
+    const rect   = button.getBoundingClientRect(); // Devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización
     const deltaX = e.clientX - rect.left - rect.width / 2;
     const deltaY = e.clientX - rect.top - rect.height / 2;
 
@@ -75,7 +112,7 @@ const useMagneticBtn = () => {
       ease: "elastic.out(1, 0.3)",
     });
 
-    if (dotRef.current) {
+    if (dotRef.current && !isGrandSon.current) {
       gsap.to(dotRef.current, {
         opacity: 0,
         scale: 0,
@@ -89,7 +126,7 @@ const useMagneticBtn = () => {
    * Displays the dot with a scaling animation when the mouse enters the button area
    */
   const showDot = () => {
-    if (dotRef.current) {
+    if (dotRef.current  ) {
       gsap.fromTo(
         dotRef.current,
         { opacity: 0, scale: 0 },
@@ -103,6 +140,7 @@ const useMagneticBtn = () => {
 		buttonRef,
 		containerRef,
 		dotRef,
+    childWithRef,
   };
 };
 

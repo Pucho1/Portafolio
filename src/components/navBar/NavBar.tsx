@@ -6,13 +6,13 @@ import useNavBar from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 import { Link } from 'react-router';
 
-const NavBar = ({text_color = 'text-white'} : {text_color?: string}) => {
+const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, dotColor?: string}) => {
   const { navLinks, toggleMenu, closeMenu, isOpen, ref, handleOnClik } = useNavBar();
 
   return (
-    <header ref={ ref } className="relative top-5 w-full left-0 right-0 z-50 transition-all duration-300 mb-2" >
+    <header ref={ ref } className="relative top-7 w-full left-0 right-0 z-50 transition-all duration-300 mb-2" >
 
-      <div className="md:px-2 px-3 w-full">
+      <div className="md:px-7 px-7 w-full">
         <div className="flex justify-between items-center font-[450] ">
           <Link to="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2">
@@ -22,8 +22,8 @@ const NavBar = ({text_color = 'text-white'} : {text_color?: string}) => {
                 className="h-6 w-8"
               />
             </div>
-            <div className='name_animation w-25 overflow-hidden whitespace-nowrap'>
-              <p className={`${text_color} text-sm`}>
+            <div className='name_animation w-32 overflow-hidden whitespace-nowrap'>
+              <p className={`${text_color} text-lg`}>
                 Code by Miguel Antonio Martinez
               </p>
             </div>
@@ -37,10 +37,10 @@ const NavBar = ({text_color = 'text-white'} : {text_color?: string}) => {
               </li>
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <MagneticBtn showDot >
+                  <MagneticBtn showDot dotColor={ dotColor }>
                     <button
                       onClick={ ()=> handleOnClik(link.href) }
-                      className={`px-3 py-2 ${text_color} font-medium rounded-lg transition-shadow duration-300 ease-in-out
+                      className={`px-3 py-2 ${text_color} font-medium rounded-lg transition-shadow duration-300 ease-in-out text-lg
                                   transform hover:-translate-y-1 active:translate-y-0 active:shadow-md`}
                     >
                       {link.name}

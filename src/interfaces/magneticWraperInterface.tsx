@@ -4,4 +4,5 @@ export interface MagneticWraperInterface {
   showDot?: boolean;
   children: ReactElement;
   justifyPosition?: string;
+  dotColor?: string;
 }

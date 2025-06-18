@@ -13,7 +13,7 @@
 }
 
 .name_animation:hover p {
-  transform: translateX(-24.8%); /* Ajusto este valor según cuánto quiero que se mueva */
+  transform: translateX(-26.8%); /* Ajusto este valor según cuánto quiero que se mueva */
 }
 
 @keyframes marquee-left {

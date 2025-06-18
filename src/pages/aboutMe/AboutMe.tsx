@@ -12,7 +12,7 @@ const AboutMe = () => {
 
   return (
     <div>
-      <NavBar text_color= {"text-black"}/>
+      <NavBar text_color= {"text-black"} dotColor={'bg-black'} />
 
       <FloatBtn />
 

@@ -18,9 +18,9 @@ const useNavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: t('PROJECTS'), href: '#projects' },
+    { name: t('PROJECTS'), href: '/projects' },
     { name: t('ABOUT_ME'), href: '/about' },
-    { name: t('SKILLS'), href: '#skills' },
+    { name: t('SKILLS'), href: '/contact' },
   ];
 
 	useEffect(() => {

@@ -9,6 +9,8 @@ import { useGSAP } from '@gsap/react';
 import "./App.css";
 import HomeLayout from "./layout/HomeLayout";
 import AboutMe from './pages/aboutMe/AboutMe';
+import { Projects } from './pages/Projects/Projects';
+import Contact from './pages/Contact/Contact';
 
 gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
 
@@ -49,6 +51,16 @@ export default function App() {
             <Route
               path="/about"
               element={ <AboutMe /> }
+            />
+
+            <Route
+              path="/projects"
+              element={ <Projects /> }
+            />
+
+            <Route
+              path="/contact"
+              element={ <Contact /> }
             />
             <Route path='*' element ={<Navigate to="/" replace />} />
           </Route>

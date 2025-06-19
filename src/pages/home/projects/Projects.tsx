@@ -1,9 +1,13 @@
+import { useNavigate } from "react-router";
 import SectionBtn from "../../../components/btns/sectionbtn/SectionBtn";
 import RowCardWorks from "../../../components/rowCardsWorks/RowCardWorks";
 import useProyects from "./useProyects";
 
 const Projects = () => {
   const { firstGroup, secondGroup, } = useProyects();
+	const navigate = useNavigate();
+
+  const handlerOnClik = () => navigate('/projects');
 
   return (
     <section className="h-[120vh] flex flex-col trigger">
@@ -23,6 +27,7 @@ const Projects = () => {
           content={"More Works"}
           hgt={5}
           wdt={15}
+          onClick={ handlerOnClik }
         />
       </div>
     </section>

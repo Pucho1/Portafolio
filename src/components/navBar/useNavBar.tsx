@@ -20,7 +20,7 @@ const useNavBar = () => {
   const navLinks = [
     { name: t('PROJECTS'), href: '/projects' },
     { name: t('ABOUT_ME'), href: '/about' },
-    { name: t('SKILLS'), href: '/contact' },
+    { name: t('CONTACT'), href: '/contact' },
   ];
 
 	useEffect(() => {

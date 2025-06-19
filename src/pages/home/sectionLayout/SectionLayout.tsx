@@ -1,4 +1,4 @@
-import Description from "../aboutMeHome/Description";
+import AboutMe from "../aboutMeHome/Description";
 import Hero from "../heroSection/Hero";
 import Projects from "../projects/Projects";
 import FloatBtn from "../../../components/btns/floatBtn/FloatBtn";
@@ -11,7 +11,7 @@ const SectionLayout = () => {
       {/* MEAN SECCTIONS */}
       <Hero />
       <FloatBtn />
-      <Description />
+      <AboutMe />
       <Projects />
       <FooterHome />
     </div>

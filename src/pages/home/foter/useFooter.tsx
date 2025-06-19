@@ -1,5 +1,9 @@
+import { useNavigate } from "react-router";
 
 const useFooter = () => {
+	const navigate = useNavigate();
+
+  const handlerOnClik = () => navigate('/contact');
 
 	const footerLinks = [
 		{
@@ -21,6 +25,7 @@ const useFooter = () => {
 
   return {
 		footerLinks,
+		handlerOnClik,
   };
 }
 

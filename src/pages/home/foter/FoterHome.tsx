@@ -7,7 +7,7 @@ import './footer.css';
 
 const FooterHome = () => {
 
-  const { footerLinks } = useFooter();
+  const { footerLinks, handlerOnClik } = useFooter();
 
   return (
     <footer className="flex flex-col bg-[#141517] text-white h-[100vh] justify-between  ">
@@ -25,10 +25,18 @@ const FooterHome = () => {
         <div className="h-20 mt-10 relative">
           <hr className='opacity-20'/>
             <div className="absolute trigger flex left-[50%] sm:left-[60%] bottom-[10%] md:left-[70%]">
-              <SectionBtn hgt={9} wdt={9} classCustom='md:h-12 md:w-12'/>
+              <SectionBtn 
+              hgt={9} 
+              wdt={9} 
+              classCustom='md:h-12 md:w-12' 
+              content={'Get in touch'}
+              onClick={ handlerOnClik }
+              />
             </div>
         </div>
 
+
+        {/* EMAIL CELL_NUMBER */}
         <div className="grid grid-cols-5 gap-4 mt-8 md:w-130">
           <div className="col-span-5 sm:col-span-3">
             <SectionBtn
@@ -57,6 +65,8 @@ const FooterHome = () => {
       </section>
 
       <section className='flex flex-col justify-center mt-10 px-[7%] pb-4 md:flex-row-reverse'>
+
+        {/* LINKS NETWORKS */}
         <div className="flex w-full md:w-1/2 flex-col md:items-end">
           <h5 className="text-white mb-2 font-black uppercase text-[0.6em] opacity-30">
            Socials
@@ -76,6 +86,7 @@ const FooterHome = () => {
 
         <hr className='md:hidden my-7 opacity-20 md:hidden'/>
 
+        {/* TIME */}
         <div className="flex justify-between md:justify-start w-full md:w-1/2 md:gap-10">
           <div>
             <h5 className="text-white mb-3 font-black uppercase text-[0.6em] opacity-50">
@@ -86,7 +97,7 @@ const FooterHome = () => {
 
           <div className="flex items-end">
             <span className='text-xs text-gray-400 pb-[0.15rem]'>
-              Made with ❤️ by Miguel Ochandarena  © 2025
+              Made  by Miguel Ochandarena  © 2025
             </span>
           </div>
         </div>
@@ -96,3 +107,5 @@ const FooterHome = () => {
 };
 
 export default FooterHome;
+
+//with ❤️

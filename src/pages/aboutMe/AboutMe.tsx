@@ -1,6 +1,6 @@
 import { NavBar } from "../../components";
 import FloatBtn from "../../components/btns/floatBtn/FloatBtn";
-import FooterHome from "../home/foter/FoterHome";
+import FooterHome from "../../components/foter/FoterHome";
 import Skills from "./skills/Skills";
 
 import './aboutMe.css';

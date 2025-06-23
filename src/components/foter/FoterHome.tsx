@@ -1,0 +1,72 @@
+import SectionBtn from '../btns/sectionbtn/SectionBtn';
+
+import useFooter from './useFooter';
+import './footer.css';
+import TimeLinksFooter from './TimeLIksFooter';
+
+const FooterHome = () => {
+
+  const { handlerOnClik } = useFooter();
+
+  return (
+    <footer className="flex flex-col bg-[#141517] text-white h-[100vh] justify-between">
+      <section className='px-[12%] md:px-[15%]'>
+        
+        <h2 className="increase_text flex flex-col my-5 mb-12">
+          <span className="flex mt-6 text-left items-center">
+            <div className="profileImg mr-3"></div>
+            Let's work
+          </span>
+          <span className="text-left w-50">
+            together!
+          </span>
+        </h2>
+
+        <div className="h-20 mt-10 relative">
+          <hr className='opacity-20'/>
+            <div className="absolute flex left-[50%] sm:left-[60%] bottom-[10%] md:left-[70%]">
+              <SectionBtn 
+              hgt={9} 
+              wdt={9} 
+              classCustom='md:h-12 md:w-12' 
+              content={'Get in touch'}
+              onClick={ handlerOnClik }
+              />
+            </div>
+        </div>
+
+        {/* EMAIL CELL_NUMBER */}
+        <div className="grid grid-cols-5 gap-4 mt-8 md:w-130">
+          <div className="col-span-5 sm:col-span-3">
+            <SectionBtn
+              hgt={5}
+              content={'martinezochandarenam@gmail.com'}
+              bgCustom= {'transparent'}
+              showBorder
+              classCustom={'md:w-90'}
+              px={3}
+              minW
+              justifyPosition={'justify-start'}
+            />
+          </div>
+
+          <div className="col-span-5 sm:col-span-2">
+            <SectionBtn
+              hgt={5}
+              content={'+34672595322'}
+              bgCustom= {'transparent'}
+              showBorder
+              classCustom={'md:w-50'}
+              px={3}
+            />
+          </div>
+        </div>
+      </section>
+      <TimeLinksFooter />
+    </footer>
+  );
+};
+
+export default FooterHome;
+
+//with ❤️

@@ -2,7 +2,7 @@ import AboutMe from "../aboutMeHome/Description";
 import Hero from "../heroSection/Hero";
 import Projects from "../projects/Projects";
 import FloatBtn from "../../../components/btns/floatBtn/FloatBtn";
-import FooterHome from "../foter/FoterHome";
+import FooterHome from "../../../components/foter/FoterHome";
 
 const SectionLayout = () => {
 

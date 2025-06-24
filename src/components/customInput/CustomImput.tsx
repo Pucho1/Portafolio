@@ -16,7 +16,7 @@ const CustomImput = ({
 	const inputValue = '';
 
   return (
-		<div className={`flex flex-col ${type === 'textarea' ? 'h-80' : 'h-40'}`}>
+		<div className={`flex flex-col ${type === 'textarea' ? 'h-100' : 'h-40'}`}>
 			<hr className="opacity-20"/>
 			<div className={`flex flex-row h-[100%] ${ showBorder  ? 'border-b-[1px]' : ''} border-b-(--white_midle) `}>
 				<div className="flex items-center p-4 text-sm text-(--white-footer) font-bold">

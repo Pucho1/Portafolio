@@ -42,7 +42,7 @@ const Contact = () => {
       </section>
 
       {/* Seccion de mis datos y form contacto  */}
-      <section className="flex flex-col md:flex-row-reverse mt-28 px-10 lg:px-[15%] ">
+      <section className="flex flex-col md:flex-row-reverse mt-28 mb-65 px-10 lg:px-[15%] ">
 
         <aside className="flex flex-col md:w-1/3 md:pl-10">
           <div className="flex flex-col gap-5 my-5">
@@ -74,7 +74,7 @@ const Contact = () => {
           </div>
         </aside>
         
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:pr-15 my-7 md:w-3/2 md:max-w-[70%]">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:pr-15 my-7 md:w-3/2 md:max-w-[70%] relative">
 
             <CustomImput  
               name= { 'name' }
@@ -127,16 +127,19 @@ const Contact = () => {
               showBorder
             /> 
 
-            <MagneticBtn justifyPosition={'justify-end'} >
-               <button
-                  className="flex justify-center items-center h-37 w-37 animated-btn rounded-full bg-(--black_btn_sections)"
-                  type="submit"
-                >
-                <span>
-                  Submit
-                </span>
-              </button>
-            </MagneticBtn >
+            <div className="absolute right-[1rem] bottom-[-4rem] ">
+              <MagneticBtn justifyPosition={'justify-end'} >
+                <button
+                    className="flex justify-center items-center h-37 w-37 animated-btn rounded-full bg-(--blue_opacity)"
+                    type="submit"
+                  >
+                  <span>
+                    Submit
+                  </span>
+                </button>
+              </MagneticBtn >
+            </div>
+            
         </form>
       </section>
 

@@ -22,7 +22,7 @@ const TimeLinksFooter = () => {
 	];
 
 	return (
-    <section className='flex flex-col justify-center mt-10 px-[7%] pb-4 md:flex-row-reverse'>
+    <section className='flex flex-col justify-center mt-10 px-[7%] pb-8 md:flex-row-reverse'>
         {/* LINKS NETWORKS */}
         <div className="flex w-full md:w-1/2 flex-col md:items-end">
           <h5 className="text-white mb-2 font-black uppercase text-[0.6em] opacity-30">

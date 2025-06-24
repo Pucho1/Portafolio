@@ -1,18 +1,27 @@
+import { useForm, type SubmitHandler } from "react-hook-form";
+
+import { zodResolver } from "@hookform/resolvers/zod"
+
 import { NavBar } from "../../components";
 import MagneticBtn from "../../components/btns/magneticBtn/MagneticBtn";
 import CustomImput from "../../components/customInput/CustomImput";
 import TimeLinksFooter from "../../components/foter/TimeLIksFooter";
 import './contact.css'
+import { schema, type FormValueContact } from "./FormSchema";
 
 const Contact = () => {
 
+  const { handleSubmit, control, formState: { errors }} = useForm<FormValueContact>({
+    resolver: zodResolver(schema), // Agrego el resolver de Zod
+    mode: "onChange", // <--- Agrego esta línea para validar en cada cambio
+    // O puedo usar "onBlur" para validar cuando el usuario sale del campo
+    // mode: "onBlur",
+    }
+  );
+
   const dataBusines = ['miguel', 'tomatoma'];
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleSubmit = (event: any) => {
-    event.preventDefault();
-    console.log('se ha enviado la data --->' )
-  };
+  const onSubmit: SubmitHandler<FormValueContact> = (data) => console.log(data, errors);
 
   return (
     <div className="bg-[#141517]  text-white">
@@ -65,18 +74,62 @@ const Contact = () => {
           </div>
         </aside>
         
-        <form className="flex flex-col md:pr-15 my-7 md:w-3/2 md:max-w-[70%]">
-            <CustomImput  customLabel="Your name is ?" fieldNumber={0} type="text" placeHolder={'jan Doe'}/>
-            <CustomImput  customLabel="And your email please" fieldNumber={1} type="text" placeHolder={'jan@doe.com'}/>
-            <CustomImput  customLabel="What kind of service do you want ?" fieldNumber={2} type="text" placeHolder={'Web, IA, Mantenance'}/>
-            <CustomImput  customLabel="What's the name of your organization?" fieldNumber={3} type="text" placeHolder={'jan Doe'}/>
-            <CustomImput  customLabel="What do you need ?" fieldNumber={3} type="text" placeHolder={'jan Doe'}/>
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col md:pr-15 my-7 md:w-3/2 md:max-w-[70%]">
+
+            <CustomImput  
+              name= { 'name' }
+              customLabel="Your name is ?"
+              fieldNumber={ 0 }
+              type="text"
+              placeHolder={ 'jan Doe' }
+              control={ control }
+              error={errors.name}
+            />
+
+            <CustomImput  
+              name= { 'email' }
+              customLabel="And your email please"
+              fieldNumber={ 1 }
+              type="text"
+              placeHolder={ 'jan@doe.com' }
+              control={ control }
+              error={errors.email}
+            />
+
+            <CustomImput  
+              name= { 'serviceKind' }
+              customLabel="What kind of service do you want ?"
+              fieldNumber={ 2 }
+              type="text"
+              placeHolder={ 'Web, IA, Mantenance ...' }
+              control={ control }
+              error={errors.serviceKind}
+            />
+
+            <CustomImput  
+              name= { 'organization' }
+              customLabel="What's the name of your organization??"
+              fieldNumber={ 3 }
+              type="text"
+              placeHolder={ 'jan Doe' }
+              control={ control }
+              error={errors.organization}
+            />
+           
+            <CustomImput  
+              name= { 'customerNeed' }
+              customLabel="What do you need ?" 
+              fieldNumber={3} type="text" 
+              placeHolder={'jan Doe'}
+              control={ control }
+              error={errors.customerNeed}
+            /> 
 
             <MagneticBtn >
                <button
                   className="flex justify-center items-center h-12 w-12 animated-btn rounded-full bg-(--black_btn_sections)"
                   type="submit"
-                  onClick={ handleSubmit}
+                  // onClick={ handleSubmit}
                 >
                 <span>
                   text

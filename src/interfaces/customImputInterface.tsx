@@ -9,4 +9,5 @@ export interface CustomImportINterface {
     control: Control<any>,
     name: string,
     error?: FieldError,
+    showBorder?: boolean,
 }

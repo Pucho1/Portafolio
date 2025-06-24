@@ -29,7 +29,7 @@ const Contact = () => {
 
       {/* Sección del título */}
       <section className="flex justify-start items-center h-[40vh] lg:h-[40vh] px-10 md:px-[12%] lg:px-[15%] pt-25">
-        <h2 className="flex flex-col text-3xl responsive_title md:w-[75%]">
+        <h2 className="flex flex-col text-3xl responsive_title md:w-[78%] lg:w-[73%]">
           <span className="flex mt-6 text-left items-center">
             <div className="flex-none profileImg mr-3 md:hidden"></div>
             And so, shall we
@@ -119,20 +119,21 @@ const Contact = () => {
             <CustomImput  
               name= { 'customerNeed' }
               customLabel="What do you need ?" 
-              fieldNumber={3} type="text" 
+              fieldNumber={4} 
+              type="textarea" 
               placeHolder={'jan Doe'}
               control={ control }
               error={errors.customerNeed}
+              showBorder
             /> 
 
-            <MagneticBtn >
+            <MagneticBtn justifyPosition={'justify-end'} >
                <button
-                  className="flex justify-center items-center h-12 w-12 animated-btn rounded-full bg-(--black_btn_sections)"
+                  className="flex justify-center items-center h-37 w-37 animated-btn rounded-full bg-(--black_btn_sections)"
                   type="submit"
-                  // onClick={ handleSubmit}
                 >
                 <span>
-                  text
+                  Submit
                 </span>
               </button>
             </MagneticBtn >

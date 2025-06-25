@@ -25,15 +25,18 @@ const TimeLinksFooter = () => {
     <section className='flex flex-col justify-center mt-10 px-[7%] pb-8 md:flex-row-reverse'>
         {/* LINKS NETWORKS */}
         <div className="flex w-full md:w-1/2 flex-col md:items-end">
-          <h5 className="text-white mb-2 font-black uppercase text-[0.6em] opacity-30">
-           Socials
-          </h5>
-          <div className="">
+          
+          <div>
+            <h5 className="text-white mb-2 font-bold uppercase text-[0.6em] opacity-50">
+              Socials
+            </h5>
             <ul className="flex gap-6">
               {footerLinks.map((link, index) => 
                 <li key={index}>
                   <MagneticBtn>
-                    <button key={index}> { link.name }</button>
+                    <button className='custom_border pb-2 text-sm' key={index}> 
+                      { link.name }
+                    </button>
                   </MagneticBtn>
                 </li>
               )}
@@ -46,7 +49,7 @@ const TimeLinksFooter = () => {
         {/* TIME */}
         <div className="flex justify-between md:justify-start w-full md:w-1/2 md:gap-10">
           <div>
-            <h5 className="text-white mb-3 font-black uppercase text-[0.6em] opacity-50">
+            <h5 className="text-white mb-3 font-bold uppercase text-[0.6em] opacity-50">
               local Time:
             </h5>
             <Clock />

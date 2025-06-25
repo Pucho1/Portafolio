@@ -1,25 +1,19 @@
-import { useForm, type SubmitHandler } from "react-hook-form";
+import { type SubmitHandler } from "react-hook-form";
 
-import { zodResolver } from "@hookform/resolvers/zod"
 
 import { NavBar } from "../../components";
 import MagneticBtn from "../../components/btns/magneticBtn/MagneticBtn";
 import CustomImput from "../../components/customInput/CustomImput";
 import TimeLinksFooter from "../../components/foter/TimeLIksFooter";
+import type { FormValueContact } from "./FormSchema";
+
 import './contact.css'
-import { schema, type FormValueContact } from "./FormSchema";
+import useContact from "./useContact";
+
 
 const Contact = () => {
 
-  const { handleSubmit, control, formState: { errors }} = useForm<FormValueContact>({
-    resolver: zodResolver(schema), // Agrego el resolver de Zod
-    mode: "onChange", // <--- Agrego esta línea para validar en cada cambio
-    // O puedo usar "onBlur" para validar cuando el usuario sale del campo
-    // mode: "onBlur",
-    }
-  );
-
-  const dataBusines = ['miguel', 'tomatoma'];
+  const { handleSubmit, control, errors , dataBusines } = useContact();
 
   const onSubmit: SubmitHandler<FormValueContact> = (data) => console.log(data, errors);
 
@@ -46,24 +40,24 @@ const Contact = () => {
 
         <aside className="flex flex-col md:w-1/3 md:pl-10">
           <div className="flex flex-col gap-5 my-5">
-            <h5 className="b-2 font-black uppercase text-[0.6em] opacity-30">
+            <h5 className="b-2 text-white font-bold uppercase text-[0.6em] opacity-50">
               Contacts
             </h5>
             <MagneticBtn justifyPosition={'justify-start'}>
-              <button className="border-none">
-                email
+              <button className="border-none custom_border pb-2">
+                martinezochandarenam@gmail.com
               </button>
             </MagneticBtn>
-            
+
             <MagneticBtn justifyPosition={'justify-start'}>
-              <button className="border-none">
-                number
+              <button className="border-none custom_border pb-2">
+                +34 672595322
               </button>
             </MagneticBtn>
           </div>
 
           <div className="flex flex-col gap-5 my-5">
-            <h5 className="b-2 text-(--white-footer) font-black uppercase text-[0.6em] opacity-30">
+            <h5 className="b-2 text-white font-bold uppercase text-[0.6em] opacity-50">
               Busines data
             </h5>
             {dataBusines.map( (data, index)  => 

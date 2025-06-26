@@ -1,36 +1,10 @@
 import { useRef } from 'react';
 
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/all';
+import type { CompanyCardProps } from '../../interfaces/cardInterface';
 
-import type { CompanyCardProps } from '../interfaces/cardInterface';
-
-// gsap.registerPlugin(ScrollTrigger);
-
-const CompanyCard = ({ logoUrl, companyName, description } : CompanyCardProps) => {
+const CompanyCardHome = ({ logoUrl, companyName, description } : CompanyCardProps) => {
 
   const cardRef = useRef(null);
-
-
-
-  // useEffect(() => {
-
-  //    const card = cardRef.current;
-
-  //    console.log('Card ref:', card);
-
-  //   ScrollTrigger.create({
-  //     trigger: card,
-  //     start: 'top bottom',
-  //     end: 'bottom top',
-  //     onUpdate: (self) => console.log('ScrollTrigger updated:', self),
-  //     markers: true
-  //   })
-
-  //   // return () => {
-  //   //   scrollTriguerInstance.kill();
-  //   // };
-  // }, []);
 
   return (
     <div 
@@ -60,4 +34,4 @@ const CompanyCard = ({ logoUrl, companyName, description } : CompanyCardProps) =
   );
 };
 
-export default CompanyCard;
+export default CompanyCardHome;

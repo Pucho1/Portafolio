@@ -1,5 +1,5 @@
 import type { CompanyCardProps } from "../../interfaces/cardInterface"
-import CompanyCard from "../CompanyCard"
+import CompanyCardHome from "../cards/CompanyCardHome"
 import useRowWorks from "./useRowWorks";
 
 const RowCardWorks = ({ companies, reverse } : { companies: CompanyCardProps[], reverse?: boolean }) => {
@@ -11,7 +11,7 @@ const RowCardWorks = ({ companies, reverse } : { companies: CompanyCardProps[], 
       style={{ transform: `translateX(${handleRowMovement()}px)` }}
     >
 			{companies.slice(0 , visibleCount ).map((company, index) => (
-				<CompanyCard key={index} {...company} />
+				<CompanyCardHome key={index} {...company} />
 			))}
 		</div>
   );

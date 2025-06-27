@@ -1,7 +1,8 @@
 import useHero from "./useHero";
 import { NavBar, TypeWriter} from '../../../components';
-import GlobeScene from "../../../components/rotatingGlobe/RotatingGlobe";
-import "./hero.css"
+
+import "./hero.css";
+import GlobeScene  from "../../../components/rotatingGlobe/GlobeScene";
 
 
 const Hero = () => {

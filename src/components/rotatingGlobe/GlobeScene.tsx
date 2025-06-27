@@ -3,7 +3,7 @@ import { OrbitControls, useTexture } from '@react-three/drei'
 import { useRef } from 'react'
 import * as THREE from 'three';
 
-export function RotatingGlobe() {
+function RotatingGlobe() {
   const globeRef = useRef<THREE.Mesh>(null)
   const texture = useTexture('public/imgs/mapaMundi.png')
 

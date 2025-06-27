@@ -10,3 +10,7 @@ export interface Companies {
 export interface CompaniesData extends Companies {
   bgColor?: string;
 }
+
+export interface RowCardWorksProps extends Companies {
+  reverse?: boolean;
+} 

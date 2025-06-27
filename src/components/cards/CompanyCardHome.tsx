@@ -1,8 +1,9 @@
 import { useRef } from 'react';
 
-import type { CompanyCardProps } from '../../interfaces/cardInterface';
+import type { Companies } from '../../interfaces/companies';
 
-const CompanyCardHome = ({ logoUrl, companyName, description } : CompanyCardProps) => {
+
+const CompanyCardHome = ({ logoUrl, companyName, description } : Companies) => {
 
   const cardRef = useRef(null);
 

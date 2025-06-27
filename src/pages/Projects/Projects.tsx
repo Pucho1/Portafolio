@@ -23,7 +23,7 @@ export const Projects = () => {
 
       {/* WORKS FILTERS */}
       <section>
-        <div className="flex flex-wrap justify-left gap-3 mb-12 px-[5%]">
+        <div className="flex flex-wrap justify-left gap-3 mb-12 px-[5%] ">
           {years.map((year, index) => (
             <MagneticBtn key={index}>
               <button
@@ -45,13 +45,12 @@ export const Projects = () => {
       </section>
 
       {/* Company Grid */}
-      <section>
+      <section className="py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-[15%] md:px-[10%] lg:px-[5%]">
           {filteredCompanies.map((company) => (
             <CompanyCard 
               {...company}
               key={company.client}
-              bgColor={'bg-zinc-600'} // You can customize this if needed
             />	
           ))}
         </div>

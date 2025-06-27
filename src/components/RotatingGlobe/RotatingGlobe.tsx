@@ -35,7 +35,7 @@ export function RotatingGlobe() {
  * @returns {JSX.Element}
  * @description Componente que renderiza la escena 3D con el globo terráqueo
  */
-export default function GlobeScene() {
+const GlobeScene = () => {
   return (
     <Canvas>
       <ambientLight intensity={0.5} />
@@ -45,3 +45,5 @@ export default function GlobeScene() {
     </Canvas>
   )
 };
+
+export default GlobeScene;

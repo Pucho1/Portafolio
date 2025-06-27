@@ -1,5 +1,6 @@
 import useHero from "./useHero";
-import { NavBar, TypeWriter,  GlobeScene} from '../../../components';
+import { NavBar, TypeWriter} from '../../../components';
+import GlobeScene from "../../../components/rotatingGlobe/RotatingGlobe";
 import "./hero.css"
 
 

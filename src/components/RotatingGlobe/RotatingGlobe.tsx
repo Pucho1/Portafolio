@@ -1,10 +1,9 @@
-// Globe.jsx
 import { Canvas, useFrame } from '@react-three/fiber'
 import { OrbitControls, useTexture } from '@react-three/drei'
 import { useRef } from 'react'
 import * as THREE from 'three';
 
-function RotatingGlobe() {
+export function RotatingGlobe() {
   const globeRef = useRef<THREE.Mesh>(null)
   const texture = useTexture('public/imgs/mapaMundi.png')
 
@@ -42,7 +41,7 @@ export default function GlobeScene() {
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} />
       <RotatingGlobe />
-      <OrbitControls  enableZoom={false} /> 
+      <OrbitControls  enableZoom={false} />
     </Canvas>
   )
 };

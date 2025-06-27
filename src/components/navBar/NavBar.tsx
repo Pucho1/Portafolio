@@ -1,11 +1,11 @@
-import { Link }         from 'react-router';
+import { Link }    from 'react-router';
 import { Menu, X } from 'lucide-react';
 
 import MagneticBtn      from '../btns/magneticBtn/MagneticBtn';
 import useNavBar        from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
-import './navBar.css';
+import './navBAr.css';
 
 
 const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, dotColor?: string}) => {

@@ -1,48 +1,7 @@
 import { useMemo } from 'react';
 
+import companies  from '../../../data/homeCompanies.json';
 
-const companies = [
-	{
-		logoUrl: 'public/imgs/markas33.jpg',
-		companyName: "Mark'As",
-		description: 'Desarrollo de aplicaciones web y móviles para grandes empresas.',
-	},
-	{
-		logoUrl: "public/imgs/El_País_logo.svg.png",
-		companyName: 'El pais',
-		description: 'Rediseño completo de la presencia digital para esta empresa internacional.',
-	},
-	{
-		logoUrl: "public/imgs/Cinco_Días_logo.svg.png",
-		companyName: 'Cinco dias',
-		description: 'Aplicación móvil innovadora para gestión de recursos humanos.',
-	},
-	{
-		logoUrl: 'public/imgs/markas33.jpg',
-		companyName: "Mark'As",
-		description: 'Desarrollo de aplicaciones web y móviles para grandes empresas.',
-	},
-	{
-		logoUrl: "public/imgs/El_País_logo.svg.png",
-		companyName: 'El pais',
-		description: 'Rediseño completo de la presencia digital para esta empresa internacional.',
-	},
-	{
-		logoUrl: "public/imgs/Cinco_Días_logo.svg.png",
-		companyName: 'Cinco dias',
-		description: 'Aplicación móvil innovadora para gestión de recursos humanos.',
-	},
-	{
-		logoUrl: "public/imgs/Cinco_Días_logo.svg.png",
-		companyName: 'Cinco dias',
-		description: 'Aplicación móvil innovadora para gestión de recursos humanos.',
-	},
-	{
-		logoUrl: 'public/imgs/markas33.jpg',
-		companyName: "Mark'As",
-		description: 'Desarrollo de aplicaciones web y móviles para grandes empresas.',
-	},
-];
 
 const useProyects = () => {
 

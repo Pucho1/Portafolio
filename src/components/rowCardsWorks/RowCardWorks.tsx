@@ -3,7 +3,7 @@ import type { RowCardWorksProps } from "../../interfaces/companies";
 import CompanyCardHome from "../cards/CompanyCardHome"
 import useRowWorks from "./useRowWorks";
 
-const RowCardWorks = ({ companies, reverse } : { companies: RowCardWorksProps[], reverse?: boolean }) => {
+const RowCardWorks = ({ companies, reverse } :  RowCardWorksProps ) => {
 
   const { visibleCount, handleRowMovement } = useRowWorks(reverse);
 

@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 function RotatingGlobe() {
   const globeRef = useRef<THREE.Mesh>(null)
-  const texture = useTexture('public/imgs/mapaMundi.png')
+  const texture = useTexture('/imgs/mapaMundi.png')
 
   /**
    * @description Función que se ejecuta en cada frame para rotar el globo terráqueo

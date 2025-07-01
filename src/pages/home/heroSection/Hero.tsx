@@ -7,27 +7,27 @@ import GlobeScene  from "../../../components/rotatingGlobe/GlobeScene";
 
 const Hero = () => {
 
-  const {  texts } = useHero();
+  const { marqueeRef,  texts } = useHero();
 
   return (
-    <section className="relative bg-[#aeaeae] w-screen">
+    <section className="relative bg-[#aeaeae] ">
         <div className="flex flex-col h-[110vh] relative z-10 items-center text-white text-center">
           <NavBar />
 
-          <div className="flex flex-col md:flex-col-reverse h-[100vh]  md:h-[92vh] w-screen">
-             {/* footer big name }
-            <div className="relative w-full h-2/3 flex items-end justify-center">
-              {/* <div
+          <div className="flex flex-col md:flex-col-reverse h-[100vh]  md:h-[92vh] w-screen ">
+             {/* footer big name */}
+            <div className="relative w-full h-2/3 flex items-end justify-center overflow-hidden">
+               <div
                 ref={marqueeRef}
                 className="flex whitespace-nowrap will-change-transform animate-marquee-left"
               >
-                {/* <div className="text-custom flex items-end text-white text-5xl capitalize pb-5">
+                <div className="text-custom flex items-end text-white text-5xl capitalize pb-5">
                   {[...Array(20)].map((_, i) => (
                     <span key={i} className="mx-4">
                       Miguel ochandarena -
                     </span>
                   ))}
-                </div> }
+                </div>
               </div> 
             </div>
 
@@ -38,12 +38,12 @@ const Hero = () => {
               <div className="globeContainer flex justify-start w-1/4 relative h-24">
                 <div className="locationCard w-60 md:bg-[#141414fc]">
                     
-                  <div className="textContainer hidden md:flex">
+                  <div className="textContainer">
                     <p>Located</p>
                     <p>in Spain</p>
                   </div>
 
-                  <div className="h-20 w-20 ml-5">
+                  <div className="h-20 w-20">
                     <GlobeScene />
                   </div> 
                 </div>

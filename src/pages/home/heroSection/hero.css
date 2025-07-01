@@ -1,6 +1,6 @@
 .locationCard {
-  display: flex; /* Para alinear el texto y el globo horizontalmente */
-  align-items: center; /* Para centrar verticalmente los elementos */
+  display: none;
+  align-items: none;
   color: white; /* Ejemplo de color de texto blanco */
   padding: 15px 20px;
   border-radius: 0px 5rem 5rem 0px; /* Para las esquinas redondeadas */
@@ -13,4 +13,10 @@
   font-size: 1.05em;
   line-height: 1.2;
   font-family: 'Dennis Sans', sans-serif;
+}
+
+@media (min-width: 768px) {
+  .locationCard {
+   display: flex; /* Para alinear el texto y el globo horizontalmente */
+  }
 }

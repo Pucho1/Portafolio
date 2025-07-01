@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import AboutMe from "../aboutMeHome/Description";
 import Hero from "../heroSection/Hero";
 import Projects from "../projects/Projects";
@@ -9,10 +10,10 @@ const SectionLayout = () => {
   return (
      <div className="bg-white flex flex-col">
       {/* MEAN SECCTIONS */}
-      <Hero />
+      {/* <Hero /> */}
       <FloatBtn />
       <AboutMe />
-      <Projects />
+      {/* <Projects /> */}
       <FooterHome />
     </div>
   );

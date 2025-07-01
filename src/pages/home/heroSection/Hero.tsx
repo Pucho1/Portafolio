@@ -7,6 +7,7 @@ import GlobeScene  from "../../../components/rotatingGlobe/GlobeScene";
 
 const Hero = () => {
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { marqueeRef, texts } = useHero();
 
   return (
@@ -15,20 +16,20 @@ const Hero = () => {
           <NavBar />
 
           <div className="flex flex-col md:flex-col-reverse h-[100vh]  md:h-[92vh] w-screen">
-             {/* footer big name */}
+             {/* footer big name }
             <div className="relative w-full h-2/3 flex items-end justify-center">
-              <div
+              {/* <div
                 ref={marqueeRef}
                 className="flex whitespace-nowrap will-change-transform animate-marquee-left"
               >
-                <div className="text-custom flex items-end text-white text-5xl capitalize pb-5">
+                {/* <div className="text-custom flex items-end text-white text-5xl capitalize pb-5">
                   {[...Array(20)].map((_, i) => (
                     <span key={i} className="mx-4">
                       Miguel ochandarena -
                     </span>
                   ))}
-                </div>
-              </div>
+                </div> }
+              </div> 
             </div>
 
             {/* typeGriter component */}

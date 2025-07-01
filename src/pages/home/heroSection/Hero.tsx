@@ -7,8 +7,7 @@ import GlobeScene  from "../../../components/rotatingGlobe/GlobeScene";
 
 const Hero = () => {
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { marqueeRef, texts } = useHero();
+  const {  texts } = useHero();
 
   return (
     <section className="relative bg-[#aeaeae] w-screen">

@@ -4,11 +4,6 @@ import Clock from '../clock/Clock'
 const TimeLinksFooter = () => {
 
     const footerLinks = [
-		// {
-		// 	name: "Instagram",
-		// 	url: "https://www.instagram.com/yourprofile",
-		// 	icon: "ri-instagram-line",
-		// },
 		{
 			name: "LinkedIn",
 			url: "https://www.linkedin.com/in/miguelantonioochandarena/",

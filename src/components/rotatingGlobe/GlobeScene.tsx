@@ -31,7 +31,7 @@ function RotatingGlobe() {
 };
 
 /**
- * OrbitControls ---> Desactiva el zoom, puedes ajustar la configuración según tus necesidades
+ * OrbitControls ---> Desactiva el zoom, puedes ajustar la configuración según las necesidades
  * @returns {JSX.Element}
  * @description Componente que renderiza la escena 3D con el globo terráqueo
  */

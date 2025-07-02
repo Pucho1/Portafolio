@@ -11,7 +11,7 @@ const TimeLinksFooter = () => {
 		},
 		{
 			name: "LinkedIn",
-			url: "https://www.linkedin.com/in/yourprofile",
+			url: "www.linkedin.com/in/miguelantonioochandarena",
 			icon: "ri-linkedin-line",
 		},
 		{

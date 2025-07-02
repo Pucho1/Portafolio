@@ -6,7 +6,7 @@ import TimeLinksFooter from './TimeLIksFooter';
 
 const FooterHome = () => {
 
-  const { handlerOnClik } = useFooter();
+  const { handlerOnClik, handleOnClikWsp, phoneNumber, handleOnClikGmail, gMail } = useFooter();
 
   return (
     <footer className="flex flex-col bg-[#141517] text-white h-[100vh] justify-between">
@@ -40,24 +40,26 @@ const FooterHome = () => {
           <div className="col-span-5 sm:col-span-3">
             <SectionBtn
               hgt={5}
-              content={'martinezochandarenam@gmail.com'}
+              content={gMail}
               bgCustom= {'transparent'}
               showBorder
               classCustom={'md:w-90'}
               px={3}
               minW
               justifyPosition={'justify-start'}
+              onClick={handleOnClikGmail}
             />
           </div>
 
           <div className="col-span-5 sm:col-span-2">
             <SectionBtn
               hgt={5}
-              content={'+34672595322'}
+              content={phoneNumber}
               bgCustom= {'transparent'}
               showBorder
               classCustom={'md:w-50'}
               px={3}
+              onClick={handleOnClikWsp}
             />
           </div>
         </div>

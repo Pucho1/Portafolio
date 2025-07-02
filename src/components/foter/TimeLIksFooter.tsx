@@ -4,19 +4,19 @@ import Clock from '../clock/Clock'
 const TimeLinksFooter = () => {
 
     const footerLinks = [
-		{
-			name: "Instagram",
-			url: "https://www.instagram.com/yourprofile",
-			icon: "ri-instagram-line",
-		},
+		// {
+		// 	name: "Instagram",
+		// 	url: "https://www.instagram.com/yourprofile",
+		// 	icon: "ri-instagram-line",
+		// },
 		{
 			name: "LinkedIn",
-			url: "www.linkedin.com/in/miguelantonioochandarena",
+			url: "https://www.linkedin.com/in/miguelantonioochandarena/",
 			icon: "ri-linkedin-line",
 		},
 		{
 			name: "GitHub",
-			url: "",
+			url: "https://github.com/Pucho1?tab=repositories",
 			icon: "ri-github-line",
 		},
 	];
@@ -34,7 +34,11 @@ const TimeLinksFooter = () => {
               {footerLinks.map((link, index) => 
                 <li key={index}>
                   <MagneticBtn>
-                    <button className='custom_border pb-2 text-sm' key={index}> 
+                    <button 
+                      className='custom_border pb-2 text-sm' 
+                      key={index}
+                      onClick={() => window.open(link.url, '_blank')}
+                    >
                       { link.name }
                     </button>
                   </MagneticBtn>

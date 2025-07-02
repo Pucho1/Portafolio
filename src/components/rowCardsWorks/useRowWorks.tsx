@@ -8,16 +8,16 @@ gsap.registerPlugin(  ScrollTrigger);
 const useRowWorks = ( reverse? : boolean ) => {
 
 	const [visibleCount, setVisibleCount] = useState(0);
-	const [ changeDirection, setChangeDirection ] = useState(false);
 	const [ progres, setProgres ] = useState<number>(0);
+
+	console.log('progres', progres);
 
 	useEffect(() => {
 
 		ScrollTrigger.create({
 			trigger: '.trigger',
-			start: 'top bottom',
-      end: 'bottom top',
-			onToggle: (self) => setChangeDirection(self.direction === 1),
+			start: 	 'top bottom',
+      end: 		 'bottom top',
 			onUpdate: (self) => setProgres( self.progress ),
 		});
 		return () => {
@@ -38,21 +38,17 @@ const useRowWorks = ( reverse? : boolean ) => {
 	};
 
 	updateVisibleCount();
-	window.addEventListener("resize", updateVisibleCount);
-	return () => window.removeEventListener("resize", updateVisibleCount);
+		window.addEventListener("resize", updateVisibleCount);
+		return () => window.removeEventListener("resize", updateVisibleCount);
 	}, []);
 
 	const handleRowMovement = (): number => {
-		if (reverse) {
-		return changeDirection ? -progres * 100 : progres * 100;
-		}
-		return changeDirection ? progres * 100 : -progres * 100;
+		return reverse ?  progres * 200 : -progres * 200;
 	};
 
   return {
 		visibleCount,
 		progres,
-		changeDirection,
 		handleRowMovement,
   };
 };

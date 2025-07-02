@@ -7,7 +7,7 @@ import FooterHome from "../../../components/foter/FoterHome";
 const SectionLayout = () => {
 
   return (
-     <div className="bg-white flex flex-col">
+     <div className="bg-white flex flex-col trigger">
       {/* MEAN SECCTIONS */}
       <Hero />
       <FloatBtn />

@@ -11,7 +11,7 @@ const Projects = () => {
   const handlerOnClik = () => navigate('/projects');
 
   return (
-    <section className="h-[120vh] flex flex-col trigger overflow-hidden">
+    <section className="h-[120vh] flex flex-col  overflow-hidden">
       <div className="px-5 h-20 w-80">
         <p className="text-xl font-bld text-gray-400 my-3">
           Key projects

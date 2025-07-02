@@ -19,7 +19,7 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
           <Link to="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2">
               <img
-                src="public/imgs/logo.png"
+                src="/imgs/logo.png"
                 alt="Logo"
                 className="h-6 w-8"
               />

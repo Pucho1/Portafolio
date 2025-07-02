@@ -25,14 +25,14 @@ const Contact = () => {
       <section className="flex justify-start items-center h-[40vh] lg:h-[40vh] px-10 md:px-[12%] lg:px-[15%] pt-25">
         <h2 className="flex flex-col text-3xl responsive_title md:w-[78%] lg:w-[73%]">
           <span className="flex mt-6 text-left items-center">
-            <div className="flex-none profileImg mr-3 md:hidden"></div>
+            <div className="flex-none profileImg profileImg_ferstOne mr-3 md:hidden"></div>
             And so, shall we
           </span>
           <span className="text-left w-50">
             begin?
           </span>
         </h2>
-        <div className="flex-none profileImg profileImg_second mr-3 hidden md:block"></div>
+        <div className="flex-none profileImg profileImg_second mr-3 hidden md:block mb-8 h-10 w-10"></div>
       </section>
 
       {/* Seccion de mis datos y form contacto  */}

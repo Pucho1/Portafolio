@@ -1,6 +1,7 @@
 import useSkills from "./useSkills";
 import SkillBar from "../../../components/skill/SkillBar";
 import MagneticBtn from "../../../components/btns/magneticBtn/MagneticBtn";
+import SectionTitle from "../../../components/sectionTitle/SectionTitle";
 
 const Skills = ( ) => {
 
@@ -9,15 +10,7 @@ const Skills = ( ) => {
   return (
     <section id="skills" className="py-4 bg-white trigger">
       <div className="px-4 md:px-8">
-          <div className="mx-auto text-left mb-16">
-              <>
-                <h2 className="text-3xl md:text-4xl font-bold text-blck mb-4">
-                  Skills
-                </h2>
-                <div className="w-40 h-1 bg-gray-400 mb-6 rounded-full"></div>
-              </>
-          </div>
-      
+        <SectionTitle title="Skills" customClass="mb-16"/>
         
         <div className="max-w-4xl mx-auto">
           {/* Category Filter */}

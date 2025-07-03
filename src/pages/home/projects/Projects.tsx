@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import SectionBtn from "../../../components/btns/sectionbtn/SectionBtn";
 import RowCardWorks from "../../../components/rowCardsWorks/RowCardWorks";
 import useProyects from "./useProyects";
+import SectionTitle from "../../../components/sectionTitle/SectionTitle";
 
 const Projects = () => {
   const { firstGroup, secondGroup, } = useProyects();
@@ -12,12 +13,11 @@ const Projects = () => {
 
   return (
     <section className="h-[120vh] flex flex-col  overflow-hidden">
-      <div className="px-5 h-20 w-80">
-        <p className="text-xl font-bld text-gray-400 my-3">
-          Key projects
-        </p>
-        <hr className="text-black"/>
-      </div>
+      <SectionTitle 
+        title="Projects" 
+        customClass={"pl-5"}
+        line_w="w-55"
+      />
 
       <RowCardWorks companies={ firstGroup} />
 

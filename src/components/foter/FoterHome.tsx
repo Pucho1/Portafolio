@@ -26,6 +26,7 @@ const FooterHome = () => {
           <hr className='opacity-20'/>
             <div className="absolute flex left-[50%] sm:left-[60%] bottom-[10%] md:left-[70%]">
               <SectionBtn 
+              bgCustom={'rgb(60, 60, 185)'}
               hgt={9} 
               wdt={9} 
               classCustom='md:h-12 md:w-12' 

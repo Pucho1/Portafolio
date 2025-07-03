@@ -19,7 +19,7 @@ const SectionBtn = ({
 			<button
         onClick={onClick}
         className={
-          `animated-btn ${bgCustom ? '' : 'bg-(--black_btn_sections)'} rounded-full flex ${showBorder ? 'border-1 border-(--white_midle)' : 'border-none'}
+          `animated-btn ${bgCustom ? '' : 'bg-(--gray-900)'} rounded-full flex ${showBorder ? 'border-1 border-(--white_midle)' : 'border-none'}
           items-center   max-w-[35rem]  ${minW ? 'min-w-[16rem]' : ''}  justify-center ${wdt ? '' : 'w-full'} ${classCustom}`
         }
         style={{

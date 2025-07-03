@@ -1,4 +1,5 @@
 import { Menu } from "lucide-react";
+import { createPortal } from 'react-dom';
 
 import DawnAnimatedBtn from "../dawnAnimatedBtn/DawnAnimatedBtn";
 import { usePositionStore } from "../../../context/PositionContext";
@@ -8,6 +9,8 @@ const FloatBtn = () => {
 const { navIsVisible } = usePositionStore();
 
   return (
+    createPortal(
+
     <AnimatePresence initial={false}>
       {!navIsVisible && (
         <motion.div
@@ -15,11 +18,13 @@ const { navIsVisible } = usePositionStore();
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           key="box"
-          className={`fixed z-50 top-15 right-10 p-2 md:top-20 md:right-15 md:p-3`}>
-            <DawnAnimatedBtn  content = { <Menu size={24} />}/>
+          className={`fixed z-50 top-7 right-7 p-2 md:top-5 md:right-5 md:p-3`}>
+            <DawnAnimatedBtn  content = { <Menu size={20} color="white"/>}/>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
+    )
   );
 };
 

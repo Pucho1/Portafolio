@@ -17,6 +17,7 @@ const useMagneticBtn = ( children: ReactElement ) => {
 
   // Clono el hijo y le paso la ref
   const childWithRef = cloneElement(children, { ref: buttonRef });
+
   const  { children: grandson } = childWithRef.props;
 
 	/**
@@ -30,7 +31,7 @@ const useMagneticBtn = ( children: ReactElement ) => {
 
 
 	/**
-	 * Manejo cuando es un hijo y cuando no, y si lo es llamo show Dot y no permito quie se quite.
+	 * Manejo cuando es un hijo y cuando no, y si lo es llamo show Dot y no permito que se quite.
 	 */
 	const handleIsGrandSon = (): void => {
 		const currentPath = pathname.split('/')[1];
@@ -85,8 +86,8 @@ const useMagneticBtn = ( children: ReactElement ) => {
   const mouseMove = (e: MouseEvent, button: HTMLButtonElement, bounds: boundsType) => {
 
     const rect   = button.getBoundingClientRect(); // Devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización
-    const deltaX = e.clientX - rect.left - rect.width / 2;
-    const deltaY = e.clientX - rect.top - rect.height / 2;
+    const deltaX = e.clientX - rect.left - rect.width / 2; // Calcula la posición horizontal relativa del mouse respecto al centro del botón
+    const deltaY = e.clientY - rect.top - rect.height / 2; // Calcula la posición vertical relativa del mouse respecto al centro del botón
 
     // Limit movement to 20px range
     const moveX = Math.max(-bounds.x, Math.min(bounds.x, deltaX / 2));

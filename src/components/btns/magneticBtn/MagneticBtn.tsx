@@ -6,10 +6,6 @@ const MagneticBtn = ({ showDot = false,  children, justifyPosition, dotColor }: 
   const { dotRef, containerRef, childWithRef } = useMagneticBtn(children);
  
 
-  // if ( childWithRef.type  !== "button") {
-  //   throw new Error("The child must be a button or an anchor element.");
-  // };
-
   return (
     <div ref={containerRef} className={`relative flex ${ justifyPosition ?? 'justify-center'}`}>
 

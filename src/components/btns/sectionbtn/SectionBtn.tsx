@@ -1,5 +1,5 @@
 import type { SectionBtnInterface } from "../../../interfaces/sectionBtnInterface";
-import MagneticBtn from "../magneticBtn/MagneticBtn";
+import MagneticBtn from '../magneticBtn/MagneticBtn';
 
 const SectionBtn = ({ 
   content= 'Cilk me',
@@ -30,7 +30,17 @@ const SectionBtn = ({
           paddingRight: `${px}rem`,
         }}
       >
-        <span className='flex justify-center items-center'>{content}</span>
+        <MagneticBtn >
+            <span className='flex justify-center items-center'
+              style={{
+                width: `${wdt}rem`,
+                height: `${hgt}rem`,
+              }}
+            >
+              {content}
+            </span>
+        </MagneticBtn>
+       
       </button>
 		</MagneticBtn>
   );

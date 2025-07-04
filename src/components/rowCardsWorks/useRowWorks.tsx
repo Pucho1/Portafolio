@@ -18,7 +18,7 @@ const useRowWorks = ( reverse? : boolean ) => {
 			start: 	 'top bottom',
       		end: 	 'bottom top',
 			onUpdate: (self) => setProgres( self.progress ),
-			markers: true,
+			// markers: true,
 		});
 		return () => {
 			ScrollTrigger.getAll().forEach(trigger => trigger.kill());

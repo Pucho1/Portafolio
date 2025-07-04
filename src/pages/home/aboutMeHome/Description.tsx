@@ -27,9 +27,9 @@ const AboutMe = () => {
 				</div>
 			</div>
 
-			<div className="absolute trigger flex left-[50%] sm:left-[60%] bottom-[10%] md:left-[70%]">
+			<div className="absolute flex left-[50%] sm:left-[60%] bottom-[9%] md:left-[75%]">
 				<SectionBtn 
-			  	hgt={9} 
+			  		hgt={9} 
 					wdt={9} 
 					classCustom='md:h-12 md:w-12' 
 					content={'About me'}

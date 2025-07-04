@@ -12,16 +12,17 @@ const Projects = () => {
   const handlerOnClik = () => navigate('/projects');
 
   return (
-    <section className="h-[120vh] flex flex-col  overflow-hidden">
+    <section className="h-[120vh] flex flex-col  overflow-hidden max-w-[100%] trigger">
       <SectionTitle 
         title="Projects" 
         customClass={"pl-5"}
         line_w="w-55"
       />
 
-      <RowCardWorks companies={ firstGroup} />
+        <RowCardWorks companies={ firstGroup} />
 
-      <RowCardWorks companies={ secondGroup} reverse />
+        <RowCardWorks companies={ secondGroup} reverse />
+      
 
       <div className="flex justify-center items-center mt-10">
         <SectionBtn

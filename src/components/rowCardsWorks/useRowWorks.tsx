@@ -10,15 +10,15 @@ const useRowWorks = ( reverse? : boolean ) => {
 	const [visibleCount, setVisibleCount] = useState(0);
 	const [ progres, setProgres ] = useState<number>(0);
 
-	console.log('progres', progres);
 
 	useEffect(() => {
 
 		ScrollTrigger.create({
 			trigger: '.trigger',
 			start: 	 'top bottom',
-      end: 		 'bottom top',
+      		end: 	 'bottom top',
 			onUpdate: (self) => setProgres( self.progress ),
+			markers: true,
 		});
 		return () => {
 			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -26,24 +26,28 @@ const useRowWorks = ( reverse? : boolean ) => {
 	}, []);
 
 
+	/**
+	 * Actualiza el número de columnas visibles según el ancho de la ventana.
+	 */
 	useEffect(() => {
 		const updateVisibleCount = () => {
-		const width = window.innerWidth;
+			const width = window.innerWidth;
 
-		let columns = 2;
-		if (width >= 1024) columns = 4; // lg
-		else if (width >= 640) columns = 3; // sm
+			let columns = 2;
+			if (width >= 1024) columns = 4; // lg
+			else if (width >= 640) columns = 3; // sm
 
-		setVisibleCount(columns); // Muestra una fila de items como máximo
-	};
+			setVisibleCount(columns); // Muestra una fila de items como máximo
+		};
 
-	updateVisibleCount();
+		updateVisibleCount();
 		window.addEventListener("resize", updateVisibleCount);
+
 		return () => window.removeEventListener("resize", updateVisibleCount);
 	}, []);
 
 	const handleRowMovement = (): number => {
-		return reverse ?  progres * 200 : -progres * 200;
+		return reverse ? ( progres  * 10) - 9 : -progres * 10;
 	};
 
   return {

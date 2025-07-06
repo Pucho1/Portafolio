@@ -5,7 +5,6 @@ import './aboutMe.css'
 
 const AboutMe = () => {
 	const navigate = useNavigate();
-
 	const handlerOnClik = () => navigate('/about');
 
   return (

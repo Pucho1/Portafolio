@@ -9,6 +9,7 @@ import type { FormValueContact } from "./FormSchema";
 
 import './contact.css'
 import useContact from "./useContact";
+import SectionBtn from "../../components/btns/sectionbtn/SectionBtn";
 
 
 const Contact = () => {
@@ -122,16 +123,14 @@ const Contact = () => {
             /> 
 
             <div className="absolute right-[1rem] bottom-[-4rem] ">
-              <MagneticBtn justifyPosition={'justify-end'} >
-                <button
-                    className="flex justify-center items-center h-37 w-37 animated-btn rounded-full bg-(--blue_opacity)"
-                    type="submit"
-                  >
-                  <span>
-                    Submit
-                  </span>
-                </button>
-              </MagneticBtn >
+              <SectionBtn 
+                hgt={9} 
+                bgCustom={'#455CE9'}
+                wdt={9} 
+                classCustom='md:h-12 md:w-12' 
+                content={'Submit'}
+                justifyPosition={'justify-end'}
+              />
             </div>
             
         </form>

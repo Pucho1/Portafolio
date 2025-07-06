@@ -1,5 +1,6 @@
 import type { AnimatedButtonProps } from '../../../interfaces/btnInterfaces';
 import MagneticBtn from "../magneticBtn/MagneticBtn";
+import BtnChild from '../btnChild/BtnChild';
 
 import '../btns.css';
 
@@ -7,7 +8,7 @@ const DawnAnimatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonPro
   return (
     <MagneticBtn>
       <button className={`fixed animated-btn ${className} bg-(--gray-900) h-20 w-20 rounded-full flex items-center justify-center`}>
-        <span className='flex justify-center items-center'>{content}</span>
+        <BtnChild content={content} wdt={4} hgt={4}/>
       </button>
     </MagneticBtn>
   );

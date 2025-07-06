@@ -12,7 +12,7 @@ const Projects = () => {
   const handlerOnClik = () => navigate('/projects');
 
   return (
-    <section className="h-[120vh] flex flex-col  overflow-hidden max-w-[100%] trigger">
+    <section className="h-[120vh] flex flex-col  overflow-hidden max-w-[100vw] trigger">
       <SectionTitle 
         title="Projects" 
         customClass={"pl-5"}

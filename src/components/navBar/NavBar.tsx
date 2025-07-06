@@ -6,9 +6,11 @@ import useNavBar        from './useNavBar';
 import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
 import './navBAr.css';
+import MobileMenu from '../mobileMenu/Mobilemenu';
 
 
 const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, dotColor?: string}) => {
+
   const { navLinks, toggleMenu, closeMenu, isOpen, ref, handleOnClik } = useNavBar();
 
   return (
@@ -66,7 +68,9 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
 
  
       {/* Mobile Navigation */}
-      <div
+
+      <MobileMenu isOpen={isOpen} onClose={closeMenu} />
+      {/* <div
         className={`fixed inset-0 bg-white z-40 pt-20 transition-transform duration-300 ease-in-out transform ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
@@ -86,7 +90,7 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
             ))}
           </ul>
         </nav>
-      </div>
+      </div> */}
     </header>
   );
 };

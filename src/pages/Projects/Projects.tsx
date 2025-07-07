@@ -29,7 +29,7 @@ export const Projects = () => {
               <button
                 key={year}
                 onClick={() => setActiveYear(year)}
-                className={`animated-btn px-4 py-2 rounded-full text-sm font-medium h-12 min-w-18 z-100 hover:text-white ${
+                className={`animated-btn px-4 py-2 rounded-full text-sm font-medium h-12 min-w-18 hover:text-white ${
                   activeYear === year 
                     ? 'bg-black text-white'
                     : 'bg-transparent text-black border-1 border-gray-300'

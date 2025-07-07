@@ -17,11 +17,21 @@ const useNavBar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+
+
   const navLinks = [
     { name: t('PROJECTS'), href: '/projects' },
     { name: t('ABOUT_ME'), href: '/about' },
     { name: t('CONTACT'), href: '/contact' },
   ];
+
+   useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    return () => {
+      document.body.style.overflow = 'auto'; // cleanup por si se desmonta
+    };
+  }, [isOpen]);
+
 
 	useEffect(() => {
     setNavIsVisible(isInView);

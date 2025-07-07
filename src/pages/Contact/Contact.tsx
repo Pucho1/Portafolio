@@ -19,7 +19,7 @@ const Contact = () => {
   const onSubmit: SubmitHandler<FormValueContact> = (data) => console.log(data, errors);
 
   return (
-    <div className="bg-[#141517]  text-white">
+    <main className="bg-[#141517]  text-white">
       <NavBar />
 
       {/* Sección del título */}
@@ -137,7 +137,7 @@ const Contact = () => {
       </section>
 
       <TimeLinksFooter />
-    </div>
+    </main>
   );
 };
 

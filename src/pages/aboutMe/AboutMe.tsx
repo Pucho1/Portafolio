@@ -11,7 +11,7 @@ const AboutMe = () => {
   const { sectionRef, imageRevealRef } = useAboutMe();
 
   return (
-    <div>
+    <main className="heigth-full">
       <NavBar text_color= {"text-black"} dotColor={'bg-black'} />
 
       <FloatBtn />
@@ -40,7 +40,7 @@ const AboutMe = () => {
       <Skills />
 
       <FooterHome />
-    </div>
+    </main>
   );
 };
 

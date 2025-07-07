@@ -34,7 +34,7 @@ const TimeLinksFooter = () => {
                       key={index}
                       onClick={() => window.open(link.url, '_blank')}
                     >
-                      { link.name }
+                      <span className="text-gray-200">{ link.name }</span>
                     </button>
                   </MagneticBtn>
                 </li>

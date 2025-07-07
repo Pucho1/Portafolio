@@ -1,12 +1,10 @@
-import React from "react";
-import { X, Home, ShoppingBag, Heart } from "lucide-react";
+import { X } from "lucide-react";
+import MobileBtn from "../btns/mobileBtn/MobileBtn";
+import type { MobileMenuProps } from "../../interfaces/mobileMenu";
+import TimeLinksFooter from "../foter/TimeLIksFooter";
 
-interface MobileMenuProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+const MobileMenu = ({ isOpen, onClose, navLinks }: MobileMenuProps) => {
 
-const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   return (
     <>
       {/* Overlay */}
@@ -19,12 +17,12 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
       {/* Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-full bg-[#141517] z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Header */}
-        <div className="flex flex-col  p-6 pb-0 border-b border-gray-200">
+        <div className="flex flex-col  p-6 pb-0">
           <div className="flex w-full justify-end">
             <button
               onClick={onClose}
@@ -35,34 +33,33 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           </div>
 
           <div className="flex w-full ustify-start">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 pl-3">
-              Navegación
-            </h3>
+            <h5 className="text-white mb-2 font-bold uppercase text-[0.6em] opacity-50">
+              navigation
+            </h5>
           </div>
+
+          <hr className="text-gray-200" />
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 p-6 h-3/4">
           {/* Section 1: Navigation */}
-          <div className="p-6 border-b border-gray-100">
+          <div className="h-full">
             <div className="space-y-2">
-              <button className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                <Home className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700 font-medium">Inicio</span>
-              </button>
 
-              <button className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                <ShoppingBag className="w-5 h-5 text-green-600" />
-                <span className="text-gray-700 font-medium">Productos</span>
-              </button>
+              {navLinks.map((link) => (
+                <MobileBtn name={link.name}  href={link.href} />
+              ))}
 
-              <button className="w-full flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                <Heart className="w-5 h-5 text-red-600" />
-                <span className="text-gray-700 font-medium">Favoritos</span>
-              </button>
             </div>
           </div>
+
+          <hr className="text-gray-200" />
         </div>
+
+        <footer>
+          <TimeLinksFooter />
+        </footer>
       </div>
     </>
   );

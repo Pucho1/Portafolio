@@ -14,7 +14,7 @@ const useNavBar = () => {
   const isInView              = useInView(ref);
   const { t }                 = useTranslation();
   const navigate              = useNavigate();
-  const { isOpen, setIsOpen } = useShowModalOpnet();
+  const {isOpen, setIsOpen, setVisibleFloatBtn}   = useShowModalOpnet();
 
 
   const navLinks = [
@@ -37,6 +37,7 @@ const useNavBar = () => {
 
 	const toggleMenu = () => {
     setIsOpen(!isOpen);
+    setVisibleFloatBtn(true);
   };
 
 	const closeMenu = () => {

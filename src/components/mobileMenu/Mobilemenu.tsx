@@ -13,7 +13,7 @@ const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
       <>
         {/* Menu */}
         <div
-          className={`fixed top-0 right-0 h-screen w-full md:w-1/2 bg-[#141517] z-50 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 right-0 h-screen w-full md:w-1/2 lg:w-1/3 bg-[#141517] z-50 transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -46,7 +46,7 @@ const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
 
           {/* footer  */}
           <footer>
-            <TimeLinksFooter />
+            <TimeLinksFooter showLocalTime={ false}/>
           </footer>
         </div>
       </>,

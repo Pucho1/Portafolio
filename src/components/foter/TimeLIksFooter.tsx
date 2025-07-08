@@ -2,13 +2,13 @@ import MagneticBtn from '../btns/magneticBtn/MagneticBtn'
 import Clock from '../clock/Clock'
 import  footerLinks from '../../data/footerData.json'
 
-const TimeLinksFooter = () => {
+const TimeLinksFooter = ({ showLocalTime = true } : {showLocalTime?: boolean}) => {
 
 	return (
     <section className='flex flex-col justify-center mt-10 px-[7%] pb-8 md:flex-row-reverse'>
+
         {/* LINKS NETWORKS */}
-        <div className="flex w-full md:w-1/2 flex-col md:items-end">
-          
+        <div className={`flex w-full md:${showLocalTime ? 'w-1/2' : ''} flex-col md:${showLocalTime ? 'items-end' : 'items-start'} gap-6`}>
           <div>
             <h5 className="text-white mb-2 font-bold uppercase text-[0.6em] opacity-50">
               Socials
@@ -31,10 +31,10 @@ const TimeLinksFooter = () => {
           </div>
         </div>
 
-        <hr className='md:hidden my-7 opacity-20 md:hidden'/>
+       { showLocalTime &&  <hr className='md:hidden my-7 opacity-20 md:hidden'/>}
 
         {/* TIME */}
-        <div className="flex justify-between md:justify-start w-full md:w-1/2 md:gap-10">
+       { showLocalTime && <div className="flex justify-between md:justify-start w-full md:w-1/2 md:gap-10">
           <div>
             <h5 className="text-white mb-3 font-bold uppercase text-[0.6em] opacity-50">
               local Time:
@@ -47,7 +47,7 @@ const TimeLinksFooter = () => {
               Made  by Miguel Ochandarena  © 2025
             </span>
           </div>
-        </div>
+        </div>}
     </section>
   );
 };

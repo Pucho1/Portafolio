@@ -1,13 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
-import { createContext, useContext, type ReactElement } from 'react';
-import { useState } from 'react';
+import { createContext, useContext, type ReactElement, useState } from 'react';
 
-type ShowModalOpenType = {
-  isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
-  visibleFloatBtn: boolean;
-  setVisibleFloatBtn: (value: boolean) => void;
-};
+import type { ShowModalOpenType } from '../interfaces/ShowModalContext';
 
 export const ShowModalOpen = createContext<ShowModalOpenType>({
   isOpen: false,
@@ -33,7 +27,6 @@ export const ShowModalOpenProvider = ({ children }: {children: ReactElement}) =>
     </ShowModalOpen.Provider>
   );
 };
-
 
 export function useShowModalOpnet() {
   return useContext(ShowModalOpen);

@@ -3,11 +3,11 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 
-import DawnAnimatedBtn from "../dawnAnimatedBtn/DawnAnimatedBtn";
+import FloatedBtn from "../FloatedBtn/FloatedBtn";
 import { usePositionStore } from "../../../context/PositionContext";
 import { useShowModalOpnet } from "../../../context/ShowModalOpen";
 
-const FloatBtn = () => {
+const FloatBtnWraper = () => {
   const { navIsVisible } = usePositionStore();
   const { visibleFloatBtn }   = useShowModalOpnet();
 
@@ -21,8 +21,8 @@ const FloatBtn = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           key="box"
-          className={`fixed z-100 top-7 right-7 p-2 md:top-5 md:right-5 md:p-3`}>
-            <DawnAnimatedBtn  content = { <Menu size={20} color="white"/>}/>
+          className={`fixed z-100 top-2 right-2 p-2 md:top-5 md:right-5 md:p-3`}>
+            <FloatedBtn  content = { <Menu size={20} color="white"/>}/>
         </motion.div>
       )}
     </AnimatePresence>,
@@ -31,4 +31,4 @@ const FloatBtn = () => {
   );
 };
 
-export default FloatBtn;
+export default FloatBtnWraper;

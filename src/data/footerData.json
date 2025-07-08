@@ -1,0 +1,13 @@
+
+ [
+		{
+			"name": "LinkedIn",
+			"url": "https://www.linkedin.com/in/miguelantonioochandarena/",
+			"icon": "ri-linkedin-line"
+		},
+		{
+			"name": "GitHub",
+			"url": "https://github.com/Pucho1?tab=repositories",
+			"icon": "ri-github-line"
+		}
+	]

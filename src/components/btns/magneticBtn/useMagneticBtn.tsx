@@ -1,8 +1,7 @@
-
 import { cloneElement, useEffect, useRef, type ReactElement } from "react";
+import { useLocation } from 'react-router';
 
 import { gsap } from 'gsap';
-import { useLocation } from 'react-router';
 
 import type { boundsType } from "../../../interfaces/boundsInterface";
 

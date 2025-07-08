@@ -5,7 +5,7 @@ import { useShowModalOpnet } from '../../../context/ShowModalOpen';
 
 import '../btns.css';
 
-const DawnAnimatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonProps ) => {
+const FloatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonProps ) => {
 
   const { isOpen, setIsOpen, setVisibleFloatBtn}  = useShowModalOpnet();
 
@@ -17,7 +17,7 @@ const DawnAnimatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonPro
   return (
     <MagneticBtn>
       <button
-        className={`fixed animated-btn ${className} bg-(--gray-900) h-20 w-20 rounded-full flex items-center justify-center`}
+        className={`fixed animated-btn ${className} bg-(--gray-900) h-16 w-16  lg:h-20 lg:w-20 rounded-full flex items-center justify-center`}
         onClick={ hadleClose }
       >
         <BtnChild content={content} wdt={4} hgt={4}/>
@@ -26,4 +26,4 @@ const DawnAnimatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonPro
   );
 };
 
-export default DawnAnimatedBtn;
+export default FloatedBtn;

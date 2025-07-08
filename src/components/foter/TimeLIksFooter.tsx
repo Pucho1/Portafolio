@@ -1,20 +1,8 @@
 import MagneticBtn from '../btns/magneticBtn/MagneticBtn'
 import Clock from '../clock/Clock'
+import  footerLinks from '../../data/footerData.json'
 
 const TimeLinksFooter = () => {
-
-    const footerLinks = [
-		{
-			name: "LinkedIn",
-			url: "https://www.linkedin.com/in/miguelantonioochandarena/",
-			icon: "ri-linkedin-line",
-		},
-		{
-			name: "GitHub",
-			url: "https://github.com/Pucho1?tab=repositories",
-			icon: "ri-github-line",
-		},
-	];
 
 	return (
     <section className='flex flex-col justify-center mt-10 px-[7%] pb-8 md:flex-row-reverse'>

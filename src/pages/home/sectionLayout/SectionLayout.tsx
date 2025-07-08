@@ -1,7 +1,7 @@
 import AboutMe from "../aboutMeHome/Description";
 import Hero from "../heroSection/Hero";
 import Projects from "../projects/Projects";
-import FloatBtn from "../../../components/btns/floatBtn/FloatBtn";
+import FloatBtn from "../../../components/btns/FloatBtnWraper/FloatBtnWraper";
 import FooterHome from "../../../components/foter/FoterHome";
 
 const SectionLayout = () => {

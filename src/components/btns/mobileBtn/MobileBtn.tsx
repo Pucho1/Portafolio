@@ -3,12 +3,20 @@ import type { navLikns } from "../../../interfaces/mobileMenu";
 import MagneticBtn from "../magneticBtn/MagneticBtn";
 
 import './btnMobileLink.css';
+import { useShowModalOpnet } from "../../../context/ShowModalOpen";
 
 const MobileBtn = ({ name, href } : navLikns) => {
 
 	const navigate = useNavigate();
+	const { setIsOpen, setVisibleFloatBtn}  = useShowModalOpnet();
 
-	const handleOnClik = (link: string) =>  navigate(`${link}`);
+	const handleOnClik = (link: string) => {
+		setIsOpen(false);
+		setVisibleFloatBtn(false);
+		setTimeout(() => {
+			navigate(`${link}`);	
+		}, 300);
+	};
 
   return (
 		<MagneticBtn>

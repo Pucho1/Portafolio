@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 
 import MagneticBtn      from '../btns/magneticBtn/MagneticBtn';
 import useNavBar        from './useNavBar';
-import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
+// import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
 import './navBAr.css';
 import MobileMenu from '../mobileMenu/Mobilemenu';
@@ -36,9 +36,9 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
           {/* Navigation */}
           <nav className="hidden md:flex">
             <ul className="flex space-x-8">
-              <li key={'language'} className='flex items-center'>
+              {/* <li key={'language'} className='flex items-center'>
                 <LanguageSwitcher />
-              </li>
+              </li> */}
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <MagneticBtn showDot dotColor={ dotColor }>

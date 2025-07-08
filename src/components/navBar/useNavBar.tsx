@@ -1,22 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
 
 import { useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { usePositionStore } from "../../context/PositionContext";
+import { useShowModalOpnet } from "../../context/ShowModalOpen";
 
 const useNavBar = () => {
 
-	const { setNavIsVisible } = usePositionStore();
-  const ref                 = useRef(null);
-  const isInView            = useInView(ref);
-  const { t }               = useTranslation();
-  const navigate            = useNavigate();
-
-
-  const [isOpen, setIsOpen] = useState(false);
-
+	const { setNavIsVisible }   = usePositionStore();
+  const ref                   = useRef(null);
+  const isInView              = useInView(ref);
+  const { t }                 = useTranslation();
+  const navigate              = useNavigate();
+  const { isOpen, setIsOpen } = useShowModalOpnet();
 
 
   const navLinks = [
@@ -25,13 +23,12 @@ const useNavBar = () => {
     { name: t('CONTACT'), href: '/contact' },
   ];
 
-   useEffect(() => {
+  useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     return () => {
       document.body.style.overflow = 'auto'; // cleanup por si se desmonta
     };
   }, [isOpen]);
-
 
 	useEffect(() => {
     setNavIsVisible(isInView);

@@ -65,37 +65,13 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
           </button>
         </div>
       </div>
-
  
       {/* Mobile Navigation */}
-
       <MobileMenu 
         isOpen={isOpen} 
         onClose={closeMenu} 
         navLinks={navLinks}
       />
-
-      {/* <div
-        className={`fixed inset-0 bg-white z-40 pt-20 transition-transform duration-300 ease-in-out transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden`}
-      >
-        <nav className="h-full">
-          <ul className="flex flex-col items-center justify-center space-y-8 h-full">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  className={`text-xl font-medium ${text_color ?  text_color : 'text-gray-800'} hover:text-blue-600 transition-colors duration-300`}
-                  onClick={closeMenu}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div> */}
     </header>
   );
 };

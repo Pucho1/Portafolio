@@ -20,34 +20,7 @@ export const PositionProvider = ({ children }: { children: React.ReactNode }) =>
 
   const [navIsVisible, setNavIsVisible] = useState(false);
 
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
-  // const handleScroll = () => {
-  //   setPosition({ x: window.scrollX, y: window.scrollY });
-  // };
-
-  /**
-   * * Intersection Observer API
-   * * Detecta si un elemento está visible en la pantalla
-   */
   
-  // const observer = new IntersectionObserver((entries) => {
-  //   entries.forEach(entry => {
-  //     if (entry.isIntersecting) {
-  //       console.log('Está visible');
-  //     }
-  //   });
-  // });
-
-  // Observa el elemento con id 'mi-elemento'
-  // Cambiar 'mi-elemento' por el id del elemento que quiero observar
-  // observer.observe(document.getElementById('mi-elemento')!);
 
   return (
     <PositionContext.Provider value={{ ...position, navIsVisible, setNavIsVisible, setPosition }}>

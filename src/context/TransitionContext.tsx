@@ -20,10 +20,7 @@ export const TransitionProvider = ({ children }: {children: ReactElement}) => {
 
   return (
     <TransitionContext.Provider
-      value={{
-        toggleCompleted,
-        completed,
-      }}
+      value={{ toggleCompleted, completed }}
     >
       {children}
     </TransitionContext.Provider>

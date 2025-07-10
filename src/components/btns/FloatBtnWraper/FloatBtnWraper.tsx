@@ -8,8 +8,8 @@ import { usePositionStore } from "../../../context/PositionContext";
 import { useShowModalOpnet } from "../../../context/ShowModalOpen";
 
 const FloatBtnWraper = () => {
-  const { navIsVisible } = usePositionStore();
-  const { visibleFloatBtn }   = useShowModalOpnet();
+  const { navIsVisible }    = usePositionStore();
+  const { visibleFloatBtn } = useShowModalOpnet();
 
   return (
     createPortal(
@@ -21,7 +21,7 @@ const FloatBtnWraper = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           key="box"
-          className={`fixed z-100 top-2 right-2 p-2 md:top-5 md:right-5 md:p-3`}>
+          className={`fixed z-100 top-2 right-2 p-2 md:p-3`}>
             <FloatedBtn  content = { <Menu size={20} color="white"/>}/>
         </motion.div>
       )}

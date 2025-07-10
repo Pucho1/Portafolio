@@ -10,6 +10,7 @@ import type { FormValueContact } from "./FormSchema";
 import './contact.css'
 import useContact from "./useContact";
 import SectionBtn from "../../components/btns/sectionbtn/SectionBtn";
+import FloatBtnWraper from "../../components/btns/FloatBtnWraper/FloatBtnWraper";
 
 
 const Contact = () => {
@@ -21,6 +22,8 @@ const Contact = () => {
   return (
     <main className="bg-[#141517]  text-white">
       <NavBar />
+
+      <FloatBtnWraper />
 
       {/* Sección del título */}
       <section className="flex justify-start items-center h-[40vh] lg:h-[40vh] px-10 md:px-[12%] lg:px-[15%] pt-25">

@@ -1,5 +1,5 @@
 import { NavBar } from "../../components";
-import FloatBtn from "../../components/btns/FloatBtnWraper/FloatBtnWraper";
+import FloatBtnWraper from "../../components/btns/FloatBtnWraper/FloatBtnWraper";
 import MagneticBtn from "../../components/btns/magneticBtn/MagneticBtn";
 import CompanyCard from "../../components/cards/CompanyCard";
 import FooterHome from "../../components/foter/FoterHome";
@@ -12,7 +12,7 @@ export const Projects = () => {
     <div>
       <NavBar text_color= {"text-black"} dotColor={'bg-black'} />
 
-      <FloatBtn />
+      <FloatBtnWraper />
 
       {/* Sección del título */}
       <section className="h-[40vh] lg:h-[60vh] px-[15%] flex justify-start items-center pt-10">

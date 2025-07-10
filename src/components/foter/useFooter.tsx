@@ -32,4 +32,4 @@ const useFooter = () => {
   };
 }
 
-export default useFooter
+export default useFooter;

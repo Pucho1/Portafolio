@@ -3,13 +3,20 @@ import SectionBtn from '../btns/sectionbtn/SectionBtn';
 import useFooter from './useFooter';
 import './footer.css';
 import TimeLinksFooter from './TimeLIksFooter';
+import useColitionDetector from '../../utils/useColitionDetector';
 
 const FooterHome = () => {
 
   const { handlerOnClik, handleOnClikWsp, phoneNumber, handleOnClikGmail, gMail } = useFooter();
 
+  const sectionId = 'section_ref';
+  const buttonId  = 'btn_ref';
+  const triguer   = 'footer_seccion';
+
+  useColitionDetector({sectionId, buttonId, triguer});
+
   return (
-    <footer className="flex flex-col bg-[#141517] text-white h-[100vh] justify-between">
+    <footer className={`${triguer} flex flex-col bg-[#141517] text-white h-[100vh] justify-between"`} id={sectionId}>
       <section className='px-[12%] md:px-[15%]'>
         
         <h2 className="increase_text flex flex-col my-5 mb-12">

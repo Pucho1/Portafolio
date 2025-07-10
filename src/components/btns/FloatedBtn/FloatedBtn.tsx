@@ -4,10 +4,12 @@ import BtnChild from '../btnChild/BtnChild';
 import { useShowModalOpnet } from '../../../context/ShowModalOpen';
 
 import '../btns.css';
+import { useFloatBtnStore } from '../../../context/FloatBtnContext';
 
 const FloatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonProps ) => {
 
-  const { isOpen, setIsOpen, setVisibleFloatBtn}  = useShowModalOpnet();
+  const { isOpen, setIsOpen } = useShowModalOpnet();
+  const { setVisibleFloatBtn, showBorder }  = useFloatBtnStore();
 
   const hadleClose = (): void => {
     setIsOpen(!isOpen);
@@ -17,8 +19,9 @@ const FloatedBtn = ({ content= 'Cilk me', className= ''}: AnimatedButtonProps ) 
   return (
     <MagneticBtn>
       <button
-        className={`fixed animated-btn ${className} bg-(--gray-900) h-16 w-16  lg:h-20 lg:w-20 rounded-full flex items-center justify-center`}
+        className={`animated-btn fixed ${className} border-(--white_midle) ${showBorder ?  'border-1': ''} bg-[#141517] h-16 w-16  lg:h-20 lg:w-20 rounded-full flex items-center justify-center`}
         onClick={ hadleClose }
+        id='btn_ref'
       >
         <BtnChild content={content} wdt={4} hgt={4}/>
       </button>

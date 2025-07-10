@@ -1,26 +1,22 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, type ReactElement, useState } from 'react';
-
 import type { ShowModalOpenType } from '../interfaces/ShowModalContext';
+
 
 export const ShowModalOpen = createContext<ShowModalOpenType>({
   isOpen: false,
   setIsOpen: () => {},
-  visibleFloatBtn: false,
-  setVisibleFloatBtn: () => {},
+
 });
 
 export const ShowModalOpenProvider = ({ children }: {children: ReactElement}) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [visibleFloatBtn, setVisibleFloatBtn] = useState<boolean>(false);
 
   return (
     <ShowModalOpen.Provider
       value={{
       setIsOpen,
       isOpen,
-      visibleFloatBtn,
-      setVisibleFloatBtn,
     }}
     >
       {children}

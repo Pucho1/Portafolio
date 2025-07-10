@@ -34,8 +34,8 @@ const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
             <div className="h-full">
               <div className="space-y-2">
 
-                {navLinks.map((link) => (
-                  <MobileBtn name={link.name}  href={link.href} />
+                {navLinks.map((link, index) => (
+                  <MobileBtn name={link.name}  href={link.href} key={index}/>
                 ))}
 
               </div>

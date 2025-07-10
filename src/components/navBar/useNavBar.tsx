@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import { usePositionStore } from "../../context/PositionContext";
 import { useShowModalOpnet } from "../../context/ShowModalOpen";
+import { useFloatBtnStore } from "../../context/FloatBtnContext";
 
 const useNavBar = () => {
 
@@ -14,7 +15,8 @@ const useNavBar = () => {
   const isInView              = useInView(ref);
   const { t }                 = useTranslation();
   const navigate              = useNavigate();
-  const {isOpen, setIsOpen, setVisibleFloatBtn}   = useShowModalOpnet();
+  const {isOpen, setIsOpen}   = useShowModalOpnet();
+  const { setVisibleFloatBtn} = useFloatBtnStore();
 
 
   const navLinks = [

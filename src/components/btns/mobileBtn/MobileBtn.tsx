@@ -1,14 +1,17 @@
 import { useNavigate } from "react-router";
+
 import type { navLikns } from "../../../interfaces/mobileMenu";
 import MagneticBtn from "../magneticBtn/MagneticBtn";
+import { useShowModalOpnet } from "../../../context/ShowModalOpen";
+import { useFloatBtnStore } from "../../../context/FloatBtnContext";
 
 import './btnMobileLink.css';
-import { useShowModalOpnet } from "../../../context/ShowModalOpen";
 
 const MobileBtn = ({ name, href } : navLikns) => {
 
 	const navigate = useNavigate();
-	const { setIsOpen, setVisibleFloatBtn}  = useShowModalOpnet();
+	const { setIsOpen }  		 = useShowModalOpnet();
+	const { setVisibleFloatBtn}  = useFloatBtnStore();
 
 	const handleOnClik = (link: string) => {
 		setIsOpen(false);

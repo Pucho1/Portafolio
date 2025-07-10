@@ -8,3 +8,19 @@
   --gray-900: #1a1a1a;
 
 }
+/* Deshabilita y oculta la barra de desplazamiento nativa para todo el documento */
+html, body {
+   /* overflow: hidden; Muy importante: evita que el body tenga scroll nativo */
+   margin: 0;        /*Asegura que no haya márgenes predeterminados */
+   padding: 0;       /*Asegura que no haya paddings predeterminados */
+   width: 100%;      /*Asegura que ocupen el 100% del ancho */
+   height: 100%;     /*Asegura que ocupen el 100% del alto */
+   -ms-overflow-style: none; /*Para Internet Explorer y Edge */
+   scrollbar-width: none;   /* Para Firefox */
+}
+
+html::-webkit-scrollbar{
+  display: none; /* Para Chrome, Safari y otros WebKit */
+  width: 0;      /* Asegura que no ocupe espacio */
+  background: transparent; /* Opcional: fondo transparente por si acaso */
+}

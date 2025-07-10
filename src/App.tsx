@@ -6,11 +6,13 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
-import "./App.css";
 import HomeLayout from "./layout/HomeLayout";
 import AboutMe from './pages/aboutMe/AboutMe';
 import { Projects } from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
+
+import "./App.css";
+
 
 gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
 

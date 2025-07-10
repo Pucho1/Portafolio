@@ -11,6 +11,7 @@ import './contact.css'
 import useContact from "./useContact";
 import SectionBtn from "../../components/btns/sectionbtn/SectionBtn";
 import FloatBtnWraper from "../../components/btns/FloatBtnWraper/FloatBtnWraper";
+import useColitionDetector from "../../utils/useColitionDetector";
 
 
 const Contact = () => {
@@ -19,8 +20,14 @@ const Contact = () => {
 
   const onSubmit: SubmitHandler<FormValueContact> = (data) => console.log(data, errors);
 
+  const sectionId = 'section_ref';
+  const buttonId  = 'btn_ref';
+  const triguer   = 'contact_seccion';
+
+  useColitionDetector({sectionId, buttonId, triguer});
+
   return (
-    <main className="bg-[#141517]  text-white">
+    <main className={`${sectionId} bg-[#141517]  text-white`} id={sectionId}>
       <NavBar />
 
       <FloatBtnWraper />

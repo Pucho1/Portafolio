@@ -5,11 +5,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import FloatedBtn from "../FloatedBtn/FloatedBtn";
 import { usePositionStore } from "../../../context/PositionContext";
-import { useShowModalOpnet } from "../../../context/ShowModalOpen";
+import { useFloatBtnStore } from "../../../context/FloatBtnContext";
 
 const FloatBtnWraper = () => {
   const { navIsVisible }    = usePositionStore();
-  const { visibleFloatBtn } = useShowModalOpnet();
+  const { visibleFloatBtn } = useFloatBtnStore();
 
   return (
     createPortal(

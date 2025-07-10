@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, type ReactElement, useState } from 'react';
-import type { ShowModalOpenType } from '../interfaces/ShowModalContext';
+import type { ShowModalOpenType } from '../interfaces/showModalContext';
 
 
 export const ShowModalOpen = createContext<ShowModalOpenType>({

@@ -2,7 +2,7 @@ import { NavBar } from "../../components";
 import FloatBtnWraper from "../../components/btns/FloatBtnWraper/FloatBtnWraper";
 import MagneticBtn from "../../components/btns/magneticBtn/MagneticBtn";
 import CompanyCard from "../../components/cards/CompanyCard";
-import FooterHome from "../../components/foter/FoterHome";
+import Footer from "../../components/foter/Footer";
 import useProjects from "./useProjects";
 
 export const Projects = () => {
@@ -56,7 +56,7 @@ export const Projects = () => {
         </div>
       </section>
 
-      <FooterHome />
+      <Footer />
 
     </div>
   );

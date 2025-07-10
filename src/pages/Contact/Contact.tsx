@@ -1,6 +1,5 @@
 import { type SubmitHandler } from "react-hook-form";
 
-
 import { NavBar } from "../../components";
 import MagneticBtn from "../../components/btns/magneticBtn/MagneticBtn";
 import CustomImput from "../../components/customInput/CustomImput";

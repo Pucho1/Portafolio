@@ -5,7 +5,7 @@ import './footer.css';
 import TimeLinksFooter from './TimeLIksFooter';
 import useColitionDetector from '../../utils/useColitionDetector';
 
-const FooterHome = () => {
+const Footer = () => {
 
   const { handlerOnClik, handleOnClikWsp, phoneNumber, handleOnClikGmail, gMail } = useFooter();
 
@@ -77,6 +77,6 @@ const FooterHome = () => {
   );
 };
 
-export default FooterHome;
+export default Footer;
 
 //with ❤️

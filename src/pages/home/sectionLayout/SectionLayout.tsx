@@ -2,7 +2,7 @@ import AboutMe from "../aboutMeHome/Description";
 import Hero from "../heroSection/Hero";
 import Projects from "../projects/Projects";
 import FloatBtn from "../../../components/btns/FloatBtnWraper/FloatBtnWraper";
-import FooterHome from "../../../components/foter/FoterHome";
+import Footer from "../../../components/foter/Footer";
 
 const SectionLayout = () => {
 
@@ -13,7 +13,7 @@ const SectionLayout = () => {
       <FloatBtn />
       <AboutMe />
       <Projects />
-      <FooterHome />
+      <Footer />
     </div>
   );
 };

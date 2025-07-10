@@ -1,10 +1,10 @@
 import { NavBar } from "../../components";
 import FloatBtn from "../../components/btns/FloatBtnWraper/FloatBtnWraper";
-import FooterHome from "../../components/foter/FoterHome";
 import Skills from "./skills/Skills";
 
 import './aboutMe.css';
 import useAboutMe from "./useAboutMe";
+import Footer from "../../components/foter/Footer";
 
 const AboutMe = () => {
 
@@ -39,7 +39,7 @@ const AboutMe = () => {
 
       <Skills />
 
-      <FooterHome />
+      <Footer />
     </main>
   );
 };

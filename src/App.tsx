@@ -10,6 +10,7 @@ import HomeLayout from "./layout/HomeLayout";
 import AboutMe from './pages/aboutMe/AboutMe';
 import { Projects } from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
+import PageClientNTF from './pages/errors/PageClientNTF';
 
 import "./App.css";
 
@@ -63,6 +64,11 @@ export default function App() {
             <Route
               path="/contact"
               element={ <Contact /> }
+            />
+
+            <Route
+              path="/error/clietnPage_Not_Found"
+              element={ <PageClientNTF /> }
             />
             <Route path='*' element ={<Navigate to="/" replace />} />
           </Route>

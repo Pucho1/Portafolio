@@ -5,6 +5,7 @@ export interface Companies {
   description: string;
   logoUrl: string;
   client?: string;
+  src: string
 };
 
 export interface CompaniesData extends Companies {

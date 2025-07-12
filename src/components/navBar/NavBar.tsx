@@ -1,8 +1,8 @@
 import { Link }    from 'react-router';
 import { Menu, X } from 'lucide-react';
 
-import MagneticBtn      from '../btns/magneticBtn/MagneticBtn';
-import useNavBar        from './useNavBar';
+import MagneticBtn from '../btns/magneticBtn/MagneticBtn';
+import useNavBar   from './useNavBar';
 
 import './navBAr.css';
 import MobileMenu from '../mobileMenu/Mobilemenu';

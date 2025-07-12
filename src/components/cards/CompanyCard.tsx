@@ -1,11 +1,23 @@
 import { Building, Calendar } from "lucide-react";
 import type { CompaniesData } from "../../interfaces/companies";
+import { useNavigate } from "react-router";
 
-const CompanyCard = ({ logoUrl, companyName, client, year, category } : CompaniesData) => {
+const CompanyCard = ({ logoUrl, companyName, client, year, category, src } : CompaniesData) => {
 
+  const navigate = useNavigate()
+
+  const handlerClick = () => {
+    if ( src !== null && src !== '' && !!src  ){
+      window.open(src , '_blank');
+    } else navigate('/error/clietnPage_Not_Found');
+  };
 
   return (
-   <div className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 relative">
+    <div 
+      className="group bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg hover:cursor-pointer transition-all duration-300 relative"
+      onClick={ handlerClick }
+
+    >
       {/* Large Image */}
       <div className="aspect-video bg-gray-100 flex items-center justify-center">
         {logoUrl.startsWith('public') ? (

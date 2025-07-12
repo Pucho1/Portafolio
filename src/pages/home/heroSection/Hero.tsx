@@ -38,12 +38,12 @@ const Hero = () => {
               <div className="globeContainer flex justify-start w-1/4 relative h-24">
                 <div className="locationCard w-60 md:bg-[#141414fc]">
                     
-                  <div className="textContainer">
+                  <div className="textContainer flex justify-center">
                     <p>Located</p>
                     <p>in Spain</p>
                   </div>
 
-                  <div className="h-20 w-20">
+                  <div className="relative -top-2 h-20 w-20">
                     <GlobeScene />
                   </div> 
                 </div>

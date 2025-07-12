@@ -3,7 +3,6 @@ import { Menu, X } from 'lucide-react';
 
 import MagneticBtn      from '../btns/magneticBtn/MagneticBtn';
 import useNavBar        from './useNavBar';
-// import LanguageSwitcher from '../btns/lenguageSwitcher/LengugeSwitcher';
 
 import './navBAr.css';
 import MobileMenu from '../mobileMenu/Mobilemenu';
@@ -11,7 +10,8 @@ import MobileMenu from '../mobileMenu/Mobilemenu';
 
 const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, dotColor?: string}) => {
 
-  const { navLinks, toggleMenu, closeMenu, isOpen, ref, handleOnClik } = useNavBar();
+  //isHome
+  const { navLinks, toggleMenu, closeMenu, isOpen, ref, handleOnClik,  } = useNavBar();
 
   return (
     <header ref={ ref } className="relative top-7 w-full left-0 right-0 z-50 transition-all duration-300 mb-2" >
@@ -21,9 +21,10 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
           <Link to="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2">
               <img
-                src="/imgs/logo.png"
+                // src= { isHome ? "/imgs/WhiteLogo.png" : '/imgs/BlackLogo' }
+                src= '/imgs/BlackLogo.png'
                 alt="Logo"
-                className="h-6 w-8"
+                className="h-6 w-7"
               />
             </div>
             <div className='name_animation w-32 overflow-hidden whitespace-nowrap'>

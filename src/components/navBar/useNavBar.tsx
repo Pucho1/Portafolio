@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { useNavigate } from "react-router";
+import { useEffect, useRef, useState } from "react";
+import { useNavigate, useLocation } from "react-router";
 
 import { useInView } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -10,6 +10,8 @@ import { useFloatBtnStore } from "../../context/FloatBtnContext";
 
 const useNavBar = () => {
 
+  const [isHome, setIsHome] = useState(false)
+
 	const { setNavIsVisible }   = usePositionStore();
   const ref                   = useRef(null);
   const isInView              = useInView(ref);
@@ -17,7 +19,8 @@ const useNavBar = () => {
   const navigate              = useNavigate();
   const {isOpen, setIsOpen}   = useShowModalOpnet();
   const { setVisibleFloatBtn} = useFloatBtnStore();
-
+  const { pathname }          = useLocation();
+  
 
   const navLinks = [
     { name: t('PROJECTS'), href: '/projects' },
@@ -36,6 +39,8 @@ const useNavBar = () => {
     setNavIsVisible(isInView);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInView]);
+
+  useEffect (() => pathname === '/' ?  setIsHome(true) : setIsHome(false), [pathname]);
 
 	const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -56,6 +61,7 @@ const useNavBar = () => {
 		closeMenu,
 		isOpen,
 		ref,
+    isHome,
   };
 };
 

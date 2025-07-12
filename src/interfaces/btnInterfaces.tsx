@@ -10,7 +10,6 @@ export interface AnimatedButtonProps {
 }
 
 export interface MagneticBtnChildProps {
-  content: string | React.ReactNode;
   wdt?: string | number;
   hgt?: string | number;
 }

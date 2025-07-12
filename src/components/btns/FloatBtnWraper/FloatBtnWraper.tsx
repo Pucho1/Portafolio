@@ -1,7 +1,5 @@
-import { Menu } from "lucide-react";
 import { createPortal } from 'react-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-
 
 import FloatedBtn from "../FloatedBtn/FloatedBtn";
 import { usePositionStore } from "../../../context/PositionContext";
@@ -22,7 +20,7 @@ const FloatBtnWraper = () => {
           exit={{ opacity: 0, scale: 0 }}
           key="box"
           className={`fixed z-100 top-2 right-2 p-2 md:p-3`}>
-            <FloatedBtn  content = { <Menu size={20} color="white"/>}/>
+            <FloatedBtn  />
         </motion.div>
       )}
     </AnimatePresence>,

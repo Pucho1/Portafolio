@@ -5,6 +5,7 @@ import CompanyCard from "../../components/cards/CompanyCard";
 import Footer from "../../components/foter/Footer";
 import useProjects from "./useProjects";
 
+
 export const Projects = () => {
   const { years, activeYear, setActiveYear, filteredCompanies } = useProjects();
 
@@ -48,10 +49,8 @@ export const Projects = () => {
       <section className="py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-[15%] md:px-[10%] lg:px-[5%]">
           {filteredCompanies.map((company) => (
-            <CompanyCard 
-              {...company}
-              key={company.client}
-            />	
+              <CompanyCard key={company.client}  {...company}
+            />
           ))}
         </div>
       </section>

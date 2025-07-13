@@ -18,7 +18,7 @@ const MobileBtn = ({ name, href } : navLikns) => {
 		setVisibleFloatBtn(false);
 		setTimeout(() => {
 			navigate(`${link}`);	
-		}, 300);
+		}, 750);
 	};
 
   return (

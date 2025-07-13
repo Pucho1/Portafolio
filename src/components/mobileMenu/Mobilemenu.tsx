@@ -12,8 +12,7 @@ const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
         {/* Menu */}
         <div
           className={`fixed top-0 right-0 h-dvh w-full md:w-1/2 lg:w-1/3 bg-[#141517] z-50 transform transition-transform duration-500 ease-in-out ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          } delay-500`}
+            isOpen ? "translate-x-0" : "translate-x-full"} delay-500`}
         >
           <div className={`h-full retard bg-trasparent transform transition-transform duration-700 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"} delay-550`}>
@@ -33,10 +32,10 @@ const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
             <div className="flex-1 p-6 pb-0 h-[63%]">
               {/* Section 1: Navigation */}
               <div className="h-full">
-                <div className="space-y-2">
+                <div className={`space-y-2`}>
 
                   {navLinks.map((link, index) => (
-                    <MobileBtn name={link.name}  href={link.href} key={index}/>
+                      <MobileBtn name={link.name}  href={link.href} key={index}/>
                   ))}
 
                 </div>

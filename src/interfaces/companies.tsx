@@ -1,3 +1,5 @@
+import type { TooltipProps } from "@mui/material/Tooltip";
+
 export interface Companies {
   companyName: string;
   year?: string;
@@ -10,9 +12,13 @@ export interface Companies {
 
 export interface CompaniesData extends Companies {
   bgColor?: string;
-}
+};
 
 export interface RowCardWorksProps {
   companies: Companies[];
   reverse?: boolean;
-} 
+};
+
+export interface customToolTipsProps extends TooltipProps {
+  show?: boolean;
+};

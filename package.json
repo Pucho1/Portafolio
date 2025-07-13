@@ -14,8 +14,12 @@
     "test:browser": "vitest run --browser.enabled --environment=browser"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@gsap/react": "^2.1.2",
     "@hookform/resolvers": "^5.1.1",
+    "@mui/material": "^7.2.0",
+    "@mui/styled-engine-sc": "^7.2.0",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.15.14",
     "@tailwindcss/vite": "^4.1.5",
@@ -37,6 +41,7 @@
     "react-router-dom": "^7.6.0",
     "react-scroll-parallax": "^3.4.5",
     "react-transition-group": "^4.4.5",
+    "styled-components": "^6.1.19",
     "tailwindcss": "^4.1.5",
     "three": "^0.177.0",
     "zod": "^3.25.67"

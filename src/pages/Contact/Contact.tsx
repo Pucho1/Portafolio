@@ -32,7 +32,7 @@ const Contact = () => {
       <FloatBtnWraper />
 
       {/* Sección del título */}
-      <section className="flex justify-start items-center h-[40vh] lg:h-[40vh] px-10 md:px-[12%] lg:px-[15%] pt-25">
+      <section className="flex justify-start items-center h-[35vh] lg:h-[40vh] px-10 md:px-[12%] lg:px-[15%] pt-10 md:pt-25">
         <h2 className="flex flex-col text-4xl responsive_title md:w-[78%] lg:w-[73%]">
           <span className="flex md:mt-6 text-left items-center">
             <div className="flex-none profileImg profileImg_ferstOne mr-3 md:hidden"></div>
@@ -46,7 +46,7 @@ const Contact = () => {
       </section>
 
       {/* Seccion de mis datos y form contacto  */}
-      <section className="flex flex-col md:flex-row-reverse mt-5 md:mt-28 mb-65 px-10 lg:px-[15%] ">
+      <section className="flex flex-col md:flex-row-reverse md:mt-28 mb-65 px-10 lg:px-[15%] ">
 
         <aside className="flex flex-col md:w-1/3 md:pl-10">
           <div className="flex flex-col gap-5 my-5">

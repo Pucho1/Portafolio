@@ -13,10 +13,10 @@ const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
         <div
           className={`fixed top-0 right-0 h-dvh w-full md:w-1/2 lg:w-1/3 bg-[#141517] z-50 transform transition-transform duration-500 ease-in-out ${
             isOpen ? "translate-x-0" : "translate-x-full"
-          } delay-80`}
+          } delay-500`}
         >
           <div className={`h-full retard bg-trasparent transform transition-transform duration-700 ease-in-out ${
-            isOpen ? "translate-x-0" : "translate-x-full"} delay-150`}>
+            isOpen ? "translate-x-0" : "translate-x-full"} delay-550`}>
 
             {/* Header */}
             <div className="flex flex-col  p-6 pb-0 h-[21%]">

@@ -14,7 +14,7 @@ const useMagneticBtn = ( children: ReactElement ) => {
 	const { pathname }    = useLocation();
 
 
-  // Clono el hijo y le paso la ref
+  // Clono el hijo y le asigno la ref
   const childWithRef = cloneElement(children, { ref: buttonRef });
 
   const  { children: grandson } = childWithRef.props;
@@ -46,6 +46,13 @@ const useMagneticBtn = ( children: ReactElement ) => {
   useEffect(() => {
     if (!buttonRef.current || !containerRef.current) return;
 
+    const windowSize = window.innerWidth;
+
+    // si la pantalla es en primera instancia una grande si se activan los efecto de magnetismo 
+    // pero si no, no lo haran ya que no se ve bien en moviles este efecto
+    if(  windowSize < 450 ) return; 
+
+
     const button    = buttonRef.current; // Gets the button element for handler the btn movement
     const container = containerRef.current; //Gets the container element for triggering mouse events
     const bounds    = { x: 10, y: 10 }; // Maximum movement range in pixels
@@ -64,9 +71,9 @@ const useMagneticBtn = ( children: ReactElement ) => {
      showDot();
     };
 
-    container.addEventListener('mousemove', handleMouseMove);
+    container.addEventListener('mousemove',  handleMouseMove);
     container.addEventListener("mouseleave", handleMouseLeave);
-    container.addEventListener("mouseenter", handleMouseEnter);   
+    container.addEventListener("mouseenter", handleMouseEnter);
 
     return () => {
       container.removeEventListener('mousemove', handleMouseMove);
@@ -87,6 +94,8 @@ const useMagneticBtn = ( children: ReactElement ) => {
     const rect   = button.getBoundingClientRect(); // Devuelve el tamaño de un elemento y su posición relativa respecto a la ventana de visualización
     const deltaX = e.clientX - rect.left - rect.width / 2; // Calcula la posición horizontal relativa del mouse respecto al centro del botón
     const deltaY = e.clientY - rect.top - rect.height / 2; // Calcula la posición vertical relativa del mouse respecto al centro del botón
+    
+   
 
     // Limit movement to 20px range
     const moveX = Math.max(-bounds.x, Math.min(bounds.x, deltaX / 2));

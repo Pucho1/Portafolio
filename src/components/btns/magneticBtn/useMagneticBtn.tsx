@@ -50,7 +50,7 @@ const useMagneticBtn = ( children: ReactElement ) => {
 
     // si la pantalla es en primera instancia una grande si se activan los efecto de magnetismo 
     // pero si no, no lo haran ya que no se ve bien en moviles este efecto
-    if(  windowSize < 450 ) return; 
+    if(  windowSize < 680 ) return; 
 
 
     const button    = buttonRef.current; // Gets the button element for handler the btn movement

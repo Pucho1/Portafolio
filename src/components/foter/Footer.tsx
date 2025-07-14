@@ -16,7 +16,7 @@ const Footer = () => {
   useColitionDetector({sectionId, buttonId, triguer});
 
   return (
-    <footer className={`${triguer} flex flex-col bg-[#141517] text-white h-[100vh] justify-between"`} id={sectionId}>
+    <footer className={`${triguer} flex flex-col bg-[#141517] text-white h-[100vh] justify-between`} id={sectionId}>
       <section className='px-[12%] md:px-[15%]'>
         
         <h2 className="increase_text flex flex-col my-5 mb-12">

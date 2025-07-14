@@ -6,7 +6,6 @@ import type { customToolTipsProps } from '../../interfaces/companies';
 
 const CustomToolTip = styled(({ className, show = true, ...props  }: customToolTipsProps) => {
   const { children } = props; 
-  console.log(show)
 
   return show ? 
     <Tooltip {...props} classes={{ popper: className }} /> 

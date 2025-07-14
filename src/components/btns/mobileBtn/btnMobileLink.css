@@ -14,3 +14,10 @@
 .btn_mobile_link:hover::after {
   opacity: 1;
 }
+
+@media (max-width: 640px ){
+  .btn_mobile_link::after {
+    top: 49% ;
+    left: 18rem;
+  }
+}

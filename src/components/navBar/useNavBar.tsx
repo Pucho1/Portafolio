@@ -10,7 +10,7 @@ import { useFloatBtnStore } from "../../context/FloatBtnContext";
 
 const useNavBar = () => {
 
-  const [isHome, setIsHome] = useState(false)
+  const [isHome, setIsHome]   = useState(false)
 
 	const { setNavIsVisible }   = usePositionStore();
   const ref                   = useRef(null);
@@ -23,6 +23,7 @@ const useNavBar = () => {
   
 
   const navLinks = [
+    { name: 'Home', href: '/' },
     { name: t('PROJECTS'), href: '/projects' },
     { name: t('ABOUT_ME'), href: '/about' },
     { name: t('CONTACT'), href: '/contact' },

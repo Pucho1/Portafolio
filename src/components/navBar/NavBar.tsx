@@ -21,7 +21,6 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
           <Link to="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2">
               <img
-                // src= { isHome ? "/imgs/WhiteLogo.png" : '/imgs/BlackLogo' }
                 src= '/imgs/BlackLogo.png'
                 alt="Logo"
                 className="h-6 w-7"
@@ -37,10 +36,7 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
           {/* Navigation */}
           <nav className="hidden md:flex">
             <ul className="flex space-x-8">
-              {/* <li key={'language'} className='flex items-center'>
-                <LanguageSwitcher />
-              </li> */}
-              {navLinks.map((link) => (
+              {navLinks.filter((links) => links.href !== '/').map((link) => (
                 <li key={link.name}>
                   <MagneticBtn showDot dotColor={ dotColor }>
                     <button

@@ -25,23 +25,20 @@ const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
                 </h5>
               </div>
 
-              <hr className="text-gray-200" />
+              <hr className="text-gray-600" />
             </div>
 
             {/* Content */}
             <div className="flex-1 p-6 pb-0 h-[63%]">
-              {/* Section 1: Navigation */}
+              {/* Navigation */}
               <div className="h-full">
-                <div className={`space-y-2`}>
-
-                  {navLinks.map((link, index) => (
-                      <MobileBtn name={link.name}  href={link.href} key={index}/>
+                 {navLinks.map((link, index) => (
+                    <div className={`relative flex space-y-2 content-center`} key={index}>
+                      <MobileBtn name={link.name}  href={link.href} />
+                    </div>
                   ))}
-
-                </div>
               </div>
-
-              <hr className="text-gray-200" />
+              <hr className="text-gray-600" />
             </div>
 
             {/* footer  */}

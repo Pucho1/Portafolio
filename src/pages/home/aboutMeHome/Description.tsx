@@ -9,7 +9,7 @@ const AboutMe = () => {
 
   return (
     <section className="relative flex justify-center h-[80vh] my-5">
-			<div className="flex flex-col md:flex-row gap-8 content-top px-20 py-[10%] lg:px-30 text-black">
+			<div className="flex flex-col md:flex-row gap-8 content-top px-5 md:px-20 lg:px-30 py-[10%] text-black">
 				<div className="items-center md:w-[80%] md:pr-[10%]">
 					<h4 className="clamp_font font-light">
 						Creo espacios donde tus ideas se vuelven leyenda.
@@ -18,7 +18,7 @@ const AboutMe = () => {
 					</h4>
 				</div>
 
-				<div className="pr-15 md:pr-0 items-center md:w-[20%] mt-3">
+				<div className="pr-17 md:pr-0 items-center md:w-[20%] mt-3">
 					<h1>
 						Cada decisión cuenta. 
               			No es solo ser visto, sino ser sentido, recordado, compartido. 

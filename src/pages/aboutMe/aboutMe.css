@@ -34,7 +34,7 @@ body {
 }
 
 .img-caja {
-  background-image: url('public/imgs/DSC07312-2.jpg');
+  background-image: url('/imgs/DSC07312-2.jpg');
   background-size: auto 150%;       /* Ajusta la imagen para configurar como va cubrir la caja  y , x*/
   background-position: center top;  /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita la imagen */

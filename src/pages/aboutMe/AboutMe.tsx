@@ -25,7 +25,7 @@ const AboutMe = () => {
 
       <hr className="bg-gray-600  mx-[12%] lg:mx-[] opacity-20"/>
 
-      {/* my img section */}
+      {/* me img section */}
       <section className="flex flex-col lg:flex-row  gap-5 h-[130vh] my-20 lg:pr-[5%] px-[12%] relative" ref={sectionRef}>
         <div className="w-full  lg:w-60 pr-15 lg:p-0">
           <p className="text-md font-medium text-gray-700 ">

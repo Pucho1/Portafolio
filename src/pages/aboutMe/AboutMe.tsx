@@ -17,16 +17,16 @@ const AboutMe = () => {
       <FloatBtn />
 
      {/* Sección del título */}
-      <section className="h-[40vh] lg:h-[60vh] px-[15%] flex justify-start items-center pt-10">
+      <section className="h-[40vh] lg:h-[60vh] px-[6%] flex justify-start items-center pt-10">
         <p className="section_title text-center w-3/2 text-left">
           Traduzco tu visión en experiencias digitales
         </p>
       </section>
 
-      <hr className="bg-gray-600  mx-[12%] lg:mx-[] opacity-20"/>
+      <hr className="bg-gray-600  mx-[6%] lg:mx-[] opacity-20"/>
 
       {/* me img section */}
-      <section className="flex flex-col lg:flex-row  gap-5 h-[130vh] my-20 lg:pr-[5%] px-[12%] relative" ref={sectionRef}>
+      <section className="flex flex-col lg:flex-row gap-5 h-[100vh] md:h-[130vh] my-20 lg:pr-[5%] px-[6%] relative" ref={sectionRef}>
         <div className="w-full  lg:w-60 pr-15 lg:p-0">
           <p className="text-md font-medium text-gray-700 ">
             I help companies from all over the world with tailor-made solutions. 

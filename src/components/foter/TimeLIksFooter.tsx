@@ -5,7 +5,7 @@ import  footerLinks from '../../data/footerData.json'
 const TimeLinksFooter = ({ showLocalTime = true } : {showLocalTime?: boolean}) => {
 
 	return (
-    <section className='flex flex-col justify-center mt-10 px-[7%] pb-8 md:flex-row-reverse'>
+    <section className='flex flex-col justify-center mt-10 px-[7%] md:px-8 pb-8 md:flex-row-reverse'>
 
         {/* LINKS NETWORKS */}
         <div className={`flex w-full md:${showLocalTime ? 'w-1/2' : ''} flex-col md:${showLocalTime ? 'items-end' : 'items-start'} gap-6`}>

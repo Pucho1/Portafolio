@@ -16,7 +16,7 @@ export const Projects = () => {
       <FloatBtnWraper />
 
       {/* Sección del título */}
-      <section className="h-[40vh] lg:h-[60vh] px-[15%] flex justify-start items-center pt-10">
+      <section className="h-[40vh] lg:h-[60vh] px-[6%] flex justify-start items-center pt-10">
         <p className="section_title text-center w-3/2 text-left">
           Traduzco tu visión en experiencias digitales
         </p>

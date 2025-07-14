@@ -17,7 +17,7 @@ const Footer = () => {
 
   return (
     <footer className={`${triguer} flex flex-col bg-[#141517] text-white h-[100vh] justify-between`} id={sectionId}>
-      <section className='px-[12%] md:px-[15%]'>
+      <section className='px-[6%] md:px-[15%]'>
         
         <h2 className="increase_text flex flex-col my-5 mb-12">
           <span className="flex mt-6 text-left items-center">

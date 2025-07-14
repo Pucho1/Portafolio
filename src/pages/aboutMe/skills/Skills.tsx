@@ -9,10 +9,10 @@ const Skills = ( ) => {
 
   return (
     <section id="skills" className="py-4 bg-white trigger">
-      <div className="px-4 md:px-8">
+      <div className="px-6 md:px-8">
         <SectionTitle title="Skills" customClass="mb-16"/>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           {/* Category Filter */}
           <div className="flex flex-wrap justify-left gap-3 mb-12">
             {categories.map((category, index) => (
@@ -35,7 +35,7 @@ const Skills = ( ) => {
           </div>
           
           {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-25 gap-y-2">
             {filteredSkills.map((skill) => (
               <SkillBar key={skill.name} skill={skill} />
             ))}

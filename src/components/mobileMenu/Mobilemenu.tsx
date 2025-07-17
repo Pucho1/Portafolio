@@ -5,7 +5,6 @@ import { createPortal } from "react-dom";
 
 const MobileMenu = ({ isOpen, navLinks }: MobileMenuProps) => {
 
-
   return (
     createPortal(
       <>

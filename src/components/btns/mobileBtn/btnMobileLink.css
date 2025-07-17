@@ -15,9 +15,13 @@
   opacity: 1;
 }
 
+.btn_mobile_link:hover::after.showDot {
+  opacity: 1;
+}
+
 @media (max-width: 640px ){
-  .btn_mobile_link::after {
-    top: 49% ;
+  .doth {
+    top: 52% ;
     left: 18rem;
   }
 }

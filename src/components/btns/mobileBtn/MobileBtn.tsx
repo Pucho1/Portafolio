@@ -9,13 +9,9 @@ import './btnMobileLink.css';
 
 const MobileBtn = ({ name, href } : navLikns) => {
 
-	// gestionar vuando se muestra o no el punto por el path name 
-	// poner y quitar una clase que me cambie la opacidad del punto 
-
-	const navigate 				= useNavigate();
-	const { setIsOpen }  		= useShowModalOpnet();
+	const navigate 				      = useNavigate();
+	const { setIsOpen }  		    = useShowModalOpnet();
 	const { setVisibleFloatBtn} = useFloatBtnStore();
-
 	const { pathname }          = useLocation();
 
 	const handleOnClik = (link: string) => {

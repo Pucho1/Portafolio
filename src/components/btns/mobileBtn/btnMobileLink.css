@@ -11,17 +11,21 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.btn_mobile_link:hover::after {
-  opacity: 1;
-}
 
 .btn_mobile_link:hover::after.showDot {
   opacity: 1;
 }
 
-@media (max-width: 640px ){
+@media ( width <= 640px ){
   .doth {
     top: 52% ;
     left: 18rem;
   }
 }
+
+@media ( width >= 641px ){
+  .btn_mobile_link:hover::after {
+    opacity: 1;
+  }
+}
+

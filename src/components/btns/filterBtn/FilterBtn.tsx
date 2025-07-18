@@ -10,7 +10,7 @@ const FilterBtn = ( { clickAction, value, activeValue } : { clickAction: (value:
     <MagneticBtn>
 			<button
 				onClick={() => handlerOnClick(value)}
-				className={`animated-btn px-4 py-2 rounded-full text-sm font-medium h-12 min-w-18 z-100 md:hover:text-white ${
+				className={`animated-btn px-4 py-2 rounded-full text-sm font-medium h-12 min-w-18 md:hover:text-white ${
 					activeValue === value 
 						? 'bg-black text-white'
 						: 'bg-transparent text-black border-1 border-gray-300'

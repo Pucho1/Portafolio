@@ -1,6 +1,6 @@
 import { NavBar } from "../../components";
+import FilterBtn from "../../components/btns/filterBtn/FilterBtn";
 import FloatBtnWraper from "../../components/btns/FloatBtnWraper/FloatBtnWraper";
-import MagneticBtn from "../../components/btns/magneticBtn/MagneticBtn";
 import CompanyCard from "../../components/cards/CompanyCard";
 import Footer from "../../components/foter/Footer";
 import useProjects from "./useProjects";
@@ -26,21 +26,12 @@ export const Projects = () => {
       <section>
         <div className="flex flex-wrap justify-left gap-3 mb-12 px-[5%] ">
           {years.map((year, index) => (
-            <MagneticBtn key={index}>
-              <button
-                key={year}
-                onClick={() => setActiveYear(year)}
-                className={`animated-btn px-4 py-2 rounded-full text-sm font-medium h-12 min-w-18 hover:text-white ${
-                  activeYear === year 
-                    ? 'bg-black text-white'
-                    : 'bg-transparent text-black border-1 border-gray-300'
-                }`}
-              >
-                <span className='flex justify-center items-center'>{
-                  year.charAt(0).toUpperCase() + year.slice(1)}
-                </span>
-              </button>
-            </MagneticBtn>
+            <FilterBtn
+                key={index}
+                clickAction={setActiveYear}
+                value={year}
+                activeValue={activeYear}
+              />
           ))}
         </div>
       </section>

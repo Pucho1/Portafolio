@@ -1,46 +1,37 @@
 import useSkills from "./useSkills";
 import SkillBar from "../../../components/skill/SkillBar";
-import MagneticBtn from "../../../components/btns/magneticBtn/MagneticBtn";
 import SectionTitle from "../../../components/sectionTitle/SectionTitle";
+import FilterBtn from "../../../components/btns/filterBtn/FilterBtn";
 
-const Skills = ( ) => {
-
-  const { filteredSkills,		activeCategory,	setActiveCategory, categories } = useSkills();
+const Skills = () => {
+  const { filteredSkills, activeCategory, setActiveCategory, categories } =
+    useSkills();
 
   return (
     <section id="skills" className="py-4 bg-white trigger">
       <div className="px-6 md:px-8">
-        <SectionTitle title="Skills" customClass="mb-16"/>
-        
+        <SectionTitle title="Skills" customClass="mb-16" />
+
         <div className="max-w-5xl mx-auto">
           {/* Category Filter */}
           <div className="flex flex-wrap justify-left gap-3 mb-12">
             {categories.map((category, index) => (
-              <MagneticBtn key={index}>
-                <button
-                  key={category}
-                  onClick={() => setActiveCategory(category)}
-                  className={`animated-btn px-4 py-2 rounded-full text-sm font-medium h-12 min-w-18 z-100 hover:text-white ${
-                    activeCategory === category 
-                      ? 'bg-black text-white'
-                      : 'bg-transparent text-black border-1 border-gray-300'
-                  }`}
-                >
-                  <span className='flex justify-center items-center'>{
-                    category.charAt(0).toUpperCase() + category.slice(1)}
-                  </span>
-                </button>
-              </MagneticBtn>
+              <FilterBtn
+                key={index}
+                clickAction={setActiveCategory}
+                value={category}
+                activeValue={activeCategory}
+              />
             ))}
           </div>
-          
+
           {/* Skills Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-25 gap-y-2">
             {filteredSkills.map((skill) => (
               <SkillBar key={skill.name} skill={skill} />
             ))}
           </div>
-          
+
           {/* Technical Details */}
           {/* <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">

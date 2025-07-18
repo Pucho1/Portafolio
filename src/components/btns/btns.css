@@ -19,14 +19,7 @@
   transition: transform 0.5s ease;
 }
 
-.animated-btn:hover::before {
-  transform: translateY(0);
-}
 
-.animated-btn:not(:hover)::before {
-  transform: translateY(100%);
-  transition: transform 0.5s ease;
-}
 
 .animated-btn span {
   position: relative;
@@ -55,4 +48,15 @@
 
 .custom_border:hover::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+@media ( width > 641px ){
+  .animated-btn:hover::before {
+    transform: translateY(0);
+  }
+
+  .animated-btn:not(:hover)::before {
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+  }
 }

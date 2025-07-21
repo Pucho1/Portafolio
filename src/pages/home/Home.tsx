@@ -9,7 +9,7 @@ const Home = () => {
     // pero no se veria la animacion de entrada de todo el home
       <motion.div
         className="bg-white w-screen"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit= {{ opacity: 0, y: -20, transition: { duration: 0.5, ease: "easeIn" } }}
         transition={{ duration: 1, ease: "easeOut" }}

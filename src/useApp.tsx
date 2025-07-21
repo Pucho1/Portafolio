@@ -29,7 +29,7 @@ const useApp = () => {
   const pageContentVariants = {
     initial: { opacity: 0, y: 20 }, // initial state (cuando entra)
     animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }, // Animations state (cuando está visible)
-    exit: { opacity: 0, y: -20, transition: { duration: 0.5, ease: "easeIn" } } // State out (cuando se va)
+    exit: { opacity: 0, y: -20, transition: { duration: 0.5, ease: "easeIn" } }, // State out (cuando se va)
   };
 
   useGSAP(() => {

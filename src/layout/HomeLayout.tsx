@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import IntroAnimation from "../components/introAnimation/IntroAnimation";
 import Home from "../pages/home/Home";
-import { AnimatePresence } from "framer-motion";
+// import { AnimatePresence } from "framer-motion";
 
 
 const HomeLayout = () => {
@@ -19,9 +19,7 @@ const HomeLayout = () => {
         { !isIntroFinished ? 
             <IntroAnimation  handleisIntroFinished={ handleisIntroFinished }/>
           :
-            <AnimatePresence>
-              <Home />
-            </AnimatePresence>
+            <Home />
         }
       </>
      : 

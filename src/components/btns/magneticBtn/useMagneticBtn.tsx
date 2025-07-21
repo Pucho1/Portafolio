@@ -1,9 +1,9 @@
 import { cloneElement, useEffect, useRef, type ReactElement } from "react";
-import { useLocation } from 'react-router';
 
 import { gsap } from 'gsap';
 
 import type { boundsType } from "../../../interfaces/boundsInterface";
+import useClearPath from "../../../utils/useClearPath";
 
 const useMagneticBtn = ( children: ReactElement ) => {
 	const buttonRef       = useRef<HTMLButtonElement>(null);
@@ -11,8 +11,8 @@ const useMagneticBtn = ( children: ReactElement ) => {
   const containerRef    = useRef<HTMLDivElement>(null);
 	const initialPosition = useRef({ x: 0, y: 0 });
 	const isGrandSon 			= useRef(false);
-	const { pathname }    = useLocation();
 
+  const { clearPath }   = useClearPath()
 
   // Clono el hijo y le asigno la ref
   const childWithRef = cloneElement(children, { ref: buttonRef });
@@ -33,10 +33,9 @@ const useMagneticBtn = ( children: ReactElement ) => {
 	 * Manejo cuando es un hijo y cuando no, y si lo es llamo show Dot y no permito que se quite.
 	 */
 	const handleIsGrandSon = (): void => {
-		const currentPath = pathname.split('/')[1];
 		const clearedGrandson = handlerClearedGrandson();
 
-		if(currentPath.toLowerCase() === clearedGrandson.toLowerCase()) {
+		if(clearPath.toLowerCase() === clearedGrandson.toLowerCase()) {
 			isGrandSon.current = true;
 			showDot();
 		};

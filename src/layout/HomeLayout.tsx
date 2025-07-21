@@ -2,10 +2,10 @@ import { useState } from "react";
 
 import IntroAnimation from "../components/introAnimation/IntroAnimation";
 import Home from "../pages/home/Home";
+import { AnimatePresence } from "framer-motion";
 
-import SectionLayout from "../pages/home/sectionLayout/SectionLayout";
 
-const HomeLayout = ({isVisited} : { isVisited: boolean}) => {
+const HomeLayout = () => {
 
   const [isIntroFinished, setIsIntroFinished] = useState(false);
 
@@ -15,18 +15,16 @@ const HomeLayout = ({isVisited} : { isVisited: boolean}) => {
  
   return (
     <main className="flex bg-black font-(family-name:--san-serif) text-white">
-     
-     { !isVisited ? 
       <>
         { !isIntroFinished ? 
             <IntroAnimation  handleisIntroFinished={ handleisIntroFinished }/>
           :
-            <Home />
+            <AnimatePresence>
+              <Home />
+            </AnimatePresence>
         }
       </>
      : 
-      <SectionLayout />
-    }
     </main>
   );
 };

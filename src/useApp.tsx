@@ -1,21 +1,21 @@
-import { useLocation } from "react-router";
 import { useEffect, useRef } from "react";
-
 
 import gsap from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import useClearPath from "./utils/useClearPath";
 
 gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
 
 
 const useApp = () => {
 
-  const location = useLocation();
   const visitedRoutesRef = useRef(new Set()); // Track visited routes /* Set()--> help me to not repeat the same route
   const isVisited = useRef(false); // Track if the current route has been visited
+  const { location, clearPath } = useClearPath();
+
 
   useEffect(() => {
     visitedRoutesRef.current.add(location.pathname);
@@ -43,12 +43,13 @@ const useApp = () => {
     };
   }, [location]); // Recreate the ScrollSmoother on location change
 
-
+  const palabraCapitalizada = clearPath.split(' ').map(p => p[0].toUpperCase() + p.slice(1)).join(' ');
 
   return{
 		pageContentVariants,
 		location,
 		isVisited,
+    clearPath: palabraCapitalizada,
   };
 };
 

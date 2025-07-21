@@ -1,79 +1,92 @@
-import { Routes, useLocation, Route, Navigate } from 'react-router';
-import { useEffect, useRef } from 'react';
+import { Routes, Route, Navigate } from "react-router";
 
-import gsap from 'gsap';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
 
 import HomeLayout from "./layout/HomeLayout";
-import AboutMe from './pages/aboutMe/AboutMe';
-import { Projects } from './pages/Projects/Projects';
-import Contact from './pages/Contact/Contact';
-import PageClientNTF from './pages/errors/PageClientNTF';
+import AboutMe from "./pages/aboutMe/AboutMe";
+import { Projects } from "./pages/Projects/Projects";
+import Contact from "./pages/Contact/Contact";
+import PageClientNTF from "./pages/errors/PageClientNTF";
 
 import "./App.css";
+import PagesLayout from "./layout/pagesLayout/PagesLayout";
+import { AnimatePresence, motion } from "framer-motion";
+import useApp from "./useApp";
 
-
-gsap.registerPlugin(ScrollSmoother, useGSAP, ScrollTrigger);
 
 export default function App() {
-
-  const location         = useLocation();
-  const visitedRoutesRef = useRef(new Set()); // Track visited routes /* Set()--> help me to not repeat the same route
-  const isVisited        = useRef(false); // Track if the current route has been visited
-
-  useEffect(() => {
-    visitedRoutesRef.current.add(location.pathname);
-    isVisited.current = hasVisited(); // Check if the current route has been visited
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[location]);
-
-  const hasVisited= () => visitedRoutesRef.current.has(location.pathname);
-
-  useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 1, // how long it takes to smooth the scroll
-      effects: true, // enable effects like pinning and parallax
-    });
-
-    return () => {
-      ScrollSmoother.get()?.kill(); // Cleanup on unmount
-    };
-  }, [location]); // Recreate the ScrollSmoother on location change
+ 
+  const { location,  pageContentVariants, isVisited } = useApp();
 
   return (
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        <Routes>
-          <Route>
-            <Route
-              path="/"
-              element={ <HomeLayout  isVisited={isVisited.current}/> }
-            />
-            <Route
-              path="/about"
-              element={ <AboutMe /> }
-            />
+        <AnimatePresence  mode="wait">
+          <Routes location={location} key={location.pathname}>
+              <Route
+                path="/"
+                element={<HomeLayout isVisited={isVisited.current} />}
+              />
+              
+              <Route 
+                path="/about" 
+                element={
+                  <PagesLayout pageName={location.pathname}>
+                    <motion.div
+                      variants={pageContentVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      className="w-full h-full" // Asegura que la div ocupe el espacio para la animación
+                    >
+                      <AboutMe />
+                    </motion.div>
+                  </PagesLayout>
+                }
+              />
 
-            <Route
-              path="/projects"
-              element={ <Projects /> }
-            />
+              <Route
+                path="/projects" 
+                element={
+                  <PagesLayout pageName={location.pathname}>
+                    <motion.div
+                      variants={pageContentVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      className="w-full h-full" // Asegura que la div ocupe el espacio para la animación
+                    >
+                      <Projects />
+                    </motion.div>
+                  </PagesLayout>
+                } 
+              />
 
-            <Route
-              path="/contact"
-              element={ <Contact /> }
-            />
+              <Route
+                path="/contact" 
+                element={
+                  <PagesLayout pageName={location.pathname}>
+                    <motion.div
+                      variants={pageContentVariants}
+                      initial="initial"
+                      animate="animate"
+                      exit="exit"
+                      className="w-full h-full" // Asegura que la div ocupe el espacio para la animación
+                    >
+                      <Contact />
+                    </motion.div>
+                  </PagesLayout>
+                } 
+              />
 
-            <Route
-              path="/error/clietnPage_Not_Found"
-              element={ <PageClientNTF /> }
-            />
-            <Route path='*' element ={<Navigate to="/" replace />} />
-          </Route>
-        </Routes>
+              <Route
+                path="/error/clietnPage_Not_Found"
+                element={<PageClientNTF />}
+              />
+
+              <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </AnimatePresence>
       </div>
     </div>
   );
-};
+}

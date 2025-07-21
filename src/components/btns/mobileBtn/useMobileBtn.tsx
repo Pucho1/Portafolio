@@ -14,7 +14,7 @@ const useMobileBtn = (name: string) => {
 		setIsOpen(false);
 		setVisibleFloatBtn(false);
 		setTimeout(() => {
-			navigate(`${link}`);	
+			navigate(`${link}`, { viewTransition: true });	
 		}, 750);
 	};
 

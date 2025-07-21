@@ -17,8 +17,6 @@ export default function App() {
  
   const { location,  pageContentVariants, isVisited, clearPath } = useApp();
 
-  console.log('isvisited from aPPP ====>', isVisited)
-
   return (
     <div id="smooth-wrapper">
       <div id="smooth-content">

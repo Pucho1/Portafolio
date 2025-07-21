@@ -7,13 +7,11 @@ const PagesLayout = ({ pageName, children } : { pageName: string, children: Reac
 
 	useEffect(() => {
 		setShowPageName(true);
-
 		const timer = setTimeout(() => {
 			setShowPageName(false);
 		}, 1000)
 
 		return () => clearTimeout(timer);
-
 	}, [pageName]);
 
   return (

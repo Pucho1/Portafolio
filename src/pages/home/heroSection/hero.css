@@ -15,8 +15,23 @@
   font-family: 'Dennis Sans', sans-serif;
 }
 
-@media (min-width: 768px) {
+@media (width > 768px) {
   .locationCard {
    display: flex; /* Para alinear el texto y el globo horizontalmente */
   }
+  .profile_img_hero{
+    height: 6rem;
+    width:  6rem;
+  }
+
+}
+
+.profile_img_hero{
+  height: 4rem;
+  width: 4rem;
+}
+
+.hero_bg{
+  background: url(/public/imgs/bghero.jpg);
+  background-size: cover;
 }

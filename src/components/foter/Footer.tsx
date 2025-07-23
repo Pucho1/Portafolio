@@ -21,7 +21,7 @@ const Footer = () => {
         
         <h2 className="increase_text flex flex-col my-5 mb-12">
           <span className="flex mt-6 text-left items-center">
-            <div className="profileImg mr-3 mt-2"></div>
+            <div className="profileImg  mr-3 mt-2"></div>
             Let's work
           </span>
           <span className="text-left w-50">

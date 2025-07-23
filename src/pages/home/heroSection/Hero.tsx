@@ -50,7 +50,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex h-1/3 w-full">
+            <div className="flex h-45 w-full">
               <div className="flex items-start md:items-center justify-start w-full md:pl-9">
                 <div className="flex flex-col text-md md:text-lg text-white font-medium md:w-1/2 px-4 md:pl-10 justify-start text-start">
                   <span>Desarrollador con +8 años de experiencia colaborando con startups y grandes empresas. </span>
@@ -67,7 +67,7 @@ const Hero = () => {
             <div className="relative w-full h-1/3 flex items-end justify-center overflow-hidden">
                <div
                 ref={marqueeRef}
-                className="flex whitespace-nowrap will-change-transform animate-marquee-left mb-20 md:mb-2"
+                className="flex whitespace-nowrap will-change-transform animate-marquee-left mb-14 md:mb-2"
               >
                 <div className="text-custom flex items-end text-white text-5xl capitalize pb-5">
                   {[...Array(20)].map((_, i) => (

@@ -22,7 +22,6 @@ const HomeLayout = () => {
             <Home />
         }
       </>
-     : 
     </main>
   );
 };

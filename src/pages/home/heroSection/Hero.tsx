@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="relative w-full h-2/3 flex items-end justify-center overflow-hidden">
                <div
                 ref={marqueeRef}
-                className="flex whitespace-nowrap will-change-transform animate-marquee-left mb-16"
+                className="flex whitespace-nowrap will-change-transform animate-marquee-left mb-20"
               >
                 <div className="text-custom flex items-end text-white text-5xl capitalize pb-5">
                   {[...Array(20)].map((_, i) => (

@@ -35,7 +35,7 @@ const Hero = () => {
               </div> */}
 
               {/* Text section */}
-              <div className= "flex flex-col items-center w-full md:items-start justify-start pl-3 md:pl-7">
+              <div className= "flex flex-col items-start w-full md:items-start justify-start pl-3 md:pl-7">
                 <div className="flex flex-row items-end pl-3 md:pl-3 w-full">
                   <div className="profileImg profile_img_hero mr-3"></div>
                   <h1 className="text-3xl font-bold">Hi, I'm</h1>
@@ -44,7 +44,7 @@ const Hero = () => {
                   texts={texts}
                   typingSpeed={80}
                   delayBetweenTexts={700}
-                  className="text-2xl font-medium text-white flex pl-19 md:pl-22 justify-start items-start w-80"
+                  className="text-2xl font-medium text-white flex pl-22 justify-start items-start w-80"
                   cursorClassName="text-yellow-300"
                 />
               </div>

@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section className="relative bg-[#aeaeae]">
-        <div className="flex flex-col h-[110vh] relative z-10 items-center text-white text-center">
+        <div className="flex flex-col h-[110vdh] relative z-10 items-center text-white text-center">
           <NavBar />
 
           <div className="flex flex-col h-[100vh]  md:h-[92vh] w-screen">
@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="relative w-full h-2/3 flex items-end justify-center overflow-hidden">
                <div
                 ref={marqueeRef}
-                className="flex whitespace-nowrap will-change-transform animate-marquee-left mb-13"
+                className="flex whitespace-nowrap will-change-transform animate-marquee-left mb-16"
               >
                 <div className="text-custom flex items-end text-white text-5xl capitalize pb-5">
                   {[...Array(20)].map((_, i) => (

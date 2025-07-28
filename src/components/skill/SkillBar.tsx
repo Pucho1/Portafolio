@@ -4,7 +4,7 @@ const SkillBar = ({ skill } : {skill : Skill}) => {
   return (
     <div className="mb-6">
       <div className="flex justify-between items-center mb-1">
-        <h4 className="text-sm font-medium text-blck">{skill.name}</h4>
+        <h4 className="text-sm text-black font-medium text-blck">{skill.name}</h4>
         <span className="text-sm font-medium text-black">{skill.level}%</span>
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">

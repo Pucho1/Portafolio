@@ -19,7 +19,7 @@ const FloatBtnWraper = () => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0 }}
           key="box"
-          className={`fixed z-100 top-2 right-2 p-2 md:p-3`}>
+          className={`fixed z-100 top-3 right-1 p-1 md:p-3`}>
             <FloatedBtn  />
         </motion.div>
       )}

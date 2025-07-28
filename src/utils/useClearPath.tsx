@@ -7,7 +7,7 @@ const useClearPath = (): { clearPath: string, location: Location} => {
 	const clearPath = currentPath[currentPath.length - 1];
 
   return {
-		clearPath : clearPath.length > 0 ? clearPath : 'Home',
+		clearPath : clearPath.length > 0 ? clearPath : 'home',
 		location,
 	};
 };

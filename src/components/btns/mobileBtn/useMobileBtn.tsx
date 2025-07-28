@@ -1,14 +1,17 @@
 import { useShowModalOpnet } from "../../../context/ShowModalOpen";
 import { useFloatBtnStore } from "../../../context/FloatBtnContext";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
+import useClearPath from "../../../utils/useClearPath";
 
 
 const useMobileBtn = (name: string) => {
 
-	const navigate 				      = useNavigate();
-	const { setIsOpen }  		    = useShowModalOpnet();
+	console.log('name --->',name)
+
+	const navigate 				= useNavigate();
+	const { setIsOpen }  		= useShowModalOpnet();
 	const { setVisibleFloatBtn} = useFloatBtnStore();
-	const { pathname }          = useLocation();
+	const { clearPath }         = useClearPath()
 
 	const handleOnClik = (link: string) => {
 		setIsOpen(false);
@@ -19,9 +22,10 @@ const useMobileBtn = (name: string) => {
 	};
 
 	const showDotWhenIsInPage = (): boolean => {
-		const fixedPath = pathname.split('/')[1];
+		// const fixedPath = pathname.split('/')[1];
+		console.log(clearPath)
 		const lowerName = name.toLowerCase();
-		return fixedPath === lowerName ?  true : false ; 
+		return clearPath === lowerName ?  true : false ; 
 	};
 
   return {

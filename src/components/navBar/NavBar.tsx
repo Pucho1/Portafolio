@@ -16,12 +16,12 @@ const NavBar = ({text_color = 'text-white', dotColor} : {text_color?: string, do
   return (
     <header ref={ ref } className="relative top-7 w-full left-0 right-0 z-50 transition-all duration-300 mb-2" >
 
-      <div className="px-4 md:px-7 w-full">
+      <div className="px-4 pr-6 md:px-7 w-full">
         <div className="flex justify-between items-center font-[450] ">
           <Link to="/" className="flex items-center">
             <div className="p-2 rounded-lg mr-2">
               <img
-                src= '/imgs/BlackLogo.png'
+                src= '/imgs/logo/BlackLogo.png'
                 alt="Logo"
                 className="h-6 w-7"
               />

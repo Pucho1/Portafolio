@@ -6,8 +6,6 @@ import useClearPath from "../../../utils/useClearPath";
 
 const useMobileBtn = (name: string) => {
 
-	console.log('name --->',name)
-
 	const navigate 				= useNavigate();
 	const { setIsOpen }  		= useShowModalOpnet();
 	const { setVisibleFloatBtn} = useFloatBtnStore();
@@ -22,8 +20,6 @@ const useMobileBtn = (name: string) => {
 	};
 
 	const showDotWhenIsInPage = (): boolean => {
-		// const fixedPath = pathname.split('/')[1];
-		console.log(clearPath)
 		const lowerName = name.toLowerCase();
 		return clearPath === lowerName ?  true : false ; 
 	};

@@ -1,6 +1,6 @@
 import { Building, Calendar } from "lucide-react";
 
-import type { CompaniesData } from "../../interfaces/companies";
+import type { Companies } from "../../interfaces/companies";
 import CustomToolTip from "../customTooltip/CustomToolTip";
 import { useState } from "react";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
@@ -12,7 +12,7 @@ const CompanyCard = ({
   year,
   category,
   src,
-}: CompaniesData) => {
+}: Companies) => {
   // const navigate = useNavigate()
   const [open, setOpen] = useState(false);
 
@@ -52,7 +52,7 @@ const CompanyCard = ({
           >
             {/* Large Image */}
             <div className="aspect-video bg-gray-100 flex items-center justify-center">
-              {logoUrl.startsWith("public") ? (
+              {logoUrl!.startsWith("public") ? (
                 <img
                   src={logoUrl}
                   alt={`${client} logo`}
@@ -66,7 +66,7 @@ const CompanyCard = ({
               ) : null}
               <Building
                 className={`w-12 h-12 text-gray-400 ${
-                  logoUrl.startsWith("public") ? "hidden" : ""
+                  logoUrl!.startsWith("public") ? "hidden" : ""
                 }`}
               />
             </div>

@@ -1,8 +1,9 @@
 import type { CardWithImgChangin } from "../../interfaces/companies";
 import EllipsisTooltipText from "../EllipsisTooltipText";
-import ImgChanging from "../ImgChanging/ImgChanging";
 
-const CardHomeMobile = ({imgUrls, companyName, rol, year, changeTimer}: CardWithImgChangin ) => {
+
+
+const CardHomeMobile = ({logoUrl, companyName, rol, year}: CardWithImgChangin ) => {
 
   return (
 
@@ -10,11 +11,11 @@ const CardHomeMobile = ({imgUrls, companyName, rol, year, changeTimer}: CardWith
 
       {/* Image Section */}
       <div className="flex-shrink-0 p-4 mb-4 flex items-center justify-left h-70 w-full bg-gray-200">
-        <ImgChanging 
-          imgUrls={imgUrls} 
-          changeTimer={changeTimer} 
+        <img
+          src={logoUrl}
+          alt={`${companyName} logo`}
           className="max-h-full max-w-full object-cover w-100"
-        />
+				/>
     	</div>
 
       {/* Content Section */}

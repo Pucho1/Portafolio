@@ -18,7 +18,7 @@ const Projects = () => {
             return(
               <CardHomeMobile
                 key={index}
-                imgUrls={company.imgUrls}
+                logoUrl={company.logoUrl}
                 companyName={company.companyName}
                 description={company.description}
                 rol= {company.rol}

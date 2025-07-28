@@ -1,33 +1,29 @@
-import React from 'react';
+import ImgChanging from '../ImgChanging/ImgChanging';
+import type { CardWithImgChangin } from '../../interfaces/companies';
 
-interface CompanyCardProps {
-  companyName: string;
-  position: string;
-  startYear: string;
-  description: string;
-  logoUrl: string;
-  duration?: string;
-}
-
-const AnotherCard: React.FC<CompanyCardProps> = ({
-  companyName,
-  position,
-  startYear,
-  description,
-  logoUrl,
-}) => {
+const AnotherCard = ({
+   companyName ,
+    year,
+    description,
+    rol,
+    imgUrls,
+    changeTimer,
+}: CardWithImgChangin) => {
+  
   return (
     <div className="bg-white rounded-2xl p-5 max-w-sm mx-auto">
       {/* Avatar/Logo */}
       <div className="flex justify-center mb-6">
         <div className="relative">
-          <img
-            src={logoUrl}
-            alt={`${companyName} logo`}
-            className="w-32 h-32 rounded-full  border-4 border-gray-100" //object-cover
+
+          <ImgChanging 
+            imgUrls={imgUrls} 
+            changeTimer={changeTimer}
+            className="w-32 h-32 rounded-full  border-4 border-gray-100 bg-black"
           />
+
           <div className="absolute -bottom-2 -right-2 bg-black text-white text-sm font-bold px-3 py-1 rounded-full">
-            {startYear}
+            {year}
           </div>
         </div>
       </div>
@@ -40,7 +36,7 @@ const AnotherCard: React.FC<CompanyCardProps> = ({
         
         <div className="space-y-2">
           <p className="text-gray-600 font-semibold text-base uppercase tracking-wide">
-            {position}
+            {rol}
           </p>
           
           {/* {duration && (

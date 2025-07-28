@@ -1,13 +1,13 @@
-
 import SectionBtn from "../../../components/btns/sectionbtn/SectionBtn";
 import RowCardWorks from "../../../components/rowCardsWorks/RowCardWorks";
-import useProyects from "./useProyects";
 import SectionTitle from "../../../components/sectionTitle/SectionTitle";
 import CardHomeMobile from "../../../components/cards/CardHomeMobile";
 
+import useProyects from "./useProyects";
+
 const Projects = () => {
 
-  const { firstGroup, isMobile, handlerOnClik } = useProyects();
+  const { firstGroup, isMobile, handlerOnClik, ramdomNumber } = useProyects();
 
   return (
     <section className="flex flex-col overflow-hidden max-w-[100vw] trigger mb-10">
@@ -18,26 +18,25 @@ const Projects = () => {
             return(
               <CardHomeMobile
                 key={index}
-                imageUrl={company.logoUrl}
-                title={company.companyName}
-                rol={company.rol}
+                imgUrls={company.imgUrls}
+                companyName={company.companyName}
+                description={company.description}
+                rol= {company.rol}
                 year={company.year}
+                changeTimer={ ramdomNumber() }
               />
             )
           })}
         </>
       ) : (
-        <>
-          <RowCardWorks companies={firstGroup} className="md:mt-15" />
-
-          {/* <RowCardWorks companies={secondGroup} reverse /> */}
-        </>
+        <RowCardWorks companies={firstGroup} className="md:mt-15" />
       )}
       <div className="flex justify-center items-center mt-15">
         <SectionBtn
           content={"More Works"}
           hgt={5}
           wdt={15}
+          classCustom={'mb-5'}
           onClick={handlerOnClik}
         />
       </div>

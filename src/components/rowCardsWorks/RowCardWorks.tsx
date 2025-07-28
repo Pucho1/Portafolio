@@ -1,12 +1,14 @@
-import type { RowCardWorksProps } from "../../interfaces/companies";
+import type { RowCardWorksProps } from "../../interfaces/cards";
+import useRandomNumber from "../../utils/useRandomNumber";
 import AnotherCard from "../cards/AnotherCard";
-// import CardHomeMobile from "../cards/CardHomeMobile";
 
 import useRowWorks from "./useRowWorks";
 
 const RowCardWorks = ({ companies, reverse, className } :  RowCardWorksProps ) => {
 
   const { visibleCount, handleRowMovement } = useRowWorks(reverse);
+
+  const { ramdomNumber } = useRandomNumber();
 
   return (
     // to see whit oversize add w-120vw
@@ -17,11 +19,11 @@ const RowCardWorks = ({ companies, reverse, className } :  RowCardWorksProps ) =
         <AnotherCard  
           key={index}
           companyName={company.companyName}
-          position={company.rol}
-          startYear={company.year}
-          duration={company.year}
+          rol={company.rol}
+          year={company.year}
           description={company.description}
-          logoUrl={company.logoUrl}
+          imgUrls={company.imgUrls}
+          changeTimer= { ramdomNumber() }
         />
 			))}
 		</div>

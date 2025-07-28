@@ -50,6 +50,8 @@ const useRowWorks = ( reverse? : boolean ) => {
 		return reverse ? ( progres  * 10) - 10 : (-progres * 10) + 6.4;
 	};
 
+
+
   return {
 		visibleCount,
 		progres,

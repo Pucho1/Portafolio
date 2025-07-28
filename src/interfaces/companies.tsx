@@ -5,21 +5,17 @@ export interface Companies {
   year: string;
   category?: string;
   description: string;
-  logoUrl: string;
+  logoUrl?: string;
   client?: string;
   src?: string;
   rol: string;
+  imgUrls?: string[]
 };
 
-export interface CompaniesData extends Companies {
-  bgColor?: string;
-};
+export interface CardWithImgChangin extends Companies{
+  changeTimer: number;
+}
 
-export interface RowCardWorksProps {
-  className?: string;
-  companies: Companies[];
-  reverse?: boolean;
-};
 
 export interface customToolTipsProps extends TooltipProps {
   show?: boolean;

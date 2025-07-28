@@ -4,27 +4,49 @@
 		"companyName": "CENRO DE INFORMATIZACION DE LA GESTION DE ENTIDADES (CEIGE)",
 		"description": "Desarrolla soluciones informáticas para la gestión empresarial, automatización de procesos.",
 		"year": "17/19",
-		"rol": "Developper"
+		"rol": "Developper",
+		"imgUrls": [
+			"/imgs/ceige/logo_ceige_blue_bg.png",
+			"/imgs/ceige/logo_ceige_dark_bg.png",
+			"/imgs/ceige/logo_ceige_white_bg.png"
+		]
 	},
 	{
 		"logoUrl": "/imgs/get/get.jpg",
 		"companyName": "GRUPO DE ELECTRONIA PARA EL TURISMO (GET)",
 		"description": "Desarrolla soluciones integrales en automatización, telecomunicaciones, ERP y servicios informáticos",
 		"year": "20/21",
-		"rol": "Developper"
+		"rol": "Developper",
+		"imgUrls": [
+			"/imgs/get/GETapps.jpg",
+			"/imgs/get/get.jpg", 
+			"/imgs/get/bulevar_mi_transfer-660x330-1.jpg",
+			"/imgs/get/zun_suot.jpeg"
+		]
 	},
 	{
 		"logoUrl": "/imgs/markas/markas_darkbg.png",
 		"companyName": "Mark'As",
 		"description": "Desarrollo de soluciones digitales a medida, combinando UI/UX y estrategias de promoción.",
 		"year": "20/22",
-		"rol": "Technical leader"
+		"rol": "Technical leader",
+		"imgUrls": [
+			"imgs/markas/profileImg/markas_gris.png",
+			"imgs/markas/profileImg/markas_dorado.png",
+			"imgs/markas/profileImg/markas_square_transparent.png"
+		]
 	},
 	{
 		"logoUrl": "/imgs/hiberus/hiberus.webp",
 		"companyName": "Hiberus Tecnology",
 		"description": "Soluciones tecnológicas especializadas en transformación digital, cloud, datos e inteligencia artificial.",
 		"year": "22/24",
-		"rol": "Developper"
+		"rol": "Developper",
+		"imgUrls": [
+			"imgs/hiberus/HIBERUS.jpg",
+			"imgs/hiberus/hiberus.webp",
+			"imgs/hiberus/hiberusdentro.webp",
+			"imgs/hiberus/lascosaHiberus.jpeg"
+		]
 	}
 ]

@@ -50,9 +50,8 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex h-45 w-full">
-              <div className="flex items-start md:items-center justify-start w-full md:pl-9">
-                <div className="flex flex-col text-md md:text-lg text-white font-medium md:w-1/2 px-4 md:pl-10 justify-start text-start">
+            <div className="flex items-start md:items-center justify-start h-45 w-full md:pl-9">
+                <div className="flex flex-col text-md md:text-lg text-white font-medium md:w-1/2 px-6 md:pl-20 md:pr-0 justify-start text-start">
                   <span>Desarrollador con +8 años de experiencia colaborando con startups y grandes empresas. </span>
                   {/* <ul className="pl-3">
                     <li>React  </li>
@@ -60,7 +59,6 @@ const Hero = () => {
                     <li>Vew    </li>
                   </ul> */}
                 </div>
-              </div>
             </div>
              
              {/* big name */}

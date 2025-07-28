@@ -47,7 +47,7 @@ const useRowWorks = ( reverse? : boolean ) => {
 	}, []);
 
 	const handleRowMovement = (): number => {
-		return reverse ? ( progres  * 10) - 9 : -progres * 10;
+		return reverse ? ( progres  * 10) - 10 : (-progres * 10) + 6.4;
 	};
 
   return {

@@ -32,6 +32,6 @@
 }
 
 .hero_bg{
-  background: url(/public/imgs/bghero.jpg);
+  background: url(/public/imgs/heroSection/bgHero.jpeg);
   background-size: cover;
 }

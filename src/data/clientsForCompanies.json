@@ -1,0 +1,107 @@
+[
+  {
+    "companyName": "CENRO DE INFORMATIZACION DE LA GESTION DE ENTIDADES (CEIGE)",
+    "client": "Fiscalía general de la república",
+    "year": "17/19",
+    "category": "Analista",
+    "description": "Desarrollador de soluciones informáticas, diseño y prototipado de interfaces dinámicas y estáticas.",
+    "logoUrl": "public/imgs/FGR cuba.jpg",
+    "src": "https://www.fgr.gob.cu/"
+  },
+  {
+    "companyName": "CENRO DE INFORMATIZACION DE LA GESTION DE ENTIDADES (CEIGE)",
+    "client": "Grupo empresarial Tabacuba",
+    "year": "17/19",
+    "category": "Developer",
+    "description": "Desarrollador de soluciones informáticas, diseño y prototipado de interfaces dinámicas y estáticas.",
+    "logoUrl": "public/imgs/get/GETabauba.png",
+    "src": ""
+  },
+  {
+    "companyName": "GRUPO DE ELECTRONIA PARA EL TURISMO (GET)",
+    "client": "Suite Zun",
+    "year": "20/21",
+    "category": "Developer",
+    "description": "Un superconjunto de JavaScript que agrega tipos estáticos",
+    "logoUrl": "public/imgs/get/zun suot.jpeg",
+    "src": "https://www.get.tur.cu/zun/"
+
+  },
+  {
+    "companyName": "GRUPO DE ELECTRONIA PARA EL TURISMO (GET)",
+    "client": "Bulevar depagos",
+    "year": "20/21",
+    "category": "Developer",
+    "description": "Una biblioteca para construir interfaces de usuario",
+    "logoUrl": "public/imgs/get/bulevar_mi_transfer-660x330-1.jpg",
+    "src": "https://excelenciascuba.com/economia/bulevar-mi-transfer-una-opcion-para-el-pago-de-negocios-en-cuba"
+
+  },
+  {
+    "companyName": "Agencia cubana de publicidad y promoción MARK’AS",
+    "client": "Proyecto de desarrollo local VisNova",
+    "year": "21/22",
+    "category": "Lider tecnico",
+    "description": "Un marco para aplicaciones React con renderizado del lado del servidor",
+    "logoUrl": "https://example.com/nextjs-logo.png",
+    "src": ""
+  },
+  {
+    "companyName": "Agencia cubana de publicidad y promoción MARK’AS",
+    "client": "Salón de belleza Nails D’Zafiros",
+    "year": "21/22",
+    "category": "Lider tecnico",
+    "description": "Un marco de CSS utilitario para crear diseños personalizados",
+    "logoUrl": "public/imgs/zafiro.jpeg",
+    "src": ""
+  },
+  {
+    "companyName": "Agencia cubana de publicidad y promoción MARK’AS",
+    "client": "Marina Hemingway",
+    "year": "21/22",
+    "category": "Lider tecnico",
+    "description": "Prácticas para crear diseños que se adaptan a diferentes tamaños de pantalla",
+    "logoUrl": "public/imgs/f0006509.jpg",
+    "src": "https://www.mrcyb.es/club-nautico-internacional-hemingway-de-cuba/"
+  },
+  {
+    "companyName": "Hiberus Tecnología",
+    "client": "Grupo Prisa (El País)",
+    "year": "22/25",
+    "category": "Developer",
+    "description": "Desarrollo y mantenimiento de software",
+    "logoUrl": "public/imgs/elPais/dospaises.png",
+    "src": "https://elpais.com/noticias/prisa/"
+
+  },
+  {
+    "companyName": "Hiberus Tecnología",
+    "client": "Grupo Prisa (Cinco Días)",
+    "year": "22/25",
+    "category": "Developer",
+    "description": "Desarrollo y mantenimiento de software",
+    "logoUrl": "public/imgs/5dias/cinco_dias.jpg",
+    "src": "https://cincodias.elpais.com/"
+
+  },
+  {
+    "companyName": "Hiberus Tecnología",
+    "client": "Banco Ibercaja",
+    "year": "22/25",
+    "category": "Developer",
+    "description": "Desarrollo y mantenimiento de software",
+    "logoUrl": "public/imgs/sede-central-de-ibercaja-en-zaragoza-recurso.r_d.851-536.webp",
+    "src": "https://www.ibercaja.es/"
+
+  },
+  {
+    "companyName": "Hiberus Tecnología",
+    "client": "Banco Santander",
+    "year": "22/25",
+    "category": "Developer",
+    "description": "Desarrollo y mantenimiento de software",
+    "logoUrl": "public/imgs/santander_portada_destacado.webp",
+    "src": "https://www.bancosantander.es/particulares"
+  }]
+
+

@@ -8,7 +8,7 @@ const AboutMe = () => {
 	const handlerOnClik = () => navigate('/about');
 
   return (
-    <section className="relative flex justify-center h-[80vh] my-5">
+    <section className="relative flex justify-center h-[70vh] mt-5">
 			<div className="flex flex-col md:flex-row gap-8 content-top px-5 md:px-20 lg:px-30 py-[10%] text-black">
 				<div className="items-center md:w-[80%] md:pr-[10%]">
 					<h4 className="clamp_font font-light">
@@ -26,7 +26,7 @@ const AboutMe = () => {
 				</div>
 			</div>
 
-			<div className="absolute flex left-[50%] sm:left-[60%] bottom-[9%] md:left-[75%]">
+			<div className="absolute flex left-[50%] sm:left-[60%] bottom-[10%] md:left-[75%]">
 				<SectionBtn 
 			  		hgt={9} 
 					wdt={9} 

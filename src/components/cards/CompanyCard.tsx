@@ -1,4 +1,3 @@
-// import { useNavigate } from "react-router";
 import { Building, Calendar } from "lucide-react";
 
 import type { CompaniesData } from "../../interfaces/companies";

@@ -33,16 +33,16 @@ const Contact = () => {
 
       {/* Sección del título */}
       <section className="flex justify-start items-center h-[35vh] lg:h-[40vh] px-10 md:px-[12%] lg:px-[15%] pt-10 md:pt-25">
-        <h2 className="flex flex-col text-4xl responsive_title md:w-[78%] lg:w-[73%]">
+        <h1 className="flex flex-col text-4xl responsive-title md:w-[78%] lg:w-[73%]">
           <span className="flex md:mt-6 text-left items-center">
-            <div className="flex-none profileImg profileImg_ferstOne mr-3 md:hidden"></div>
+            <div className="flex-none profile-img profile-img-first mr-3 md:hidden"></div>
             And so, shall we
           </span>
           <span className="text-left w-50">
             begin?
           </span>
-        </h2>
-        <div className="flex-none profileImg profileImg_second mr-3 hidden md:block mb-8 h-10 w-10"></div>
+        </h1>
+        <div className="flex-none profile-img profile-img-second mr-3 hidden md:block mb-8 h-10 w-10"></div>
       </section>
 
       {/* Seccion de mis datos y form contacto  */}
@@ -54,13 +54,13 @@ const Contact = () => {
               Contacts
             </h5>
             <MagneticBtn justifyPosition={'justify-start'}>
-              <button className="border-none custom_border pb-2">
+              <button className="border-none custom-border pb-2">
                 martinezochandarenam@gmail.com
               </button>
             </MagneticBtn>
 
             <MagneticBtn justifyPosition={'justify-start'}>
-              <button className="border-none custom_border pb-2">
+              <button className="border-none custom-border pb-2">
                 +34 672595322
               </button>
             </MagneticBtn>

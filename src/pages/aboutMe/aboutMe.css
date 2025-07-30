@@ -27,13 +27,13 @@ body {
 } */
 
 
-.section_title {
+.section-title {
   font-size: clamp(2rem, 6vw , 6rem);
   font-weight: 400;
   line-height: clamp(2rem, 6vw , 6rem);
 }
 
-.img-caja {
+.img-box {
   background-image: url('/imgs/profile/DSC07312-2.jpg');
   background-size: auto 150%;       /* Ajusta la imagen para configurar como va cubrir la caja  y , x*/
   background-position: center top;  /* Centra la imagen */

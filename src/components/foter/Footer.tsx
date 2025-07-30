@@ -7,7 +7,7 @@ import useColitionDetector from '../../utils/useColitionDetector';
 
 const Footer = () => {
 
-  const { handlerOnClik, handleOnClikWsp, phoneNumber, handleOnClikGmail, gMail } = useFooter();
+  const { handleClick, handleOnClikWsp, phoneNumber, handleOnClikGmail, gMail } = useFooter();
 
   const sectionId = 'section_ref';
   const buttonId  = 'btn_ref';
@@ -21,7 +21,7 @@ const Footer = () => {
         
         <h2 className="increase_text flex flex-col my-5 mb-12">
           <span className="flex mt-6 text-left items-center">
-            <div className="profileImg  mr-3 mt-2"></div>
+            <div className="profile-img  mr-3 mt-2"></div>
             Let's work
           </span>
           <span className="text-left w-50">
@@ -38,7 +38,7 @@ const Footer = () => {
               wdt={9} 
               classCustom='md:h-12 md:w-12' 
               content={'Get in touch'}
-              onClick={ handlerOnClik }
+              onClick={ handleClick }
               />
             </div>
         </div>

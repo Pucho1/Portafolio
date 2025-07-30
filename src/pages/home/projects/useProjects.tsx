@@ -4,21 +4,21 @@ import { useNavigate } from "react-router";
 import companies from '../../../data/companies.json'
 import useRandomNumber from '../../../utils/useRandomNumber';
 
-const useProyects = () => {
+const useProjects = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const navigate = useNavigate();
-  const { ramdomNumber } = useRandomNumber();
+  const { randomNumber } = useRandomNumber();
 
 
-  const handlerOnClik = () => navigate("/projects");
+  const handleClick = () => navigate("/projects");
 
    useEffect(() => {
-    const handlerResize = () => {
+    const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener("resize", handlerResize);
-    return () => window.removeEventListener("resize", handlerResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
 	const firstGroup = useMemo(() => companies.slice(0, 4), []);
@@ -28,9 +28,9 @@ const useProyects = () => {
 		firstGroup,
 		secondGroup,
 		isMobile,
-		handlerOnClik,
-    ramdomNumber,
+		handleClick,
+    randomNumber,
   };
 };
 
-export default useProyects;
+export default useProjects;

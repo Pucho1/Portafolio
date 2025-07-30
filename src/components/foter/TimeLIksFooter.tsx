@@ -18,7 +18,7 @@ const TimeLinksFooter = ({ showLocalTime = true } : {showLocalTime?: boolean}) =
                 <li key={index}>
                   <MagneticBtn>
                     <button 
-                      className='custom_border pb-2 text-sm' 
+                      className='custom-border pb-2 text-sm' 
                       key={index}
                       onClick={() => window.open(link.url, '_blank')}
                     >

@@ -6,7 +6,7 @@ const useFooter = () => {
 	const gMail = 'martinezochandarenam@gmail.com';
 
 
-  const handlerOnClik   = () => navigate('/contact');
+  const handleClick   = () => navigate('/contact');
 	
 	const handleOnClikWsp = (): void => {
 		const message = 'Hello, I would like to get in touch with you.';
@@ -24,7 +24,7 @@ const useFooter = () => {
 	};
 
   return {
-		handlerOnClik,
+		handleClick,
 		handleOnClikWsp,
 		phoneNumber,
 		handleOnClikGmail,

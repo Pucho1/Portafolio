@@ -8,7 +8,7 @@ const RowCardWorks = ({ companies, reverse, className } :  RowCardWorksProps ) =
 
   const { visibleCount, handleRowMovement } = useRowWorks(reverse);
 
-  const { ramdomNumber } = useRandomNumber();
+  const { randomNumber } = useRandomNumber();
 
   return (
     // to see whit oversize add w-120vw
@@ -23,7 +23,7 @@ const RowCardWorks = ({ companies, reverse, className } :  RowCardWorksProps ) =
           year={company.year}
           description={company.description}
           imgUrls={company.imgUrls}
-          changeTimer= { ramdomNumber() }
+          changeTimer= { randomNumber() }
         />
 			))}
 		</div>

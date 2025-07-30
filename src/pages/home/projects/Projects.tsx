@@ -3,11 +3,11 @@ import RowCardWorks from "../../../components/rowCardsWorks/RowCardWorks";
 import SectionTitle from "../../../components/sectionTitle/SectionTitle";
 import CardHomeMobile from "../../../components/cards/CardHomeMobile";
 
-import useProyects from "./useProyects";
+import useProjects from "./useProjects";
 
 const Projects = () => {
 
-  const { firstGroup, isMobile, handlerOnClik, ramdomNumber } = useProyects();
+  const { firstGroup, isMobile, handleClick, randomNumber } = useProjects();
 
   return (
     <section className="flex flex-col overflow-hidden max-w-[100vw] trigger mb-10">
@@ -23,7 +23,7 @@ const Projects = () => {
                 description={company.description}
                 rol= {company.rol}
                 year={company.year}
-                changeTimer={ ramdomNumber() }
+                changeTimer={ randomNumber() }
               />
             )
           })}
@@ -37,7 +37,7 @@ const Projects = () => {
           hgt={5}
           wdt={15}
           classCustom={'mb-5'}
-          onClick={handlerOnClik}
+          onClick={handleClick}
         />
       </div>
     </section>

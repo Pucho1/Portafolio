@@ -26,14 +26,14 @@
   z-index: 2;
 } 
 
-.custom_border {
+.custom-border {
   position: relative;
   border-bottom: none;
   overflow: hidden;
   cursor: pointer;
 }
 
-.custom_border::after { 
+.custom-border::after { 
   content: '';          
   position: absolute;
   left: 50%;
@@ -46,7 +46,7 @@
   transition: transform 0.3s cubic-bezier(.4,0,.2,1);
 }
 
-.custom_border:hover::after {
+.custom-border:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 

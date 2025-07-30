@@ -1,18 +1,18 @@
 
 @media (min-width: 640px) {
-   .responsive_title{
+   .responsive-title{
         font-size: clamp(2rem, 6vw , 6rem);
         font-weight: 400;
         line-height: clamp(2rem, 6vw , 6rem);
     } 
 }
 
-.profileImg_ferstOne{
+.profile-img-first{
     width: 45px;
     height: 45px;
 }
 
-.profileImg_second{
+.profile-img-second{
     width: 90px;
     height: 90px;
 }

@@ -5,7 +5,7 @@ import './aboutMe.css'
 
 const AboutMe = () => {
 	const navigate = useNavigate();
-	const handlerOnClik = () => navigate('/about');
+	const handleClick = () => navigate('/about');
 
   return (
     <section className="relative flex justify-center h-[70vh] mt-5">
@@ -32,7 +32,7 @@ const AboutMe = () => {
 					wdt={9} 
 					classCustom='md:h-12 md:w-12' 
 					content={'About me'}
-					onClick={ handlerOnClik }
+					onClick={ handleClick }
 				/>
             </div>
 		</section>

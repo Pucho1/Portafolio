@@ -16,10 +16,10 @@ const TypeWriter: React.FC<TypeWriterProps> = ({
 
   return (
     <div className={`typewriter-container ${className}`}>
-      <span className="typewriter-text" aria-live="polite">
+      <h1 className="typewriter-text" aria-live="polite">
         {displayText}
         <span className={`typewriter-cursor ${cursorClassName}`}>|</span>
-      </span>
+      </h1>
     </div>
   );
 };
